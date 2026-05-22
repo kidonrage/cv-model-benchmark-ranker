@@ -1,0 +1,6 @@
+experiment=26F71740-2241-471A-80D1-303CDE771646 timestamp=2026-05-16T12:50:35Z
+dataset=imagenette2-160 subset=imagenette2-160-subset-500 size=500 images_per_class=50 measurement=fullPipeline
+note=compute=ALL reflects deployment behavior on available accelerators; it is not an isolated arithmetic-precision measurement
+selection_rule="deterministic random sample of 50 validation images per class with seed 20260420"
+
+dataset=imagenette2-160 subset=imagenette2-160-subset-500 version=v2 @ Resources/Datasets/imagenette2-160-subset-500 model=MobileNetV2 format=INT8 compute=ALL top1=327/500 top1_acc=0.6540 top5=438/500 top5_acc=0.8760 mean=14.52ms median=14.20ms p90=14.58ms ref=FP32 top1_agree=0.9740 top1_diff=13/500 top5_agree=0.7880 top5_diff=106/500

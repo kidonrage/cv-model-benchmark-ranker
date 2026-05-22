@@ -1,0 +1,5656 @@
+{
+  "baselineComparison" : {
+    "baselinePrecision" : "FP32",
+    "changedTop1PredictionCount" : 14,
+    "commonImagesCount" : 500,
+    "comparedPrecision" : "INT8",
+    "improvedVsFP32Count" : 3,
+    "modelName" : "MobileNetV2",
+    "regressedVsFP32Count" : 3,
+    "sameCorrectnessCount" : 494,
+    "sameTop1PredictionCount" : 486,
+    "top1AgreementWithFP32" : 0.972
+  },
+  "debugTop5Records" : [
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__ILSVRC2012_val_00029930.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__ILSVRC2012_val_00029930.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "eel",
+        "barracouta",
+        "coho",
+        "gar"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_10150.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_10150.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "coho",
+        "gar",
+        "jacamar"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_10211.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_10211.JPEG",
+      "isTop1Correct" : false,
+      "isTop5Correct" : true,
+      "top1Index" : 389,
+      "top1Label" : "barracouta",
+      "top5Labels" : [
+        "barracouta",
+        "tench",
+        "gar",
+        "coho",
+        "reel"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_10290.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_10290.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "gar",
+        "sturgeon",
+        "mountain tent"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_11190.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_11190.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "gar",
+        "lawn mower",
+        "coho"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_11400.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_11400.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "coho",
+        "gar",
+        "sturgeon"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_11590.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_11590.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "platypus",
+        "coho",
+        "eel"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_12151.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_12151.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "coho",
+        "hartebeest",
+        "sturgeon"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_12620.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_12620.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "gar",
+        "goldfish",
+        "sturgeon"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_13702.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_13702.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "goldfish",
+        "rock beauty",
+        "barracouta",
+        "puffer"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_141.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_141.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "coho",
+        "hog",
+        "gar"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_14150.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_14150.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "eel",
+        "gar",
+        "goldfish"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_14172.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_14172.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "goldfish",
+        "maraca",
+        "piggy bank"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_14402.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_14402.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "zucchini",
+        "coho",
+        "gar"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_14731.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_14731.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "bulletproof vest",
+        "oxygen mask",
+        "breastplate"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_14790.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_14790.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "eel",
+        "barracouta",
+        "goldfish",
+        "axolotl"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_172.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_172.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "gar",
+        "barracouta",
+        "axolotl",
+        "rock beauty"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_17501.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_17501.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "platypus",
+        "eel",
+        "slug"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_200.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_200.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "gar",
+        "coho",
+        "platypus"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_2102.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_2102.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "sturgeon",
+        "coho",
+        "gar"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_26320.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_26320.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "coho",
+        "gar",
+        "sturgeon"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_26631.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_26631.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "eel",
+        "coho",
+        "gar"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_292.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_292.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "fiddler crab",
+        "eel",
+        "axolotl"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_2921.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_2921.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "goldfish",
+        "rock beauty",
+        "barracouta",
+        "coho"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_29551.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_29551.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "coho",
+        "hartebeest",
+        "gar"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_29731.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_29731.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "platypus",
+        "sturgeon",
+        "mud turtle"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_3782.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_3782.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "sturgeon",
+        "coho",
+        "hartebeest"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_4221.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_4221.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "gar",
+        "reel",
+        "eel"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_4611.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_4611.JPEG",
+      "isTop1Correct" : true,
+      "isTop5Correct" : true,
+      "top1Index" : 0,
+      "top1Label" : "tench",
+      "top5Labels" : [
+        "tench",
+        "barracouta",
+        "coho",
+        "bulletproof vest",
+        "sturgeon"
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_5690.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_5690.JPEG",
+      "isTop1Correct" : false,
+      "isTop5Correct" : false,
+      "top1Index" : 390,
+      "top1Label" : "eel",
+      "top5Labels" : [
+        "eel",
+        "dugong",
+        "nematode",
+        "flatworm",
+        "electric ray"
+      ]
+    }
+  ],
+  "experimentID" : "7EECD97C-A58F-4D8B-9F1C-153A365E9AFA",
+  "mistakes" : [
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_10211.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_10211.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 389,
+      "predictedTop1Label" : "barracouta",
+      "predictedTop1Score" : 5.765625,
+      "top5Indices" : [
+        389,
+        0,
+        395,
+        391,
+        758
+      ],
+      "top5Labels" : [
+        "barracouta",
+        "tench",
+        "gar",
+        "coho",
+        "reel"
+      ],
+      "top5Scores" : [
+        5.765625,
+        5.3671875,
+        5.19140625,
+        4.06640625,
+        3.87890625
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_5690.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_5690.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 390,
+      "predictedTop1Label" : "eel",
+      "predictedTop1Score" : 5.49609375,
+      "top5Indices" : [
+        390,
+        149,
+        111,
+        110,
+        5
+      ],
+      "top5Labels" : [
+        "eel",
+        "dugong",
+        "nematode",
+        "flatworm",
+        "electric ray"
+      ],
+      "top5Scores" : [
+        5.49609375,
+        3.609375,
+        3.533203125,
+        3.478515625,
+        3.3125
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_7492.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_7492.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 389,
+      "predictedTop1Label" : "barracouta",
+      "predictedTop1Score" : 6.35546875,
+      "top5Indices" : [
+        389,
+        394,
+        395,
+        0,
+        472
+      ],
+      "top5Labels" : [
+        "barracouta",
+        "sturgeon",
+        "gar",
+        "tench",
+        "canoe"
+      ],
+      "top5Scores" : [
+        6.35546875,
+        5.3984375,
+        4.94921875,
+        4.21484375,
+        3.396484375
+      ]
+    },
+    {
+      "groundTruthIndex" : 0,
+      "groundTruthLabel" : "tench",
+      "imageID" : "images\/n01440764\/imagenette2-160-subset-500__n01440764__n01440764_9940.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n01440764__n01440764_9940.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 389,
+      "predictedTop1Label" : "barracouta",
+      "predictedTop1Score" : 6.4375,
+      "top5Indices" : [
+        389,
+        0,
+        395,
+        391,
+        390
+      ],
+      "top5Labels" : [
+        "barracouta",
+        "tench",
+        "gar",
+        "coho",
+        "eel"
+      ],
+      "top5Scores" : [
+        6.4375,
+        5.5078125,
+        3.546875,
+        3.365234375,
+        2.982421875
+      ]
+    },
+    {
+      "groundTruthIndex" : 217,
+      "groundTruthLabel" : "English springer",
+      "imageID" : "images\/n02102040\/imagenette2-160-subset-500__n02102040__ILSVRC2012_val_00004650.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02102040__ILSVRC2012_val_00004650.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 232,
+      "predictedTop1Label" : "Border collie",
+      "predictedTop1Score" : 4.44140625,
+      "top5Indices" : [
+        232,
+        152,
+        217,
+        188,
+        264
+      ],
+      "top5Labels" : [
+        "Border collie",
+        "Japanese spaniel",
+        "English springer",
+        "wire-haired fox terrier",
+        "Cardigan"
+      ],
+      "top5Scores" : [
+        4.44140625,
+        4.02734375,
+        3.935546875,
+        3.5859375,
+        3.099609375
+      ]
+    },
+    {
+      "groundTruthIndex" : 217,
+      "groundTruthLabel" : "English springer",
+      "imageID" : "images\/n02102040\/imagenette2-160-subset-500__n02102040__n02102040_1241.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02102040__n02102040_1241.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 220,
+      "predictedTop1Label" : "Sussex spaniel",
+      "predictedTop1Score" : 4.8046875,
+      "top5Indices" : [
+        220,
+        247,
+        217,
+        221,
+        163
+      ],
+      "top5Labels" : [
+        "Sussex spaniel",
+        "Saint Bernard",
+        "English springer",
+        "Irish water spaniel",
+        "bloodhound"
+      ],
+      "top5Scores" : [
+        4.8046875,
+        3.720703125,
+        3.1875,
+        3.169921875,
+        2.978515625
+      ]
+    },
+    {
+      "groundTruthIndex" : 217,
+      "groundTruthLabel" : "English springer",
+      "imageID" : "images\/n02102040\/imagenette2-160-subset-500__n02102040__n02102040_1252.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02102040__n02102040_1252.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 691,
+      "predictedTop1Label" : "oxygen mask",
+      "predictedTop1Score" : 3.91015625,
+      "top5Indices" : [
+        691,
+        797,
+        220,
+        680,
+        206
+      ],
+      "top5Labels" : [
+        "oxygen mask",
+        "sleeping bag",
+        "Sussex spaniel",
+        "nipple",
+        "curly-coated retriever"
+      ],
+      "top5Scores" : [
+        3.91015625,
+        3.861328125,
+        3.771484375,
+        3.6484375,
+        3.361328125
+      ]
+    },
+    {
+      "groundTruthIndex" : 217,
+      "groundTruthLabel" : "English springer",
+      "imageID" : "images\/n02102040\/imagenette2-160-subset-500__n02102040__n02102040_1261.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02102040__n02102040_1261.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 212,
+      "predictedTop1Label" : "English setter",
+      "predictedTop1Score" : 6.25390625,
+      "top5Indices" : [
+        212,
+        210,
+        216,
+        215,
+        170
+      ],
+      "top5Labels" : [
+        "English setter",
+        "German short-haired pointer",
+        "clumber",
+        "Brittany spaniel",
+        "Irish wolfhound"
+      ],
+      "top5Scores" : [
+        6.25390625,
+        5.80859375,
+        5.328125,
+        4.5703125,
+        4.4453125
+      ]
+    },
+    {
+      "groundTruthIndex" : 217,
+      "groundTruthLabel" : "English springer",
+      "imageID" : "images\/n02102040\/imagenette2-160-subset-500__n02102040__n02102040_1740.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02102040__n02102040_1740.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 218,
+      "predictedTop1Label" : "Welsh springer spaniel",
+      "predictedTop1Score" : 4.59765625,
+      "top5Indices" : [
+        218,
+        215,
+        217,
+        212,
+        169
+      ],
+      "top5Labels" : [
+        "Welsh springer spaniel",
+        "Brittany spaniel",
+        "English springer",
+        "English setter",
+        "borzoi"
+      ],
+      "top5Scores" : [
+        4.59765625,
+        4.53125,
+        4.39453125,
+        4.19140625,
+        3.810546875
+      ]
+    },
+    {
+      "groundTruthIndex" : 217,
+      "groundTruthLabel" : "English springer",
+      "imageID" : "images\/n02102040\/imagenette2-160-subset-500__n02102040__n02102040_3221.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02102040__n02102040_3221.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 152,
+      "predictedTop1Label" : "Japanese spaniel",
+      "predictedTop1Score" : 5.61328125,
+      "top5Indices" : [
+        152,
+        218,
+        216,
+        156,
+        217
+      ],
+      "top5Labels" : [
+        "Japanese spaniel",
+        "Welsh springer spaniel",
+        "clumber",
+        "Blenheim spaniel",
+        "English springer"
+      ],
+      "top5Scores" : [
+        5.61328125,
+        5.375,
+        5.2578125,
+        5.24609375,
+        5.09765625
+      ]
+    },
+    {
+      "groundTruthIndex" : 217,
+      "groundTruthLabel" : "English springer",
+      "imageID" : "images\/n02102040\/imagenette2-160-subset-500__n02102040__n02102040_4090.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02102040__n02102040_4090.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 198,
+      "predictedTop1Label" : "standard schnauzer",
+      "predictedTop1Score" : 3.904296875,
+      "top5Indices" : [
+        198,
+        342,
+        360,
+        356,
+        357
+      ],
+      "top5Labels" : [
+        "standard schnauzer",
+        "wild boar",
+        "otter",
+        "weasel",
+        "mink"
+      ],
+      "top5Scores" : [
+        3.904296875,
+        3.69921875,
+        3.533203125,
+        3.396484375,
+        3.396484375
+      ]
+    },
+    {
+      "groundTruthIndex" : 217,
+      "groundTruthLabel" : "English springer",
+      "imageID" : "images\/n02102040\/imagenette2-160-subset-500__n02102040__n02102040_4481.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02102040__n02102040_4481.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 152,
+      "predictedTop1Label" : "Japanese spaniel",
+      "predictedTop1Score" : 5.14453125,
+      "top5Indices" : [
+        152,
+        200,
+        157,
+        155,
+        478
+      ],
+      "top5Labels" : [
+        "Japanese spaniel",
+        "Tibetan terrier",
+        "papillon",
+        "Shih-Tzu",
+        "carton"
+      ],
+      "top5Scores" : [
+        5.14453125,
+        4.51171875,
+        4.390625,
+        4.01171875,
+        3.6015625
+      ]
+    },
+    {
+      "groundTruthIndex" : 217,
+      "groundTruthLabel" : "English springer",
+      "imageID" : "images\/n02102040\/imagenette2-160-subset-500__n02102040__n02102040_4650.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02102040__n02102040_4650.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 218,
+      "predictedTop1Label" : "Welsh springer spaniel",
+      "predictedTop1Score" : 6.76171875,
+      "top5Indices" : [
+        218,
+        217,
+        220,
+        215,
+        156
+      ],
+      "top5Labels" : [
+        "Welsh springer spaniel",
+        "English springer",
+        "Sussex spaniel",
+        "Brittany spaniel",
+        "Blenheim spaniel"
+      ],
+      "top5Scores" : [
+        6.76171875,
+        5.859375,
+        5.03125,
+        3.83203125,
+        3.71484375
+      ]
+    },
+    {
+      "groundTruthIndex" : 217,
+      "groundTruthLabel" : "English springer",
+      "imageID" : "images\/n02102040\/imagenette2-160-subset-500__n02102040__n02102040_5502.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02102040__n02102040_5502.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 212,
+      "predictedTop1Label" : "English setter",
+      "predictedTop1Score" : 4.89453125,
+      "top5Indices" : [
+        212,
+        217,
+        246,
+        164,
+        210
+      ],
+      "top5Labels" : [
+        "English setter",
+        "English springer",
+        "Great Dane",
+        "bluetick",
+        "German short-haired pointer"
+      ],
+      "top5Scores" : [
+        4.89453125,
+        4.10546875,
+        3.771484375,
+        3.63671875,
+        3.412109375
+      ]
+    },
+    {
+      "groundTruthIndex" : 217,
+      "groundTruthLabel" : "English springer",
+      "imageID" : "images\/n02102040\/imagenette2-160-subset-500__n02102040__n02102040_562.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02102040__n02102040_562.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 188,
+      "predictedTop1Label" : "wire-haired fox terrier",
+      "predictedTop1Score" : 5.16796875,
+      "top5Indices" : [
+        188,
+        210,
+        215,
+        212,
+        158
+      ],
+      "top5Labels" : [
+        "wire-haired fox terrier",
+        "German short-haired pointer",
+        "Brittany spaniel",
+        "English setter",
+        "toy terrier"
+      ],
+      "top5Scores" : [
+        5.16796875,
+        4.4609375,
+        4.36328125,
+        4.328125,
+        3.5625
+      ]
+    },
+    {
+      "groundTruthIndex" : 217,
+      "groundTruthLabel" : "English springer",
+      "imageID" : "images\/n02102040\/imagenette2-160-subset-500__n02102040__n02102040_5802.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02102040__n02102040_5802.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 241,
+      "predictedTop1Label" : "EntleBucher",
+      "predictedTop1Score" : 4.125,
+      "top5Indices" : [
+        241,
+        361,
+        238,
+        240,
+        676
+      ],
+      "top5Labels" : [
+        "EntleBucher",
+        "skunk",
+        "Greater Swiss Mountain dog",
+        "Appenzeller",
+        "muzzle"
+      ],
+      "top5Scores" : [
+        4.125,
+        3.837890625,
+        3.82421875,
+        3.80859375,
+        3.427734375
+      ]
+    },
+    {
+      "groundTruthIndex" : 217,
+      "groundTruthLabel" : "English springer",
+      "imageID" : "images\/n02102040\/imagenette2-160-subset-500__n02102040__n02102040_5950.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02102040__n02102040_5950.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 166,
+      "predictedTop1Label" : "Walker hound",
+      "predictedTop1Score" : 4.9765625,
+      "top5Indices" : [
+        166,
+        210,
+        217,
+        164,
+        232
+      ],
+      "top5Labels" : [
+        "Walker hound",
+        "German short-haired pointer",
+        "English springer",
+        "bluetick",
+        "Border collie"
+      ],
+      "top5Scores" : [
+        4.9765625,
+        4.75390625,
+        4.5078125,
+        4.1484375,
+        4.1328125
+      ]
+    },
+    {
+      "groundTruthIndex" : 217,
+      "groundTruthLabel" : "English springer",
+      "imageID" : "images\/n02102040\/imagenette2-160-subset-500__n02102040__n02102040_6232.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02102040__n02102040_6232.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 424,
+      "predictedTop1Label" : "barbershop",
+      "predictedTop1Score" : 3.03515625,
+      "top5Indices" : [
+        424,
+        345,
+        367,
+        341,
+        365
+      ],
+      "top5Labels" : [
+        "barbershop",
+        "ox",
+        "chimpanzee",
+        "hog",
+        "orangutan"
+      ],
+      "top5Scores" : [
+        3.03515625,
+        2.888671875,
+        2.833984375,
+        2.779296875,
+        2.765625
+      ]
+    },
+    {
+      "groundTruthIndex" : 217,
+      "groundTruthLabel" : "English springer",
+      "imageID" : "images\/n02102040\/imagenette2-160-subset-500__n02102040__n02102040_6240.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02102040__n02102040_6240.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 215,
+      "predictedTop1Label" : "Brittany spaniel",
+      "predictedTop1Score" : 5.15234375,
+      "top5Indices" : [
+        215,
+        217,
+        156,
+        210,
+        220
+      ],
+      "top5Labels" : [
+        "Brittany spaniel",
+        "English springer",
+        "Blenheim spaniel",
+        "German short-haired pointer",
+        "Sussex spaniel"
+      ],
+      "top5Scores" : [
+        5.15234375,
+        4.41796875,
+        3.880859375,
+        3.814453125,
+        3.703125
+      ]
+    },
+    {
+      "groundTruthIndex" : 217,
+      "groundTruthLabel" : "English springer",
+      "imageID" : "images\/n02102040\/imagenette2-160-subset-500__n02102040__n02102040_652.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02102040__n02102040_652.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 220,
+      "predictedTop1Label" : "Sussex spaniel",
+      "predictedTop1Score" : 6.4375,
+      "top5Indices" : [
+        220,
+        219,
+        216,
+        217,
+        218
+      ],
+      "top5Labels" : [
+        "Sussex spaniel",
+        "cocker spaniel",
+        "clumber",
+        "English springer",
+        "Welsh springer spaniel"
+      ],
+      "top5Scores" : [
+        6.4375,
+        4.9453125,
+        4.4453125,
+        3.93359375,
+        3.36328125
+      ]
+    },
+    {
+      "groundTruthIndex" : 217,
+      "groundTruthLabel" : "English springer",
+      "imageID" : "images\/n02102040\/imagenette2-160-subset-500__n02102040__n02102040_7270.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02102040__n02102040_7270.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 215,
+      "predictedTop1Label" : "Brittany spaniel",
+      "predictedTop1Score" : 6.23046875,
+      "top5Indices" : [
+        215,
+        210,
+        218,
+        167,
+        166
+      ],
+      "top5Labels" : [
+        "Brittany spaniel",
+        "German short-haired pointer",
+        "Welsh springer spaniel",
+        "English foxhound",
+        "Walker hound"
+      ],
+      "top5Scores" : [
+        6.23046875,
+        6.1953125,
+        5.359375,
+        4.72265625,
+        4.40234375
+      ]
+    },
+    {
+      "groundTruthIndex" : 217,
+      "groundTruthLabel" : "English springer",
+      "imageID" : "images\/n02102040\/imagenette2-160-subset-500__n02102040__n02102040_8372.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02102040__n02102040_8372.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 216,
+      "predictedTop1Label" : "clumber",
+      "predictedTop1Score" : 6.71484375,
+      "top5Indices" : [
+        216,
+        212,
+        228,
+        188,
+        190
+      ],
+      "top5Labels" : [
+        "clumber",
+        "English setter",
+        "komondor",
+        "wire-haired fox terrier",
+        "Sealyham terrier"
+      ],
+      "top5Scores" : [
+        6.71484375,
+        5.73828125,
+        4.97265625,
+        4.6015625,
+        4.46875
+      ]
+    },
+    {
+      "groundTruthIndex" : 217,
+      "groundTruthLabel" : "English springer",
+      "imageID" : "images\/n02102040\/imagenette2-160-subset-500__n02102040__n02102040_880.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02102040__n02102040_880.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 220,
+      "predictedTop1Label" : "Sussex spaniel",
+      "predictedTop1Score" : 6.71875,
+      "top5Indices" : [
+        220,
+        217,
+        216,
+        218,
+        212
+      ],
+      "top5Labels" : [
+        "Sussex spaniel",
+        "English springer",
+        "clumber",
+        "Welsh springer spaniel",
+        "English setter"
+      ],
+      "top5Scores" : [
+        6.71875,
+        4.828125,
+        4.796875,
+        4.109375,
+        4.0625
+      ]
+    },
+    {
+      "groundTruthIndex" : 217,
+      "groundTruthLabel" : "English springer",
+      "imageID" : "images\/n02102040\/imagenette2-160-subset-500__n02102040__n02102040_960.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02102040__n02102040_960.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 195,
+      "predictedTop1Label" : "Boston bull",
+      "predictedTop1Score" : 4.34375,
+      "top5Indices" : [
+        195,
+        180,
+        232,
+        158,
+        166
+      ],
+      "top5Labels" : [
+        "Boston bull",
+        "American Staffordshire terrier",
+        "Border collie",
+        "toy terrier",
+        "Walker hound"
+      ],
+      "top5Scores" : [
+        4.34375,
+        3.814453125,
+        3.7109375,
+        3.58984375,
+        3.5625
+      ]
+    },
+    {
+      "groundTruthIndex" : 482,
+      "groundTruthLabel" : "cassette player",
+      "imageID" : "images\/n02979186\/imagenette2-160-subset-500__n02979186__n02979186_10870.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02979186__n02979186_10870.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 818,
+      "predictedTop1Label" : "spotlight",
+      "predictedTop1Score" : 5.29296875,
+      "top5Indices" : [
+        818,
+        482,
+        758,
+        590,
+        766
+      ],
+      "top5Labels" : [
+        "spotlight",
+        "cassette player",
+        "reel",
+        "hand-held computer",
+        "rotisserie"
+      ],
+      "top5Scores" : [
+        5.29296875,
+        4.62890625,
+        4,
+        3.7578125,
+        3.5859375
+      ]
+    },
+    {
+      "groundTruthIndex" : 482,
+      "groundTruthLabel" : "cassette player",
+      "imageID" : "images\/n02979186\/imagenette2-160-subset-500__n02979186__n02979186_11670.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02979186__n02979186_11670.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 481,
+      "predictedTop1Label" : "cassette",
+      "predictedTop1Score" : 7.40625,
+      "top5Indices" : [
+        481,
+        482,
+        848,
+        916,
+        590
+      ],
+      "top5Labels" : [
+        "cassette",
+        "cassette player",
+        "tape player",
+        "web site",
+        "hand-held computer"
+      ],
+      "top5Scores" : [
+        7.40625,
+        4.859375,
+        4.3671875,
+        4.2265625,
+        4.0390625
+      ]
+    },
+    {
+      "groundTruthIndex" : 482,
+      "groundTruthLabel" : "cassette player",
+      "imageID" : "images\/n02979186\/imagenette2-160-subset-500__n02979186__n02979186_12172.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02979186__n02979186_12172.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 481,
+      "predictedTop1Label" : "cassette",
+      "predictedTop1Score" : 5.359375,
+      "top5Indices" : [
+        481,
+        754,
+        482,
+        662,
+        848
+      ],
+      "top5Labels" : [
+        "cassette",
+        "radio",
+        "cassette player",
+        "modem",
+        "tape player"
+      ],
+      "top5Scores" : [
+        5.359375,
+        5.22265625,
+        5.1171875,
+        4.546875,
+        4.09375
+      ]
+    },
+    {
+      "groundTruthIndex" : 482,
+      "groundTruthLabel" : "cassette player",
+      "imageID" : "images\/n02979186\/imagenette2-160-subset-500__n02979186__n02979186_13502.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02979186__n02979186_13502.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 675,
+      "predictedTop1Label" : "moving van",
+      "predictedTop1Score" : 5.34375,
+      "top5Indices" : [
+        675,
+        864,
+        867,
+        482,
+        817
+      ],
+      "top5Labels" : [
+        "moving van",
+        "tow truck",
+        "trailer truck",
+        "cassette player",
+        "sports car"
+      ],
+      "top5Scores" : [
+        5.34375,
+        5.1171875,
+        4.49609375,
+        4.234375,
+        4.22265625
+      ]
+    },
+    {
+      "groundTruthIndex" : 482,
+      "groundTruthLabel" : "cassette player",
+      "imageID" : "images\/n02979186\/imagenette2-160-subset-500__n02979186__n02979186_18940.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02979186__n02979186_18940.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 481,
+      "predictedTop1Label" : "cassette",
+      "predictedTop1Score" : 5.77734375,
+      "top5Indices" : [
+        481,
+        482,
+        860,
+        848,
+        590
+      ],
+      "top5Labels" : [
+        "cassette",
+        "cassette player",
+        "tobacco shop",
+        "tape player",
+        "hand-held computer"
+      ],
+      "top5Scores" : [
+        5.77734375,
+        4.65234375,
+        4.05859375,
+        3.482421875,
+        3.361328125
+      ]
+    },
+    {
+      "groundTruthIndex" : 482,
+      "groundTruthLabel" : "cassette player",
+      "imageID" : "images\/n02979186\/imagenette2-160-subset-500__n02979186__n02979186_20701.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02979186__n02979186_20701.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 662,
+      "predictedTop1Label" : "modem",
+      "predictedTop1Score" : 4.81640625,
+      "top5Indices" : [
+        662,
+        446,
+        778,
+        592,
+        507
+      ],
+      "top5Labels" : [
+        "modem",
+        "binder",
+        "scale",
+        "hard disc",
+        "combination lock"
+      ],
+      "top5Scores" : [
+        4.81640625,
+        3.962890625,
+        3.71875,
+        3.337890625,
+        3.21875
+      ]
+    },
+    {
+      "groundTruthIndex" : 482,
+      "groundTruthLabel" : "cassette player",
+      "imageID" : "images\/n02979186\/imagenette2-160-subset-500__n02979186__n02979186_2381.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02979186__n02979186_2381.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 754,
+      "predictedTop1Label" : "radio",
+      "predictedTop1Score" : 6.24609375,
+      "top5Indices" : [
+        754,
+        662,
+        482,
+        485,
+        530
+      ],
+      "top5Labels" : [
+        "radio",
+        "modem",
+        "cassette player",
+        "CD player",
+        "digital clock"
+      ],
+      "top5Scores" : [
+        6.24609375,
+        5.5546875,
+        5.5234375,
+        5.5234375,
+        5.4453125
+      ]
+    },
+    {
+      "groundTruthIndex" : 482,
+      "groundTruthLabel" : "cassette player",
+      "imageID" : "images\/n02979186\/imagenette2-160-subset-500__n02979186__n02979186_24591.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02979186__n02979186_24591.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 590,
+      "predictedTop1Label" : "hand-held computer",
+      "predictedTop1Score" : 2.9296875,
+      "top5Indices" : [
+        590,
+        482,
+        921,
+        686,
+        826
+      ],
+      "top5Labels" : [
+        "hand-held computer",
+        "cassette player",
+        "book jacket",
+        "oil filter",
+        "stopwatch"
+      ],
+      "top5Scores" : [
+        2.9296875,
+        2.830078125,
+        2.794921875,
+        2.673828125,
+        2.595703125
+      ]
+    },
+    {
+      "groundTruthIndex" : 482,
+      "groundTruthLabel" : "cassette player",
+      "imageID" : "images\/n02979186\/imagenette2-160-subset-500__n02979186__n02979186_2511.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02979186__n02979186_2511.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 481,
+      "predictedTop1Label" : "cassette",
+      "predictedTop1Score" : 6.046875,
+      "top5Indices" : [
+        481,
+        482,
+        754,
+        848,
+        613
+      ],
+      "top5Labels" : [
+        "cassette",
+        "cassette player",
+        "radio",
+        "tape player",
+        "joystick"
+      ],
+      "top5Scores" : [
+        6.046875,
+        5.5390625,
+        5.3515625,
+        4.98828125,
+        4.7890625
+      ]
+    },
+    {
+      "groundTruthIndex" : 482,
+      "groundTruthLabel" : "cassette player",
+      "imageID" : "images\/n02979186\/imagenette2-160-subset-500__n02979186__n02979186_3211.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02979186__n02979186_3211.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 481,
+      "predictedTop1Label" : "cassette",
+      "predictedTop1Score" : 6.48046875,
+      "top5Indices" : [
+        481,
+        482,
+        848,
+        710,
+        485
+      ],
+      "top5Labels" : [
+        "cassette",
+        "cassette player",
+        "tape player",
+        "pencil sharpener",
+        "CD player"
+      ],
+      "top5Scores" : [
+        6.48046875,
+        5.46484375,
+        5.46484375,
+        4.23828125,
+        4.08203125
+      ]
+    },
+    {
+      "groundTruthIndex" : 482,
+      "groundTruthLabel" : "cassette player",
+      "imageID" : "images\/n02979186\/imagenette2-160-subset-500__n02979186__n02979186_3372.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02979186__n02979186_3372.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 632,
+      "predictedTop1Label" : "loudspeaker",
+      "predictedTop1Score" : 4.9921875,
+      "top5Indices" : [
+        632,
+        548,
+        598,
+        527,
+        851
+      ],
+      "top5Labels" : [
+        "loudspeaker",
+        "entertainment center",
+        "home theater",
+        "desktop computer",
+        "television"
+      ],
+      "top5Scores" : [
+        4.9921875,
+        4.91796875,
+        4.3671875,
+        4.328125,
+        4.15625
+      ]
+    },
+    {
+      "groundTruthIndex" : 482,
+      "groundTruthLabel" : "cassette player",
+      "imageID" : "images\/n02979186\/imagenette2-160-subset-500__n02979186__n02979186_5280.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02979186__n02979186_5280.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 548,
+      "predictedTop1Label" : "entertainment center",
+      "predictedTop1Score" : 6.0625,
+      "top5Indices" : [
+        548,
+        598,
+        851,
+        651,
+        527
+      ],
+      "top5Labels" : [
+        "entertainment center",
+        "home theater",
+        "television",
+        "microwave",
+        "desktop computer"
+      ],
+      "top5Scores" : [
+        6.0625,
+        4.60546875,
+        4.58984375,
+        3.673828125,
+        3.64453125
+      ]
+    },
+    {
+      "groundTruthIndex" : 482,
+      "groundTruthLabel" : "cassette player",
+      "imageID" : "images\/n02979186\/imagenette2-160-subset-500__n02979186__n02979186_5622.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02979186__n02979186_5622.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 481,
+      "predictedTop1Label" : "cassette",
+      "predictedTop1Score" : 4.67578125,
+      "top5Indices" : [
+        481,
+        592,
+        482,
+        633,
+        485
+      ],
+      "top5Labels" : [
+        "cassette",
+        "hard disc",
+        "cassette player",
+        "loupe",
+        "CD player"
+      ],
+      "top5Scores" : [
+        4.67578125,
+        4.3515625,
+        3.734375,
+        3.724609375,
+        3.4609375
+      ]
+    },
+    {
+      "groundTruthIndex" : 482,
+      "groundTruthLabel" : "cassette player",
+      "imageID" : "images\/n02979186\/imagenette2-160-subset-500__n02979186__n02979186_6390.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02979186__n02979186_6390.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 485,
+      "predictedTop1Label" : "CD player",
+      "predictedTop1Score" : 6.52734375,
+      "top5Indices" : [
+        485,
+        848,
+        482,
+        754,
+        481
+      ],
+      "top5Labels" : [
+        "CD player",
+        "tape player",
+        "cassette player",
+        "radio",
+        "cassette"
+      ],
+      "top5Scores" : [
+        6.52734375,
+        6.3359375,
+        6.26953125,
+        5.2421875,
+        3.51171875
+      ]
+    },
+    {
+      "groundTruthIndex" : 482,
+      "groundTruthLabel" : "cassette player",
+      "imageID" : "images\/n02979186\/imagenette2-160-subset-500__n02979186__n02979186_6992.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02979186__n02979186_6992.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 507,
+      "predictedTop1Label" : "combination lock",
+      "predictedTop1Score" : 4.90234375,
+      "top5Indices" : [
+        507,
+        758,
+        482,
+        818,
+        633
+      ],
+      "top5Labels" : [
+        "combination lock",
+        "reel",
+        "cassette player",
+        "spotlight",
+        "loupe"
+      ],
+      "top5Scores" : [
+        4.90234375,
+        4.58984375,
+        4.19921875,
+        4.00390625,
+        3.09765625
+      ]
+    },
+    {
+      "groundTruthIndex" : 482,
+      "groundTruthLabel" : "cassette player",
+      "imageID" : "images\/n02979186\/imagenette2-160-subset-500__n02979186__n02979186_872.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02979186__n02979186_872.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 485,
+      "predictedTop1Label" : "CD player",
+      "predictedTop1Score" : 5.4375,
+      "top5Indices" : [
+        485,
+        482,
+        754,
+        848,
+        742
+      ],
+      "top5Labels" : [
+        "CD player",
+        "cassette player",
+        "radio",
+        "tape player",
+        "printer"
+      ],
+      "top5Scores" : [
+        5.4375,
+        5.0546875,
+        4.84765625,
+        4.328125,
+        4.2265625
+      ]
+    },
+    {
+      "groundTruthIndex" : 482,
+      "groundTruthLabel" : "cassette player",
+      "imageID" : "images\/n02979186\/imagenette2-160-subset-500__n02979186__n02979186_9811.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n02979186__n02979186_9811.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 481,
+      "predictedTop1Label" : "cassette",
+      "predictedTop1Score" : 8.59375,
+      "top5Indices" : [
+        481,
+        593,
+        482,
+        848,
+        798
+      ],
+      "top5Labels" : [
+        "cassette",
+        "harmonica",
+        "cassette player",
+        "tape player",
+        "slide rule"
+      ],
+      "top5Scores" : [
+        8.59375,
+        5.53515625,
+        5.25,
+        5.11328125,
+        4.875
+      ]
+    },
+    {
+      "groundTruthIndex" : 491,
+      "groundTruthLabel" : "chain saw",
+      "imageID" : "images\/n03000684\/imagenette2-160-subset-500__n03000684__n03000684_12370.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03000684__n03000684_12370.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 577,
+      "predictedTop1Label" : "gong",
+      "predictedTop1Score" : 5.63671875,
+      "top5Indices" : [
+        577,
+        822,
+        747,
+        494,
+        691
+      ],
+      "top5Labels" : [
+        "gong",
+        "steel drum",
+        "punching bag",
+        "chime",
+        "oxygen mask"
+      ],
+      "top5Scores" : [
+        5.63671875,
+        5.23046875,
+        4.2890625,
+        4.1796875,
+        4.16015625
+      ]
+    },
+    {
+      "groundTruthIndex" : 491,
+      "groundTruthLabel" : "chain saw",
+      "imageID" : "images\/n03000684\/imagenette2-160-subset-500__n03000684__n03000684_15400.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03000684__n03000684_15400.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 413,
+      "predictedTop1Label" : "assault rifle",
+      "predictedTop1Score" : 4.0234375,
+      "top5Indices" : [
+        413,
+        895,
+        708,
+        733,
+        456
+      ],
+      "top5Labels" : [
+        "assault rifle",
+        "warplane",
+        "pedestal",
+        "pole",
+        "bow"
+      ],
+      "top5Scores" : [
+        4.0234375,
+        3.892578125,
+        3.619140625,
+        3.599609375,
+        3.517578125
+      ]
+    },
+    {
+      "groundTruthIndex" : 491,
+      "groundTruthLabel" : "chain saw",
+      "imageID" : "images\/n03000684\/imagenette2-160-subset-500__n03000684__n03000684_15441.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03000684__n03000684_15441.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 461,
+      "predictedTop1Label" : "breastplate",
+      "predictedTop1Score" : 4.81640625,
+      "top5Indices" : [
+        461,
+        708,
+        524,
+        583,
+        556
+      ],
+      "top5Labels" : [
+        "breastplate",
+        "pedestal",
+        "cuirass",
+        "guillotine",
+        "fire screen"
+      ],
+      "top5Scores" : [
+        4.81640625,
+        4.23828125,
+        4.13671875,
+        3.779296875,
+        3.560546875
+      ]
+    },
+    {
+      "groundTruthIndex" : 491,
+      "groundTruthLabel" : "chain saw",
+      "imageID" : "images\/n03000684\/imagenette2-160-subset-500__n03000684__n03000684_16372.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03000684__n03000684_16372.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 456,
+      "predictedTop1Label" : "bow",
+      "predictedTop1Score" : 7,
+      "top5Indices" : [
+        456,
+        671,
+        972,
+        880,
+        491
+      ],
+      "top5Labels" : [
+        "bow",
+        "mountain bike",
+        "cliff",
+        "unicycle",
+        "chain saw"
+      ],
+      "top5Scores" : [
+        7,
+        4.65625,
+        4.359375,
+        3.564453125,
+        3.232421875
+      ]
+    },
+    {
+      "groundTruthIndex" : 491,
+      "groundTruthLabel" : "chain saw",
+      "imageID" : "images\/n03000684\/imagenette2-160-subset-500__n03000684__n03000684_19192.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03000684__n03000684_19192.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 758,
+      "predictedTop1Label" : "reel",
+      "predictedTop1Score" : 4.75390625,
+      "top5Indices" : [
+        758,
+        473,
+        676,
+        891,
+        512
+      ],
+      "top5Labels" : [
+        "reel",
+        "can opener",
+        "muzzle",
+        "waffle iron",
+        "corkscrew"
+      ],
+      "top5Scores" : [
+        4.75390625,
+        4.60546875,
+        4.4296875,
+        3.837890625,
+        3.798828125
+      ]
+    },
+    {
+      "groundTruthIndex" : 491,
+      "groundTruthLabel" : "chain saw",
+      "imageID" : "images\/n03000684\/imagenette2-160-subset-500__n03000684__n03000684_2202.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03000684__n03000684_2202.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 830,
+      "predictedTop1Label" : "stretcher",
+      "predictedTop1Score" : 5.1328125,
+      "top5Indices" : [
+        830,
+        856,
+        595,
+        730,
+        491
+      ],
+      "top5Labels" : [
+        "stretcher",
+        "thresher",
+        "harvester",
+        "plow",
+        "chain saw"
+      ],
+      "top5Scores" : [
+        5.1328125,
+        4.76953125,
+        4.078125,
+        4.0390625,
+        3.607421875
+      ]
+    },
+    {
+      "groundTruthIndex" : 491,
+      "groundTruthLabel" : "chain saw",
+      "imageID" : "images\/n03000684\/imagenette2-160-subset-500__n03000684__n03000684_2472.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03000684__n03000684_2472.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 634,
+      "predictedTop1Label" : "lumbermill",
+      "predictedTop1Score" : 8.546875,
+      "top5Indices" : [
+        634,
+        491,
+        341,
+        830,
+        596
+      ],
+      "top5Labels" : [
+        "lumbermill",
+        "chain saw",
+        "hog",
+        "stretcher",
+        "hatchet"
+      ],
+      "top5Scores" : [
+        8.546875,
+        6.9765625,
+        4.703125,
+        4.40625,
+        4.2578125
+      ]
+    },
+    {
+      "groundTruthIndex" : 491,
+      "groundTruthLabel" : "chain saw",
+      "imageID" : "images\/n03000684\/imagenette2-160-subset-500__n03000684__n03000684_25411.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03000684__n03000684_25411.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 979,
+      "predictedTop1Label" : "valley",
+      "predictedTop1Score" : 5.2109375,
+      "top5Indices" : [
+        979,
+        395,
+        972,
+        391,
+        491
+      ],
+      "top5Labels" : [
+        "valley",
+        "gar",
+        "cliff",
+        "coho",
+        "chain saw"
+      ],
+      "top5Scores" : [
+        5.2109375,
+        4.9609375,
+        4.875,
+        4.85546875,
+        4.4921875
+      ]
+    },
+    {
+      "groundTruthIndex" : 491,
+      "groundTruthLabel" : "chain saw",
+      "imageID" : "images\/n03000684\/imagenette2-160-subset-500__n03000684__n03000684_31181.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03000684__n03000684_31181.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 634,
+      "predictedTop1Label" : "lumbermill",
+      "predictedTop1Score" : 5.125,
+      "top5Indices" : [
+        634,
+        432,
+        660,
+        807,
+        912
+      ],
+      "top5Labels" : [
+        "lumbermill",
+        "bassoon",
+        "mobile home",
+        "solar dish",
+        "worm fence"
+      ],
+      "top5Scores" : [
+        5.125,
+        4.47265625,
+        3.947265625,
+        3.658203125,
+        3.62890625
+      ]
+    },
+    {
+      "groundTruthIndex" : 491,
+      "groundTruthLabel" : "chain saw",
+      "imageID" : "images\/n03000684\/imagenette2-160-subset-500__n03000684__n03000684_4081.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03000684__n03000684_4081.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 456,
+      "predictedTop1Label" : "bow",
+      "predictedTop1Score" : 4.03125,
+      "top5Indices" : [
+        456,
+        461,
+        62,
+        432,
+        395
+      ],
+      "top5Labels" : [
+        "bow",
+        "breastplate",
+        "rock python",
+        "bassoon",
+        "gar"
+      ],
+      "top5Scores" : [
+        4.03125,
+        3.95703125,
+        3.861328125,
+        3.5546875,
+        3.419921875
+      ]
+    },
+    {
+      "groundTruthIndex" : 491,
+      "groundTruthLabel" : "chain saw",
+      "imageID" : "images\/n03000684\/imagenette2-160-subset-500__n03000684__n03000684_7050.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03000684__n03000684_7050.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 165,
+      "predictedTop1Label" : "black-and-tan coonhound",
+      "predictedTop1Score" : 4.09375,
+      "top5Indices" : [
+        165,
+        491,
+        163,
+        354,
+        168
+      ],
+      "top5Labels" : [
+        "black-and-tan coonhound",
+        "chain saw",
+        "bloodhound",
+        "Arabian camel",
+        "redbone"
+      ],
+      "top5Scores" : [
+        4.09375,
+        4.046875,
+        3.900390625,
+        3.595703125,
+        3.30859375
+      ]
+    },
+    {
+      "groundTruthIndex" : 491,
+      "groundTruthLabel" : "chain saw",
+      "imageID" : "images\/n03000684\/imagenette2-160-subset-500__n03000684__n03000684_7460.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03000684__n03000684_7460.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 456,
+      "predictedTop1Label" : "bow",
+      "predictedTop1Score" : 6.125,
+      "top5Indices" : [
+        456,
+        491,
+        671,
+        384,
+        444
+      ],
+      "top5Labels" : [
+        "bow",
+        "chain saw",
+        "mountain bike",
+        "indri",
+        "bicycle-built-for-two"
+      ],
+      "top5Scores" : [
+        6.125,
+        5.80078125,
+        5.08984375,
+        4.05078125,
+        3.947265625
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__ILSVRC2012_val_00023000.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__ILSVRC2012_val_00023000.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 442,
+      "predictedTop1Label" : "bell cote",
+      "predictedTop1Score" : 6.10546875,
+      "top5Indices" : [
+        442,
+        663,
+        497,
+        483,
+        437
+      ],
+      "top5Labels" : [
+        "bell cote",
+        "monastery",
+        "church",
+        "castle",
+        "beacon"
+      ],
+      "top5Scores" : [
+        6.10546875,
+        5.98046875,
+        5.0078125,
+        4.0390625,
+        3.96484375
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_10060.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_10060.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 663,
+      "predictedTop1Label" : "monastery",
+      "predictedTop1Score" : 7.05859375,
+      "top5Indices" : [
+        663,
+        483,
+        698,
+        497,
+        442
+      ],
+      "top5Labels" : [
+        "monastery",
+        "castle",
+        "palace",
+        "church",
+        "bell cote"
+      ],
+      "top5Scores" : [
+        7.05859375,
+        6.546875,
+        5.12109375,
+        4.7109375,
+        3.591796875
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_116072.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_116072.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 437,
+      "predictedTop1Label" : "beacon",
+      "predictedTop1Score" : 6.05078125,
+      "top5Indices" : [
+        437,
+        663,
+        483,
+        497,
+        442
+      ],
+      "top5Labels" : [
+        "beacon",
+        "monastery",
+        "castle",
+        "church",
+        "bell cote"
+      ],
+      "top5Scores" : [
+        6.05078125,
+        5.32421875,
+        4.28125,
+        4.2734375,
+        4.01953125
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_12812.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_12812.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 442,
+      "predictedTop1Label" : "bell cote",
+      "predictedTop1Score" : 4.54296875,
+      "top5Indices" : [
+        442,
+        497,
+        663,
+        437,
+        538
+      ],
+      "top5Labels" : [
+        "bell cote",
+        "church",
+        "monastery",
+        "beacon",
+        "dome"
+      ],
+      "top5Scores" : [
+        4.54296875,
+        4.453125,
+        4.23046875,
+        3.337890625,
+        3.333984375
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_13331.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_13331.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 884,
+      "predictedTop1Label" : "vault",
+      "predictedTop1Score" : 6.77734375,
+      "top5Indices" : [
+        884,
+        406,
+        663,
+        497,
+        687
+      ],
+      "top5Labels" : [
+        "vault",
+        "altar",
+        "monastery",
+        "church",
+        "organ"
+      ],
+      "top5Scores" : [
+        6.77734375,
+        5.8515625,
+        5.72265625,
+        5.109375,
+        5.0703125
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_14371.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_14371.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 449,
+      "predictedTop1Label" : "boathouse",
+      "predictedTop1Score" : 6.171875,
+      "top5Indices" : [
+        449,
+        425,
+        497,
+        975,
+        807
+      ],
+      "top5Labels" : [
+        "boathouse",
+        "barn",
+        "church",
+        "lakeside",
+        "solar dish"
+      ],
+      "top5Scores" : [
+        6.171875,
+        3.81640625,
+        3.67578125,
+        3.39453125,
+        3.37109375
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_14582.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_14582.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 668,
+      "predictedTop1Label" : "mosque",
+      "predictedTop1Score" : 4.19921875,
+      "top5Indices" : [
+        668,
+        663,
+        833,
+        540,
+        812
+      ],
+      "top5Labels" : [
+        "mosque",
+        "monastery",
+        "submarine",
+        "drilling platform",
+        "space shuttle"
+      ],
+      "top5Scores" : [
+        4.19921875,
+        3.58984375,
+        3.2421875,
+        3.181640625,
+        3.0234375
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_14860.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_14860.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 884,
+      "predictedTop1Label" : "vault",
+      "predictedTop1Score" : 5.76953125,
+      "top5Indices" : [
+        884,
+        663,
+        743,
+        708,
+        406
+      ],
+      "top5Labels" : [
+        "vault",
+        "monastery",
+        "prison",
+        "pedestal",
+        "altar"
+      ],
+      "top5Scores" : [
+        5.76953125,
+        5.6953125,
+        4.79296875,
+        4.54296875,
+        4.453125
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_14900.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_14900.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 782,
+      "predictedTop1Label" : "screen",
+      "predictedTop1Score" : 5.2734375,
+      "top5Indices" : [
+        782,
+        598,
+        446,
+        620,
+        916
+      ],
+      "top5Labels" : [
+        "screen",
+        "home theater",
+        "binder",
+        "laptop",
+        "web site"
+      ],
+      "top5Scores" : [
+        5.2734375,
+        4.5625,
+        4.3125,
+        4.08203125,
+        4.01953125
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_16731.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_16731.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 663,
+      "predictedTop1Label" : "monastery",
+      "predictedTop1Score" : 7.28125,
+      "top5Indices" : [
+        663,
+        497,
+        660,
+        449,
+        442
+      ],
+      "top5Labels" : [
+        "monastery",
+        "church",
+        "mobile home",
+        "boathouse",
+        "bell cote"
+      ],
+      "top5Scores" : [
+        7.28125,
+        6.5546875,
+        4.84765625,
+        3.87109375,
+        3.654296875
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_17351.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_17351.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 884,
+      "predictedTop1Label" : "vault",
+      "predictedTop1Score" : 6.921875,
+      "top5Indices" : [
+        884,
+        406,
+        663,
+        497,
+        698
+      ],
+      "top5Labels" : [
+        "vault",
+        "altar",
+        "monastery",
+        "church",
+        "palace"
+      ],
+      "top5Scores" : [
+        6.921875,
+        6.69140625,
+        6.1953125,
+        6.015625,
+        4.8515625
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_17551.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_17551.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 663,
+      "predictedTop1Label" : "monastery",
+      "predictedTop1Score" : 6.05078125,
+      "top5Indices" : [
+        663,
+        497,
+        698,
+        442,
+        483
+      ],
+      "top5Labels" : [
+        "monastery",
+        "church",
+        "palace",
+        "bell cote",
+        "castle"
+      ],
+      "top5Scores" : [
+        6.05078125,
+        5.953125,
+        4.78125,
+        4.265625,
+        4.2265625
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_1870.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_1870.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 663,
+      "predictedTop1Label" : "monastery",
+      "predictedTop1Score" : 4.890625,
+      "top5Indices" : [
+        663,
+        497,
+        649,
+        727,
+        425
+      ],
+      "top5Labels" : [
+        "monastery",
+        "church",
+        "megalith",
+        "planetarium",
+        "barn"
+      ],
+      "top5Scores" : [
+        4.890625,
+        4.703125,
+        4.2734375,
+        4.25390625,
+        3.556640625
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_21591.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_21591.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 663,
+      "predictedTop1Label" : "monastery",
+      "predictedTop1Score" : 6.42578125,
+      "top5Indices" : [
+        663,
+        497,
+        698,
+        483,
+        442
+      ],
+      "top5Labels" : [
+        "monastery",
+        "church",
+        "palace",
+        "castle",
+        "bell cote"
+      ],
+      "top5Scores" : [
+        6.42578125,
+        6.24609375,
+        5.20703125,
+        4.60546875,
+        4.1640625
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_22500.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_22500.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 483,
+      "predictedTop1Label" : "castle",
+      "predictedTop1Score" : 5.69921875,
+      "top5Indices" : [
+        483,
+        663,
+        698,
+        442,
+        437
+      ],
+      "top5Labels" : [
+        "castle",
+        "monastery",
+        "palace",
+        "bell cote",
+        "beacon"
+      ],
+      "top5Scores" : [
+        5.69921875,
+        5.46875,
+        4.73046875,
+        4.09375,
+        3.859375
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_23510.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_23510.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 812,
+      "predictedTop1Label" : "space shuttle",
+      "predictedTop1Score" : 4.8046875,
+      "top5Indices" : [
+        812,
+        657,
+        744,
+        497,
+        835
+      ],
+      "top5Labels" : [
+        "space shuttle",
+        "missile",
+        "projectile",
+        "church",
+        "sundial"
+      ],
+      "top5Scores" : [
+        4.8046875,
+        4.66796875,
+        4.60546875,
+        4.15234375,
+        3.8359375
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_2592.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_2592.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 975,
+      "predictedTop1Label" : "lakeside",
+      "predictedTop1Score" : 3.5703125,
+      "top5Indices" : [
+        975,
+        978,
+        912,
+        980,
+        556
+      ],
+      "top5Labels" : [
+        "lakeside",
+        "seashore",
+        "worm fence",
+        "volcano",
+        "fire screen"
+      ],
+      "top5Scores" : [
+        3.5703125,
+        3.541015625,
+        3.158203125,
+        2.978515625,
+        2.888671875
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_2660.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_2660.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 663,
+      "predictedTop1Label" : "monastery",
+      "predictedTop1Score" : 5.44140625,
+      "top5Indices" : [
+        663,
+        698,
+        442,
+        668,
+        873
+      ],
+      "top5Labels" : [
+        "monastery",
+        "palace",
+        "bell cote",
+        "mosque",
+        "triumphal arch"
+      ],
+      "top5Scores" : [
+        5.44140625,
+        3.849609375,
+        3.845703125,
+        3.697265625,
+        3.638671875
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_26842.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_26842.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 970,
+      "predictedTop1Label" : "alp",
+      "predictedTop1Score" : 6.23828125,
+      "top5Indices" : [
+        970,
+        663,
+        979,
+        497,
+        832
+      ],
+      "top5Labels" : [
+        "alp",
+        "monastery",
+        "valley",
+        "church",
+        "stupa"
+      ],
+      "top5Scores" : [
+        6.23828125,
+        5.5703125,
+        5.203125,
+        4.92578125,
+        4.61328125
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_27060.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_27060.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 483,
+      "predictedTop1Label" : "castle",
+      "predictedTop1Score" : 5.49609375,
+      "top5Indices" : [
+        483,
+        663,
+        442,
+        497,
+        912
+      ],
+      "top5Labels" : [
+        "castle",
+        "monastery",
+        "bell cote",
+        "church",
+        "worm fence"
+      ],
+      "top5Scores" : [
+        5.49609375,
+        5.4609375,
+        4.4609375,
+        4.421875,
+        4.41796875
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_30232.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_30232.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 663,
+      "predictedTop1Label" : "monastery",
+      "predictedTop1Score" : 6.31640625,
+      "top5Indices" : [
+        663,
+        497,
+        442,
+        668,
+        698
+      ],
+      "top5Labels" : [
+        "monastery",
+        "church",
+        "bell cote",
+        "mosque",
+        "palace"
+      ],
+      "top5Scores" : [
+        6.31640625,
+        5.13671875,
+        4.61328125,
+        3.763671875,
+        3.6953125
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_30642.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_30642.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 663,
+      "predictedTop1Label" : "monastery",
+      "predictedTop1Score" : 7.72265625,
+      "top5Indices" : [
+        663,
+        497,
+        483,
+        442,
+        698
+      ],
+      "top5Labels" : [
+        "monastery",
+        "church",
+        "castle",
+        "bell cote",
+        "palace"
+      ],
+      "top5Scores" : [
+        7.72265625,
+        6.44921875,
+        5.49609375,
+        4.7109375,
+        4.59375
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_30751.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_30751.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 663,
+      "predictedTop1Label" : "monastery",
+      "predictedTop1Score" : 6.9765625,
+      "top5Indices" : [
+        663,
+        442,
+        437,
+        497,
+        698
+      ],
+      "top5Labels" : [
+        "monastery",
+        "bell cote",
+        "beacon",
+        "church",
+        "palace"
+      ],
+      "top5Scores" : [
+        6.9765625,
+        5.42578125,
+        5.41796875,
+        4.484375,
+        3.904296875
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_3320.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_3320.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 663,
+      "predictedTop1Label" : "monastery",
+      "predictedTop1Score" : 5.87890625,
+      "top5Indices" : [
+        663,
+        497,
+        442,
+        437,
+        483
+      ],
+      "top5Labels" : [
+        "monastery",
+        "church",
+        "bell cote",
+        "beacon",
+        "castle"
+      ],
+      "top5Scores" : [
+        5.87890625,
+        5.37890625,
+        3.958984375,
+        3.728515625,
+        3.1875
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_3432.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_3432.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 884,
+      "predictedTop1Label" : "vault",
+      "predictedTop1Score" : 6.90234375,
+      "top5Indices" : [
+        884,
+        538,
+        904,
+        741,
+        698
+      ],
+      "top5Labels" : [
+        "vault",
+        "dome",
+        "window screen",
+        "prayer rug",
+        "palace"
+      ],
+      "top5Scores" : [
+        6.90234375,
+        5.67578125,
+        4.1796875,
+        4.15625,
+        4.09375
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_40120.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_40120.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 663,
+      "predictedTop1Label" : "monastery",
+      "predictedTop1Score" : 5.43359375,
+      "top5Indices" : [
+        663,
+        483,
+        442,
+        497,
+        698
+      ],
+      "top5Labels" : [
+        "monastery",
+        "castle",
+        "bell cote",
+        "church",
+        "palace"
+      ],
+      "top5Scores" : [
+        5.43359375,
+        4.81640625,
+        4.05859375,
+        3.84375,
+        3.5546875
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_4731.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_4731.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 871,
+      "predictedTop1Label" : "trimaran",
+      "predictedTop1Score" : 4.5390625,
+      "top5Indices" : [
+        871,
+        449,
+        484,
+        554,
+        914
+      ],
+      "top5Labels" : [
+        "trimaran",
+        "boathouse",
+        "catamaran",
+        "fireboat",
+        "yawl"
+      ],
+      "top5Scores" : [
+        4.5390625,
+        4.31640625,
+        4.17578125,
+        4.1484375,
+        4.046875
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_4902.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_4902.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 663,
+      "predictedTop1Label" : "monastery",
+      "predictedTop1Score" : 5.53125,
+      "top5Indices" : [
+        663,
+        442,
+        497,
+        682,
+        698
+      ],
+      "top5Labels" : [
+        "monastery",
+        "bell cote",
+        "church",
+        "obelisk",
+        "palace"
+      ],
+      "top5Scores" : [
+        5.53125,
+        5.20703125,
+        5.01171875,
+        4.59375,
+        3.900390625
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_5260.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_5260.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 663,
+      "predictedTop1Label" : "monastery",
+      "predictedTop1Score" : 5.1015625,
+      "top5Indices" : [
+        663,
+        497,
+        406,
+        442,
+        884
+      ],
+      "top5Labels" : [
+        "monastery",
+        "church",
+        "altar",
+        "bell cote",
+        "vault"
+      ],
+      "top5Scores" : [
+        5.1015625,
+        4.8046875,
+        4.19140625,
+        4.08203125,
+        3.619140625
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_53111.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_53111.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 449,
+      "predictedTop1Label" : "boathouse",
+      "predictedTop1Score" : 5.08203125,
+      "top5Indices" : [
+        449,
+        425,
+        497,
+        442,
+        663
+      ],
+      "top5Labels" : [
+        "boathouse",
+        "barn",
+        "church",
+        "bell cote",
+        "monastery"
+      ],
+      "top5Scores" : [
+        5.08203125,
+        4.94140625,
+        4.0234375,
+        3.759765625,
+        3.669921875
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_57572.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_57572.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 663,
+      "predictedTop1Label" : "monastery",
+      "predictedTop1Score" : 7.31640625,
+      "top5Indices" : [
+        663,
+        442,
+        497,
+        483,
+        698
+      ],
+      "top5Labels" : [
+        "monastery",
+        "bell cote",
+        "church",
+        "castle",
+        "palace"
+      ],
+      "top5Scores" : [
+        7.31640625,
+        5.921875,
+        5.625,
+        5.3203125,
+        4.38671875
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_5942.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_5942.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 663,
+      "predictedTop1Label" : "monastery",
+      "predictedTop1Score" : 6.40234375,
+      "top5Indices" : [
+        663,
+        497,
+        483,
+        442,
+        698
+      ],
+      "top5Labels" : [
+        "monastery",
+        "church",
+        "castle",
+        "bell cote",
+        "palace"
+      ],
+      "top5Scores" : [
+        6.40234375,
+        5.94140625,
+        4.5859375,
+        4.26171875,
+        3.615234375
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_6292.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_6292.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 743,
+      "predictedTop1Label" : "prison",
+      "predictedTop1Score" : 3.849609375,
+      "top5Indices" : [
+        743,
+        800,
+        556,
+        854,
+        917
+      ],
+      "top5Labels" : [
+        "prison",
+        "slot",
+        "fire screen",
+        "theater curtain",
+        "comic book"
+      ],
+      "top5Scores" : [
+        3.849609375,
+        3.18359375,
+        3,
+        2.908203125,
+        2.853515625
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_6720.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_6720.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 663,
+      "predictedTop1Label" : "monastery",
+      "predictedTop1Score" : 6.27734375,
+      "top5Indices" : [
+        663,
+        483,
+        497,
+        442,
+        698
+      ],
+      "top5Labels" : [
+        "monastery",
+        "castle",
+        "church",
+        "bell cote",
+        "palace"
+      ],
+      "top5Scores" : [
+        6.27734375,
+        5.76171875,
+        5.75,
+        4.875,
+        4.23046875
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_6831.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_6831.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 663,
+      "predictedTop1Label" : "monastery",
+      "predictedTop1Score" : 6.40625,
+      "top5Indices" : [
+        663,
+        442,
+        497,
+        698,
+        483
+      ],
+      "top5Labels" : [
+        "monastery",
+        "bell cote",
+        "church",
+        "palace",
+        "castle"
+      ],
+      "top5Scores" : [
+        6.40625,
+        5.41015625,
+        4.34375,
+        4.25390625,
+        3.990234375
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_8132.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_8132.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 668,
+      "predictedTop1Label" : "mosque",
+      "predictedTop1Score" : 5.16015625,
+      "top5Indices" : [
+        668,
+        538,
+        663,
+        497,
+        437
+      ],
+      "top5Labels" : [
+        "mosque",
+        "dome",
+        "monastery",
+        "church",
+        "beacon"
+      ],
+      "top5Scores" : [
+        5.16015625,
+        5.15625,
+        4.02734375,
+        3.9609375,
+        3.388671875
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_8911.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_8911.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 663,
+      "predictedTop1Label" : "monastery",
+      "predictedTop1Score" : 7.80859375,
+      "top5Indices" : [
+        663,
+        442,
+        497,
+        698,
+        483
+      ],
+      "top5Labels" : [
+        "monastery",
+        "bell cote",
+        "church",
+        "palace",
+        "castle"
+      ],
+      "top5Scores" : [
+        7.80859375,
+        6.94921875,
+        6.20703125,
+        4.68359375,
+        4.01171875
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_9580.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_9580.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 442,
+      "predictedTop1Label" : "bell cote",
+      "predictedTop1Score" : 6.5859375,
+      "top5Indices" : [
+        442,
+        663,
+        698,
+        497,
+        409
+      ],
+      "top5Labels" : [
+        "bell cote",
+        "monastery",
+        "palace",
+        "church",
+        "analog clock"
+      ],
+      "top5Scores" : [
+        6.5859375,
+        6.09765625,
+        6.06640625,
+        5.66796875,
+        4.31640625
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_9632.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_9632.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 663,
+      "predictedTop1Label" : "monastery",
+      "predictedTop1Score" : 7.5703125,
+      "top5Indices" : [
+        663,
+        497,
+        698,
+        442,
+        576
+      ],
+      "top5Labels" : [
+        "monastery",
+        "church",
+        "palace",
+        "bell cote",
+        "gondola"
+      ],
+      "top5Scores" : [
+        7.5703125,
+        6.48828125,
+        6.45703125,
+        5.95703125,
+        3.775390625
+      ]
+    },
+    {
+      "groundTruthIndex" : 497,
+      "groundTruthLabel" : "church",
+      "imageID" : "images\/n03028079\/imagenette2-160-subset-500__n03028079__n03028079_9702.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03028079__n03028079_9702.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 663,
+      "predictedTop1Label" : "monastery",
+      "predictedTop1Score" : 6.7734375,
+      "top5Indices" : [
+        663,
+        497,
+        442,
+        698,
+        483
+      ],
+      "top5Labels" : [
+        "monastery",
+        "church",
+        "bell cote",
+        "palace",
+        "castle"
+      ],
+      "top5Scores" : [
+        6.7734375,
+        6.109375,
+        5.67578125,
+        4.2890625,
+        4.03515625
+      ]
+    },
+    {
+      "groundTruthIndex" : 566,
+      "groundTruthLabel" : "French horn",
+      "imageID" : "images\/n03394916\/imagenette2-160-subset-500__n03394916__n03394916_26270.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03394916__n03394916_26270.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 776,
+      "predictedTop1Label" : "sax",
+      "predictedTop1Score" : 5.35546875,
+      "top5Indices" : [
+        776,
+        683,
+        566,
+        513,
+        432
+      ],
+      "top5Labels" : [
+        "sax",
+        "oboe",
+        "French horn",
+        "cornet",
+        "bassoon"
+      ],
+      "top5Scores" : [
+        5.35546875,
+        4.67578125,
+        3.630859375,
+        3.474609375,
+        3.181640625
+      ]
+    },
+    {
+      "groundTruthIndex" : 566,
+      "groundTruthLabel" : "French horn",
+      "imageID" : "images\/n03394916\/imagenette2-160-subset-500__n03394916__n03394916_26831.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03394916__n03394916_26831.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 676,
+      "predictedTop1Label" : "muzzle",
+      "predictedTop1Score" : 4.80859375,
+      "top5Indices" : [
+        676,
+        356,
+        359,
+        333,
+        566
+      ],
+      "top5Labels" : [
+        "muzzle",
+        "weasel",
+        "black-footed ferret",
+        "hamster",
+        "French horn"
+      ],
+      "top5Scores" : [
+        4.80859375,
+        4.66796875,
+        4.6015625,
+        4.3984375,
+        4.26171875
+      ]
+    },
+    {
+      "groundTruthIndex" : 566,
+      "groundTruthLabel" : "French horn",
+      "imageID" : "images\/n03394916\/imagenette2-160-subset-500__n03394916__n03394916_29940.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03394916__n03394916_29940.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 857,
+      "predictedTop1Label" : "throne",
+      "predictedTop1Score" : 5.40234375,
+      "top5Indices" : [
+        857,
+        406,
+        887,
+        865,
+        476
+      ],
+      "top5Labels" : [
+        "throne",
+        "altar",
+        "vestment",
+        "toyshop",
+        "carousel"
+      ],
+      "top5Scores" : [
+        5.40234375,
+        4.0703125,
+        3.751953125,
+        3.46875,
+        3.46484375
+      ]
+    },
+    {
+      "groundTruthIndex" : 566,
+      "groundTruthLabel" : "French horn",
+      "imageID" : "images\/n03394916\/imagenette2-160-subset-500__n03394916__n03394916_30261.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03394916__n03394916_30261.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 683,
+      "predictedTop1Label" : "oboe",
+      "predictedTop1Score" : 5.5703125,
+      "top5Indices" : [
+        683,
+        776,
+        566,
+        617,
+        513
+      ],
+      "top5Labels" : [
+        "oboe",
+        "sax",
+        "French horn",
+        "lab coat",
+        "cornet"
+      ],
+      "top5Scores" : [
+        5.5703125,
+        5.1796875,
+        5.14453125,
+        3.994140625,
+        3.810546875
+      ]
+    },
+    {
+      "groundTruthIndex" : 566,
+      "groundTruthLabel" : "French horn",
+      "imageID" : "images\/n03394916\/imagenette2-160-subset-500__n03394916__n03394916_32582.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03394916__n03394916_32582.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 513,
+      "predictedTop1Label" : "cornet",
+      "predictedTop1Score" : 6.21875,
+      "top5Indices" : [
+        513,
+        566,
+        875,
+        776,
+        683
+      ],
+      "top5Labels" : [
+        "cornet",
+        "French horn",
+        "trombone",
+        "sax",
+        "oboe"
+      ],
+      "top5Scores" : [
+        6.21875,
+        5.484375,
+        5.16796875,
+        2.96484375,
+        2.291015625
+      ]
+    },
+    {
+      "groundTruthIndex" : 566,
+      "groundTruthLabel" : "French horn",
+      "imageID" : "images\/n03394916\/imagenette2-160-subset-500__n03394916__n03394916_33481.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03394916__n03394916_33481.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 422,
+      "predictedTop1Label" : "barbell",
+      "predictedTop1Score" : 4.421875,
+      "top5Indices" : [
+        422,
+        399,
+        683,
+        543,
+        413
+      ],
+      "top5Labels" : [
+        "barbell",
+        "abaya",
+        "oboe",
+        "dumbbell",
+        "assault rifle"
+      ],
+      "top5Scores" : [
+        4.421875,
+        4.15234375,
+        4.05859375,
+        3.6796875,
+        3.57421875
+      ]
+    },
+    {
+      "groundTruthIndex" : 566,
+      "groundTruthLabel" : "French horn",
+      "imageID" : "images\/n03394916\/imagenette2-160-subset-500__n03394916__n03394916_37852.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03394916__n03394916_37852.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 843,
+      "predictedTop1Label" : "swing",
+      "predictedTop1Score" : 5.14453125,
+      "top5Indices" : [
+        843,
+        872,
+        456,
+        559,
+        807
+      ],
+      "top5Labels" : [
+        "swing",
+        "tripod",
+        "bow",
+        "folding chair",
+        "solar dish"
+      ],
+      "top5Scores" : [
+        5.14453125,
+        4.62109375,
+        4.23046875,
+        3.896484375,
+        3.78125
+      ]
+    },
+    {
+      "groundTruthIndex" : 566,
+      "groundTruthLabel" : "French horn",
+      "imageID" : "images\/n03394916\/imagenette2-160-subset-500__n03394916__n03394916_38050.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03394916__n03394916_38050.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 683,
+      "predictedTop1Label" : "oboe",
+      "predictedTop1Score" : 4.82421875,
+      "top5Indices" : [
+        683,
+        399,
+        689,
+        869,
+        566
+      ],
+      "top5Labels" : [
+        "oboe",
+        "abaya",
+        "overskirt",
+        "trench coat",
+        "French horn"
+      ],
+      "top5Scores" : [
+        4.82421875,
+        3.640625,
+        3.525390625,
+        3.38671875,
+        3.1484375
+      ]
+    },
+    {
+      "groundTruthIndex" : 566,
+      "groundTruthLabel" : "French horn",
+      "imageID" : "images\/n03394916\/imagenette2-160-subset-500__n03394916__n03394916_38830.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03394916__n03394916_38830.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 981,
+      "predictedTop1Label" : "ballplayer",
+      "predictedTop1Score" : 4.0546875,
+      "top5Indices" : [
+        981,
+        566,
+        513,
+        433,
+        768
+      ],
+      "top5Labels" : [
+        "ballplayer",
+        "French horn",
+        "cornet",
+        "bathing cap",
+        "rugby ball"
+      ],
+      "top5Scores" : [
+        4.0546875,
+        3.361328125,
+        3.298828125,
+        3.111328125,
+        3.09765625
+      ]
+    },
+    {
+      "groundTruthIndex" : 566,
+      "groundTruthLabel" : "French horn",
+      "imageID" : "images\/n03394916\/imagenette2-160-subset-500__n03394916__n03394916_42200.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03394916__n03394916_42200.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 743,
+      "predictedTop1Label" : "prison",
+      "predictedTop1Score" : 4.62109375,
+      "top5Indices" : [
+        743,
+        566,
+        513,
+        776,
+        875
+      ],
+      "top5Labels" : [
+        "prison",
+        "French horn",
+        "cornet",
+        "sax",
+        "trombone"
+      ],
+      "top5Scores" : [
+        4.62109375,
+        4.4609375,
+        3.4921875,
+        3.23046875,
+        3.21484375
+      ]
+    },
+    {
+      "groundTruthIndex" : 566,
+      "groundTruthLabel" : "French horn",
+      "imageID" : "images\/n03394916\/imagenette2-160-subset-500__n03394916__n03394916_43022.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03394916__n03394916_43022.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 598,
+      "predictedTop1Label" : "home theater",
+      "predictedTop1Score" : 4.1484375,
+      "top5Indices" : [
+        598,
+        831,
+        548,
+        905,
+        453
+      ],
+      "top5Labels" : [
+        "home theater",
+        "studio couch",
+        "entertainment center",
+        "window shade",
+        "bookcase"
+      ],
+      "top5Scores" : [
+        4.1484375,
+        3.912109375,
+        3.86328125,
+        3.69140625,
+        3.681640625
+      ]
+    },
+    {
+      "groundTruthIndex" : 566,
+      "groundTruthLabel" : "French horn",
+      "imageID" : "images\/n03394916\/imagenette2-160-subset-500__n03394916__n03394916_44060.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03394916__n03394916_44060.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 854,
+      "predictedTop1Label" : "theater curtain",
+      "predictedTop1Score" : 7.7421875,
+      "top5Indices" : [
+        854,
+        762,
+        857,
+        498,
+        406
+      ],
+      "top5Labels" : [
+        "theater curtain",
+        "restaurant",
+        "throne",
+        "cinema",
+        "altar"
+      ],
+      "top5Scores" : [
+        7.7421875,
+        4.47265625,
+        4.13671875,
+        3.1796875,
+        3.15625
+      ]
+    },
+    {
+      "groundTruthIndex" : 566,
+      "groundTruthLabel" : "French horn",
+      "imageID" : "images\/n03394916\/imagenette2-160-subset-500__n03394916__n03394916_46670.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03394916__n03394916_46670.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 571,
+      "predictedTop1Label" : "gas pump",
+      "predictedTop1Score" : 3.759765625,
+      "top5Indices" : [
+        571,
+        506,
+        843,
+        566,
+        439
+      ],
+      "top5Labels" : [
+        "gas pump",
+        "coil",
+        "swing",
+        "French horn",
+        "bearskin"
+      ],
+      "top5Scores" : [
+        3.759765625,
+        3.048828125,
+        2.994140625,
+        2.859375,
+        2.837890625
+      ]
+    },
+    {
+      "groundTruthIndex" : 566,
+      "groundTruthLabel" : "French horn",
+      "imageID" : "images\/n03394916\/imagenette2-160-subset-500__n03394916__n03394916_47022.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03394916__n03394916_47022.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 822,
+      "predictedTop1Label" : "steel drum",
+      "predictedTop1Score" : 4.40625,
+      "top5Indices" : [
+        822,
+        566,
+        830,
+        612,
+        807
+      ],
+      "top5Labels" : [
+        "steel drum",
+        "French horn",
+        "stretcher",
+        "jinrikisha",
+        "solar dish"
+      ],
+      "top5Scores" : [
+        4.40625,
+        4.1328125,
+        3.51171875,
+        3.498046875,
+        3.353515625
+      ]
+    },
+    {
+      "groundTruthIndex" : 566,
+      "groundTruthLabel" : "French horn",
+      "imageID" : "images\/n03394916\/imagenette2-160-subset-500__n03394916__n03394916_47300.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03394916__n03394916_47300.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 522,
+      "predictedTop1Label" : "croquet ball",
+      "predictedTop1Score" : 3.140625,
+      "top5Indices" : [
+        522,
+        529,
+        639,
+        739,
+        601
+      ],
+      "top5Labels" : [
+        "croquet ball",
+        "diaper",
+        "maillot",
+        "potter's wheel",
+        "hoopskirt"
+      ],
+      "top5Scores" : [
+        3.140625,
+        2.9296875,
+        2.623046875,
+        2.2421875,
+        2.203125
+      ]
+    },
+    {
+      "groundTruthIndex" : 566,
+      "groundTruthLabel" : "French horn",
+      "imageID" : "images\/n03394916\/imagenette2-160-subset-500__n03394916__n03394916_47982.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03394916__n03394916_47982.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 676,
+      "predictedTop1Label" : "muzzle",
+      "predictedTop1Score" : 6.9140625,
+      "top5Indices" : [
+        676,
+        566,
+        513,
+        684,
+        846
+      ],
+      "top5Labels" : [
+        "muzzle",
+        "French horn",
+        "cornet",
+        "ocarina",
+        "table lamp"
+      ],
+      "top5Scores" : [
+        6.9140625,
+        6.73828125,
+        3.962890625,
+        3.41796875,
+        3.294921875
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_10520.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_10520.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 675,
+      "predictedTop1Label" : "moving van",
+      "predictedTop1Score" : 6.37109375,
+      "top5Indices" : [
+        675,
+        867,
+        569,
+        408,
+        864
+      ],
+      "top5Labels" : [
+        "moving van",
+        "trailer truck",
+        "garbage truck",
+        "amphibian",
+        "tow truck"
+      ],
+      "top5Scores" : [
+        6.37109375,
+        5.06640625,
+        3.470703125,
+        3.27734375,
+        3.236328125
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_1330.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_1330.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 645,
+      "predictedTop1Label" : "maypole",
+      "predictedTop1Score" : 4.2421875,
+      "top5Indices" : [
+        645,
+        660,
+        675,
+        612,
+        830
+      ],
+      "top5Labels" : [
+        "maypole",
+        "mobile home",
+        "moving van",
+        "jinrikisha",
+        "stretcher"
+      ],
+      "top5Scores" : [
+        4.2421875,
+        4.02734375,
+        3.962890625,
+        3.955078125,
+        3.5625
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_1492.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_1492.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 675,
+      "predictedTop1Label" : "moving van",
+      "predictedTop1Score" : 5.1640625,
+      "top5Indices" : [
+        675,
+        860,
+        480,
+        831,
+        624
+      ],
+      "top5Labels" : [
+        "moving van",
+        "tobacco shop",
+        "cash machine",
+        "studio couch",
+        "library"
+      ],
+      "top5Scores" : [
+        5.1640625,
+        4.3046875,
+        3.146484375,
+        3.123046875,
+        3.05078125
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_1651.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_1651.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 675,
+      "predictedTop1Label" : "moving van",
+      "predictedTop1Score" : 6.2265625,
+      "top5Indices" : [
+        675,
+        660,
+        569,
+        867,
+        449
+      ],
+      "top5Labels" : [
+        "moving van",
+        "mobile home",
+        "garbage truck",
+        "trailer truck",
+        "boathouse"
+      ],
+      "top5Scores" : [
+        6.2265625,
+        5.109375,
+        4.91796875,
+        3.34765625,
+        3.234375
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_16871.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_16871.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 675,
+      "predictedTop1Label" : "moving van",
+      "predictedTop1Score" : 6.18359375,
+      "top5Indices" : [
+        675,
+        757,
+        569,
+        660,
+        867
+      ],
+      "top5Labels" : [
+        "moving van",
+        "recreational vehicle",
+        "garbage truck",
+        "mobile home",
+        "trailer truck"
+      ],
+      "top5Scores" : [
+        6.18359375,
+        5.40234375,
+        5.1171875,
+        4.91796875,
+        4.33203125
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_17862.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_17862.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 856,
+      "predictedTop1Label" : "thresher",
+      "predictedTop1Score" : 4.47265625,
+      "top5Indices" : [
+        856,
+        867,
+        569,
+        675,
+        803
+      ],
+      "top5Labels" : [
+        "thresher",
+        "trailer truck",
+        "garbage truck",
+        "moving van",
+        "snowplow"
+      ],
+      "top5Scores" : [
+        4.47265625,
+        4.27734375,
+        4.07421875,
+        3.7734375,
+        3.6953125
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_19020.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_19020.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 660,
+      "predictedTop1Label" : "mobile home",
+      "predictedTop1Score" : 5.10546875,
+      "top5Indices" : [
+        660,
+        867,
+        705,
+        675,
+        727
+      ],
+      "top5Labels" : [
+        "mobile home",
+        "trailer truck",
+        "passenger car",
+        "moving van",
+        "planetarium"
+      ],
+      "top5Scores" : [
+        5.10546875,
+        4.52734375,
+        4.3984375,
+        4.32421875,
+        4.27734375
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_20892.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_20892.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 675,
+      "predictedTop1Label" : "moving van",
+      "predictedTop1Score" : 6.4375,
+      "top5Indices" : [
+        675,
+        867,
+        569,
+        864,
+        660
+      ],
+      "top5Labels" : [
+        "moving van",
+        "trailer truck",
+        "garbage truck",
+        "tow truck",
+        "mobile home"
+      ],
+      "top5Scores" : [
+        6.4375,
+        6.203125,
+        5.40234375,
+        4.55078125,
+        3.638671875
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_25411.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_25411.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 654,
+      "predictedTop1Label" : "minibus",
+      "predictedTop1Score" : 4.640625,
+      "top5Indices" : [
+        654,
+        569,
+        874,
+        675,
+        829
+      ],
+      "top5Labels" : [
+        "minibus",
+        "garbage truck",
+        "trolleybus",
+        "moving van",
+        "streetcar"
+      ],
+      "top5Scores" : [
+        4.640625,
+        4.46484375,
+        4.39453125,
+        4.1484375,
+        3.41015625
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_27320.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_27320.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 867,
+      "predictedTop1Label" : "trailer truck",
+      "predictedTop1Score" : 5.76171875,
+      "top5Indices" : [
+        867,
+        569,
+        675,
+        864,
+        705
+      ],
+      "top5Labels" : [
+        "trailer truck",
+        "garbage truck",
+        "moving van",
+        "tow truck",
+        "passenger car"
+      ],
+      "top5Scores" : [
+        5.76171875,
+        5.296875,
+        4.76953125,
+        3.6796875,
+        3.03515625
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_3272.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_3272.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 856,
+      "predictedTop1Label" : "thresher",
+      "predictedTop1Score" : 5.69921875,
+      "top5Indices" : [
+        856,
+        864,
+        569,
+        867,
+        675
+      ],
+      "top5Labels" : [
+        "thresher",
+        "tow truck",
+        "garbage truck",
+        "trailer truck",
+        "moving van"
+      ],
+      "top5Scores" : [
+        5.69921875,
+        5.21484375,
+        4.03515625,
+        3.740234375,
+        3.638671875
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_3280.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_3280.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 469,
+      "predictedTop1Label" : "caldron",
+      "predictedTop1Score" : 3.830078125,
+      "top5Indices" : [
+        469,
+        126,
+        691,
+        122,
+        712
+      ],
+      "top5Labels" : [
+        "caldron",
+        "isopod",
+        "oxygen mask",
+        "American lobster",
+        "Petri dish"
+      ],
+      "top5Scores" : [
+        3.830078125,
+        3.69140625,
+        3.494140625,
+        3.408203125,
+        3.390625
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_3331.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_3331.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 978,
+      "predictedTop1Label" : "seashore",
+      "predictedTop1Score" : 5.59765625,
+      "top5Indices" : [
+        978,
+        975,
+        976,
+        437,
+        977
+      ],
+      "top5Labels" : [
+        "seashore",
+        "lakeside",
+        "promontory",
+        "beacon",
+        "sandbar"
+      ],
+      "top5Scores" : [
+        5.59765625,
+        4.66015625,
+        4.484375,
+        4.171875,
+        3.46875
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_3482.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_3482.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 634,
+      "predictedTop1Label" : "lumbermill",
+      "predictedTop1Score" : 4.95703125,
+      "top5Indices" : [
+        634,
+        913,
+        569,
+        847,
+        519
+      ],
+      "top5Labels" : [
+        "lumbermill",
+        "wreck",
+        "garbage truck",
+        "tank",
+        "crate"
+      ],
+      "top5Scores" : [
+        4.95703125,
+        3.900390625,
+        3.841796875,
+        3.484375,
+        3.423828125
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_3600.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_3600.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 864,
+      "predictedTop1Label" : "tow truck",
+      "predictedTop1Score" : 4.32421875,
+      "top5Indices" : [
+        864,
+        751,
+        408,
+        802,
+        573
+      ],
+      "top5Labels" : [
+        "tow truck",
+        "racer",
+        "amphibian",
+        "snowmobile",
+        "go-kart"
+      ],
+      "top5Scores" : [
+        4.32421875,
+        4.23046875,
+        3.822265625,
+        3.78125,
+        3.640625
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_3792.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_3792.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 675,
+      "predictedTop1Label" : "moving van",
+      "predictedTop1Score" : 4.4765625,
+      "top5Indices" : [
+        675,
+        468,
+        569,
+        803,
+        864
+      ],
+      "top5Labels" : [
+        "moving van",
+        "cab",
+        "garbage truck",
+        "snowplow",
+        "tow truck"
+      ],
+      "top5Scores" : [
+        4.4765625,
+        3.7734375,
+        3.697265625,
+        3.66015625,
+        3.60546875
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_4600.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_4600.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 675,
+      "predictedTop1Label" : "moving van",
+      "predictedTop1Score" : 6.46484375,
+      "top5Indices" : [
+        675,
+        569,
+        660,
+        867,
+        757
+      ],
+      "top5Labels" : [
+        "moving van",
+        "garbage truck",
+        "mobile home",
+        "trailer truck",
+        "recreational vehicle"
+      ],
+      "top5Scores" : [
+        6.46484375,
+        5.66015625,
+        5.4609375,
+        5.046875,
+        4.8828125
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_5110.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_5110.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 864,
+      "predictedTop1Label" : "tow truck",
+      "predictedTop1Score" : 4.4140625,
+      "top5Indices" : [
+        864,
+        555,
+        867,
+        856,
+        705
+      ],
+      "top5Labels" : [
+        "tow truck",
+        "fire engine",
+        "trailer truck",
+        "thresher",
+        "passenger car"
+      ],
+      "top5Scores" : [
+        4.4140625,
+        4.26171875,
+        4.18359375,
+        3.326171875,
+        3.03125
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_5682.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_5682.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 612,
+      "predictedTop1Label" : "jinrikisha",
+      "predictedTop1Score" : 4.5546875,
+      "top5Indices" : [
+        612,
+        862,
+        830,
+        456,
+        569
+      ],
+      "top5Labels" : [
+        "jinrikisha",
+        "torch",
+        "stretcher",
+        "bow",
+        "garbage truck"
+      ],
+      "top5Scores" : [
+        4.5546875,
+        3.828125,
+        3.587890625,
+        3.486328125,
+        3.181640625
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_581.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_581.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 856,
+      "predictedTop1Label" : "thresher",
+      "predictedTop1Score" : 5.30859375,
+      "top5Indices" : [
+        856,
+        595,
+        408,
+        555,
+        407
+      ],
+      "top5Labels" : [
+        "thresher",
+        "harvester",
+        "amphibian",
+        "fire engine",
+        "ambulance"
+      ],
+      "top5Scores" : [
+        5.30859375,
+        4.57421875,
+        4.203125,
+        3.96484375,
+        3.828125
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_690.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_690.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 660,
+      "predictedTop1Label" : "mobile home",
+      "predictedTop1Score" : 5.16015625,
+      "top5Indices" : [
+        660,
+        867,
+        675,
+        975,
+        569
+      ],
+      "top5Labels" : [
+        "mobile home",
+        "trailer truck",
+        "moving van",
+        "lakeside",
+        "garbage truck"
+      ],
+      "top5Scores" : [
+        5.16015625,
+        4.51953125,
+        4.359375,
+        4.17578125,
+        3.876953125
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_8581.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_8581.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 675,
+      "predictedTop1Label" : "moving van",
+      "predictedTop1Score" : 6.54296875,
+      "top5Indices" : [
+        675,
+        569,
+        867,
+        757,
+        660
+      ],
+      "top5Labels" : [
+        "moving van",
+        "garbage truck",
+        "trailer truck",
+        "recreational vehicle",
+        "mobile home"
+      ],
+      "top5Scores" : [
+        6.54296875,
+        5.85546875,
+        5.7890625,
+        3.53125,
+        3.146484375
+      ]
+    },
+    {
+      "groundTruthIndex" : 569,
+      "groundTruthLabel" : "garbage truck",
+      "imageID" : "images\/n03417042\/imagenette2-160-subset-500__n03417042__n03417042_8630.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03417042__n03417042_8630.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 675,
+      "predictedTop1Label" : "moving van",
+      "predictedTop1Score" : 5.578125,
+      "top5Indices" : [
+        675,
+        867,
+        569,
+        856,
+        408
+      ],
+      "top5Labels" : [
+        "moving van",
+        "trailer truck",
+        "garbage truck",
+        "thresher",
+        "amphibian"
+      ],
+      "top5Scores" : [
+        5.578125,
+        5.2421875,
+        4.63671875,
+        4.140625,
+        3.771484375
+      ]
+    },
+    {
+      "groundTruthIndex" : 571,
+      "groundTruthLabel" : "gas pump",
+      "imageID" : "images\/n03425413\/imagenette2-160-subset-500__n03425413__ILSVRC2012_val_00001432.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03425413__ILSVRC2012_val_00001432.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 856,
+      "predictedTop1Label" : "thresher",
+      "predictedTop1Score" : 4.1796875,
+      "top5Indices" : [
+        856,
+        571,
+        555,
+        866,
+        595
+      ],
+      "top5Labels" : [
+        "thresher",
+        "gas pump",
+        "fire engine",
+        "tractor",
+        "harvester"
+      ],
+      "top5Scores" : [
+        4.1796875,
+        3.875,
+        3.685546875,
+        3.294921875,
+        3.142578125
+      ]
+    },
+    {
+      "groundTruthIndex" : 571,
+      "groundTruthLabel" : "gas pump",
+      "imageID" : "images\/n03425413\/imagenette2-160-subset-500__n03425413__n03425413_12722.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03425413__n03425413_12722.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 743,
+      "predictedTop1Label" : "prison",
+      "predictedTop1Score" : 5.19921875,
+      "top5Indices" : [
+        743,
+        571,
+        707,
+        708,
+        663
+      ],
+      "top5Labels" : [
+        "prison",
+        "gas pump",
+        "pay-phone",
+        "pedestal",
+        "monastery"
+      ],
+      "top5Scores" : [
+        5.19921875,
+        4.859375,
+        3.845703125,
+        3.7421875,
+        3.58203125
+      ]
+    },
+    {
+      "groundTruthIndex" : 571,
+      "groundTruthLabel" : "gas pump",
+      "imageID" : "images\/n03425413\/imagenette2-160-subset-500__n03425413__n03425413_13620.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03425413__n03425413_13620.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 583,
+      "predictedTop1Label" : "guillotine",
+      "predictedTop1Score" : 4.734375,
+      "top5Indices" : [
+        583,
+        634,
+        860,
+        733,
+        610
+      ],
+      "top5Labels" : [
+        "guillotine",
+        "lumbermill",
+        "tobacco shop",
+        "pole",
+        "jersey"
+      ],
+      "top5Scores" : [
+        4.734375,
+        4.4140625,
+        3.517578125,
+        3.408203125,
+        3.25
+      ]
+    },
+    {
+      "groundTruthIndex" : 571,
+      "groundTruthLabel" : "gas pump",
+      "imageID" : "images\/n03425413\/imagenette2-160-subset-500__n03425413__n03425413_13642.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03425413__n03425413_13642.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 660,
+      "predictedTop1Label" : "mobile home",
+      "predictedTop1Score" : 5.66796875,
+      "top5Indices" : [
+        660,
+        437,
+        756,
+        807,
+        744
+      ],
+      "top5Labels" : [
+        "mobile home",
+        "beacon",
+        "rain barrel",
+        "solar dish",
+        "projectile"
+      ],
+      "top5Scores" : [
+        5.66796875,
+        5.06640625,
+        5.0234375,
+        3.853515625,
+        3.646484375
+      ]
+    },
+    {
+      "groundTruthIndex" : 571,
+      "groundTruthLabel" : "gas pump",
+      "imageID" : "images\/n03425413\/imagenette2-160-subset-500__n03425413__n03425413_13741.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03425413__n03425413_13741.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 877,
+      "predictedTop1Label" : "turnstile",
+      "predictedTop1Score" : 3.90234375,
+      "top5Indices" : [
+        877,
+        675,
+        571,
+        856,
+        561
+      ],
+      "top5Labels" : [
+        "turnstile",
+        "moving van",
+        "gas pump",
+        "thresher",
+        "forklift"
+      ],
+      "top5Scores" : [
+        3.90234375,
+        3.751953125,
+        3.705078125,
+        3.482421875,
+        3.21875
+      ]
+    },
+    {
+      "groundTruthIndex" : 571,
+      "groundTruthLabel" : "gas pump",
+      "imageID" : "images\/n03425413\/imagenette2-160-subset-500__n03425413__n03425413_14040.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03425413__n03425413_14040.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 675,
+      "predictedTop1Label" : "moving van",
+      "predictedTop1Score" : 4.2421875,
+      "top5Indices" : [
+        675,
+        612,
+        747,
+        654,
+        450
+      ],
+      "top5Labels" : [
+        "moving van",
+        "jinrikisha",
+        "punching bag",
+        "minibus",
+        "bobsled"
+      ],
+      "top5Scores" : [
+        4.2421875,
+        3.90625,
+        3.435546875,
+        3.25390625,
+        3.126953125
+      ]
+    },
+    {
+      "groundTruthIndex" : 571,
+      "groundTruthLabel" : "gas pump",
+      "imageID" : "images\/n03425413\/imagenette2-160-subset-500__n03425413__n03425413_14280.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03425413__n03425413_14280.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 864,
+      "predictedTop1Label" : "tow truck",
+      "predictedTop1Score" : 3.5234375,
+      "top5Indices" : [
+        864,
+        511,
+        672,
+        717,
+        675
+      ],
+      "top5Labels" : [
+        "tow truck",
+        "convertible",
+        "mountain tent",
+        "pickup",
+        "moving van"
+      ],
+      "top5Scores" : [
+        3.5234375,
+        3.2890625,
+        3.125,
+        2.85546875,
+        2.7890625
+      ]
+    },
+    {
+      "groundTruthIndex" : 571,
+      "groundTruthLabel" : "gas pump",
+      "imageID" : "images\/n03425413\/imagenette2-160-subset-500__n03425413__n03425413_14510.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03425413__n03425413_14510.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 675,
+      "predictedTop1Label" : "moving van",
+      "predictedTop1Score" : 5.7421875,
+      "top5Indices" : [
+        675,
+        446,
+        921,
+        686,
+        419
+      ],
+      "top5Labels" : [
+        "moving van",
+        "binder",
+        "book jacket",
+        "oil filter",
+        "Band Aid"
+      ],
+      "top5Scores" : [
+        5.7421875,
+        4.40234375,
+        4.14453125,
+        3.75,
+        3.498046875
+      ]
+    },
+    {
+      "groundTruthIndex" : 571,
+      "groundTruthLabel" : "gas pump",
+      "imageID" : "images\/n03425413\/imagenette2-160-subset-500__n03425413__n03425413_14672.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03425413__n03425413_14672.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 901,
+      "predictedTop1Label" : "whiskey jug",
+      "predictedTop1Score" : 4.41015625,
+      "top5Indices" : [
+        901,
+        921,
+        571,
+        844,
+        715
+      ],
+      "top5Labels" : [
+        "whiskey jug",
+        "book jacket",
+        "gas pump",
+        "switch",
+        "pickelhaube"
+      ],
+      "top5Scores" : [
+        4.41015625,
+        3.6484375,
+        3.3984375,
+        3.150390625,
+        3.078125
+      ]
+    },
+    {
+      "groundTruthIndex" : 571,
+      "groundTruthLabel" : "gas pump",
+      "imageID" : "images\/n03425413\/imagenette2-160-subset-500__n03425413__n03425413_17322.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03425413__n03425413_17322.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 675,
+      "predictedTop1Label" : "moving van",
+      "predictedTop1Score" : 5.0546875,
+      "top5Indices" : [
+        675,
+        571,
+        660,
+        519,
+        446
+      ],
+      "top5Labels" : [
+        "moving van",
+        "gas pump",
+        "mobile home",
+        "crate",
+        "binder"
+      ],
+      "top5Scores" : [
+        5.0546875,
+        4.109375,
+        3.416015625,
+        3.048828125,
+        2.794921875
+      ]
+    },
+    {
+      "groundTruthIndex" : 571,
+      "groundTruthLabel" : "gas pump",
+      "imageID" : "images\/n03425413\/imagenette2-160-subset-500__n03425413__n03425413_18390.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03425413__n03425413_18390.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 482,
+      "predictedTop1Label" : "cassette player",
+      "predictedTop1Score" : 4.578125,
+      "top5Indices" : [
+        482,
+        848,
+        571,
+        707,
+        886
+      ],
+      "top5Labels" : [
+        "cassette player",
+        "tape player",
+        "gas pump",
+        "pay-phone",
+        "vending machine"
+      ],
+      "top5Scores" : [
+        4.578125,
+        4.484375,
+        3.935546875,
+        3.376953125,
+        3.35546875
+      ]
+    },
+    {
+      "groundTruthIndex" : 571,
+      "groundTruthLabel" : "gas pump",
+      "imageID" : "images\/n03425413\/imagenette2-160-subset-500__n03425413__n03425413_212.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03425413__n03425413_212.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 675,
+      "predictedTop1Label" : "moving van",
+      "predictedTop1Score" : 4.1015625,
+      "top5Indices" : [
+        675,
+        482,
+        811,
+        860,
+        571
+      ],
+      "top5Labels" : [
+        "moving van",
+        "cassette player",
+        "space heater",
+        "tobacco shop",
+        "gas pump"
+      ],
+      "top5Scores" : [
+        4.1015625,
+        3.7578125,
+        3.75,
+        3.599609375,
+        3.23046875
+      ]
+    },
+    {
+      "groundTruthIndex" : 571,
+      "groundTruthLabel" : "gas pump",
+      "imageID" : "images\/n03425413\/imagenette2-160-subset-500__n03425413__n03425413_24552.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03425413__n03425413_24552.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 598,
+      "predictedTop1Label" : "home theater",
+      "predictedTop1Score" : 3.880859375,
+      "top5Indices" : [
+        598,
+        867,
+        583,
+        970,
+        548
+      ],
+      "top5Labels" : [
+        "home theater",
+        "trailer truck",
+        "guillotine",
+        "alp",
+        "entertainment center"
+      ],
+      "top5Scores" : [
+        3.880859375,
+        3.47265625,
+        3.298828125,
+        3.294921875,
+        3.1640625
+      ]
+    },
+    {
+      "groundTruthIndex" : 571,
+      "groundTruthLabel" : "gas pump",
+      "imageID" : "images\/n03425413\/imagenette2-160-subset-500__n03425413__n03425413_251.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03425413__n03425413_251.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 856,
+      "predictedTop1Label" : "thresher",
+      "predictedTop1Score" : 4.32421875,
+      "top5Indices" : [
+        856,
+        661,
+        586,
+        603,
+        860
+      ],
+      "top5Labels" : [
+        "thresher",
+        "Model T",
+        "half track",
+        "horse cart",
+        "tobacco shop"
+      ],
+      "top5Scores" : [
+        4.32421875,
+        4.07421875,
+        3.9375,
+        3.80078125,
+        3.126953125
+      ]
+    },
+    {
+      "groundTruthIndex" : 571,
+      "groundTruthLabel" : "gas pump",
+      "imageID" : "images\/n03425413\/imagenette2-160-subset-500__n03425413__n03425413_27392.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03425413__n03425413_27392.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 660,
+      "predictedTop1Label" : "mobile home",
+      "predictedTop1Score" : 4.35546875,
+      "top5Indices" : [
+        660,
+        860,
+        675,
+        571,
+        807
+      ],
+      "top5Labels" : [
+        "mobile home",
+        "tobacco shop",
+        "moving van",
+        "gas pump",
+        "solar dish"
+      ],
+      "top5Scores" : [
+        4.35546875,
+        4.0234375,
+        3.9921875,
+        3.7734375,
+        3.73046875
+      ]
+    },
+    {
+      "groundTruthIndex" : 571,
+      "groundTruthLabel" : "gas pump",
+      "imageID" : "images\/n03425413\/imagenette2-160-subset-500__n03425413__n03425413_5092.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03425413__n03425413_5092.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 691,
+      "predictedTop1Label" : "oxygen mask",
+      "predictedTop1Score" : 4.484375,
+      "top5Indices" : [
+        691,
+        630,
+        726,
+        447,
+        570
+      ],
+      "top5Labels" : [
+        "oxygen mask",
+        "Loafer",
+        "plane",
+        "binoculars",
+        "gasmask"
+      ],
+      "top5Scores" : [
+        4.484375,
+        4.3046875,
+        4.28515625,
+        4.1796875,
+        3.83203125
+      ]
+    },
+    {
+      "groundTruthIndex" : 571,
+      "groundTruthLabel" : "gas pump",
+      "imageID" : "images\/n03425413\/imagenette2-160-subset-500__n03425413__n03425413_8420.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03425413__n03425413_8420.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 747,
+      "predictedTop1Label" : "punching bag",
+      "predictedTop1Score" : 4.30859375,
+      "top5Indices" : [
+        747,
+        571,
+        758,
+        456,
+        920
+      ],
+      "top5Labels" : [
+        "punching bag",
+        "gas pump",
+        "reel",
+        "bow",
+        "traffic light"
+      ],
+      "top5Scores" : [
+        4.30859375,
+        3.8125,
+        3.56640625,
+        3.404296875,
+        3.017578125
+      ]
+    },
+    {
+      "groundTruthIndex" : 574,
+      "groundTruthLabel" : "golf ball",
+      "imageID" : "images\/n03445777\/imagenette2-160-subset-500__n03445777__n03445777_11401.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03445777__n03445777_11401.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 522,
+      "predictedTop1Label" : "croquet ball",
+      "predictedTop1Score" : 6.71875,
+      "top5Indices" : [
+        522,
+        574,
+        733,
+        602,
+        852
+      ],
+      "top5Labels" : [
+        "croquet ball",
+        "golf ball",
+        "pole",
+        "horizontal bar",
+        "tennis ball"
+      ],
+      "top5Scores" : [
+        6.71875,
+        6.09375,
+        3.470703125,
+        3.248046875,
+        3.15234375
+      ]
+    },
+    {
+      "groundTruthIndex" : 574,
+      "groundTruthLabel" : "golf ball",
+      "imageID" : "images\/n03445777\/imagenette2-160-subset-500__n03445777__n03445777_2270.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03445777__n03445777_2270.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 522,
+      "predictedTop1Label" : "croquet ball",
+      "predictedTop1Score" : 5.70703125,
+      "top5Indices" : [
+        522,
+        456,
+        981,
+        429,
+        733
+      ],
+      "top5Labels" : [
+        "croquet ball",
+        "bow",
+        "ballplayer",
+        "baseball",
+        "pole"
+      ],
+      "top5Scores" : [
+        5.70703125,
+        5.296875,
+        4.64453125,
+        3.875,
+        3.794921875
+      ]
+    },
+    {
+      "groundTruthIndex" : 574,
+      "groundTruthLabel" : "golf ball",
+      "imageID" : "images\/n03445777\/imagenette2-160-subset-500__n03445777__n03445777_5971.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03445777__n03445777_5971.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 0,
+      "predictedTop1Label" : "tench",
+      "predictedTop1Score" : 4.8984375,
+      "top5Indices" : [
+        0,
+        522,
+        233,
+        389,
+        394
+      ],
+      "top5Labels" : [
+        "tench",
+        "croquet ball",
+        "Bouvier des Flandres",
+        "barracouta",
+        "sturgeon"
+      ],
+      "top5Scores" : [
+        4.8984375,
+        3.751953125,
+        3.25,
+        3.19921875,
+        2.92578125
+      ]
+    },
+    {
+      "groundTruthIndex" : 701,
+      "groundTruthLabel" : "parachute",
+      "imageID" : "images\/n03888257\/imagenette2-160-subset-500__n03888257__ILSVRC2012_val_00002990.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03888257__ILSVRC2012_val_00002990.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 978,
+      "predictedTop1Label" : "seashore",
+      "predictedTop1Score" : 5.5078125,
+      "top5Indices" : [
+        978,
+        977,
+        663,
+        975,
+        437
+      ],
+      "top5Labels" : [
+        "seashore",
+        "sandbar",
+        "monastery",
+        "lakeside",
+        "beacon"
+      ],
+      "top5Scores" : [
+        5.5078125,
+        4.33984375,
+        4.01171875,
+        4.01171875,
+        3.6796875
+      ]
+    },
+    {
+      "groundTruthIndex" : 701,
+      "groundTruthLabel" : "parachute",
+      "imageID" : "images\/n03888257\/imagenette2-160-subset-500__n03888257__n03888257_12212.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03888257__n03888257_12212.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 906,
+      "predictedTop1Label" : "Windsor tie",
+      "predictedTop1Score" : 3.302734375,
+      "top5Indices" : [
+        906,
+        639,
+        683,
+        702,
+        400
+      ],
+      "top5Labels" : [
+        "Windsor tie",
+        "maillot",
+        "oboe",
+        "parallel bars",
+        "academic gown"
+      ],
+      "top5Scores" : [
+        3.302734375,
+        3.0234375,
+        2.935546875,
+        2.92578125,
+        2.904296875
+      ]
+    },
+    {
+      "groundTruthIndex" : 701,
+      "groundTruthLabel" : "parachute",
+      "imageID" : "images\/n03888257\/imagenette2-160-subset-500__n03888257__n03888257_12641.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03888257__n03888257_12641.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 812,
+      "predictedTop1Label" : "space shuttle",
+      "predictedTop1Score" : 5.4765625,
+      "top5Indices" : [
+        812,
+        404,
+        895,
+        744,
+        657
+      ],
+      "top5Labels" : [
+        "space shuttle",
+        "airliner",
+        "warplane",
+        "projectile",
+        "missile"
+      ],
+      "top5Scores" : [
+        5.4765625,
+        4.6015625,
+        4.40234375,
+        3.421875,
+        3.2578125
+      ]
+    },
+    {
+      "groundTruthIndex" : 701,
+      "groundTruthLabel" : "parachute",
+      "imageID" : "images\/n03888257\/imagenette2-160-subset-500__n03888257__n03888257_13072.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03888257__n03888257_13072.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 522,
+      "predictedTop1Label" : "croquet ball",
+      "predictedTop1Score" : 4.27734375,
+      "top5Indices" : [
+        522,
+        701,
+        176,
+        981,
+        216
+      ],
+      "top5Labels" : [
+        "croquet ball",
+        "parachute",
+        "Saluki",
+        "ballplayer",
+        "clumber"
+      ],
+      "top5Scores" : [
+        4.27734375,
+        3.767578125,
+        3.53125,
+        3.3671875,
+        3.30859375
+      ]
+    },
+    {
+      "groundTruthIndex" : 701,
+      "groundTruthLabel" : "parachute",
+      "imageID" : "images\/n03888257\/imagenette2-160-subset-500__n03888257__n03888257_14090.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03888257__n03888257_14090.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 506,
+      "predictedTop1Label" : "coil",
+      "predictedTop1Score" : 5.47265625,
+      "top5Indices" : [
+        506,
+        111,
+        78,
+        488,
+        512
+      ],
+      "top5Labels" : [
+        "coil",
+        "nematode",
+        "tick",
+        "chain",
+        "corkscrew"
+      ],
+      "top5Scores" : [
+        5.47265625,
+        4.66015625,
+        4.58984375,
+        4.1328125,
+        4.12109375
+      ]
+    },
+    {
+      "groundTruthIndex" : 701,
+      "groundTruthLabel" : "parachute",
+      "imageID" : "images\/n03888257\/imagenette2-160-subset-500__n03888257__n03888257_14901.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03888257__n03888257_14901.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 672,
+      "predictedTop1Label" : "mountain tent",
+      "predictedTop1Score" : 5.33203125,
+      "top5Indices" : [
+        672,
+        701,
+        645,
+        417,
+        879
+      ],
+      "top5Labels" : [
+        "mountain tent",
+        "parachute",
+        "maypole",
+        "balloon",
+        "umbrella"
+      ],
+      "top5Scores" : [
+        5.33203125,
+        4.56640625,
+        4.3359375,
+        3.046875,
+        3.02734375
+      ]
+    },
+    {
+      "groundTruthIndex" : 701,
+      "groundTruthLabel" : "parachute",
+      "imageID" : "images\/n03888257\/imagenette2-160-subset-500__n03888257__n03888257_16991.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03888257__n03888257_16991.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 518,
+      "predictedTop1Label" : "crash helmet",
+      "predictedTop1Score" : 3.68359375,
+      "top5Indices" : [
+        518,
+        812,
+        667,
+        400,
+        615
+      ],
+      "top5Labels" : [
+        "crash helmet",
+        "space shuttle",
+        "mortarboard",
+        "academic gown",
+        "knee pad"
+      ],
+      "top5Scores" : [
+        3.68359375,
+        3.427734375,
+        3.25,
+        3.134765625,
+        2.86328125
+      ]
+    },
+    {
+      "groundTruthIndex" : 701,
+      "groundTruthLabel" : "parachute",
+      "imageID" : "images\/n03888257\/imagenette2-160-subset-500__n03888257__n03888257_17542.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03888257__n03888257_17542.JPEG",
+      "isTop5Correct" : true,
+      "predictedTop1Index" : 350,
+      "predictedTop1Label" : "ibex",
+      "predictedTop1Score" : 5.09765625,
+      "top5Indices" : [
+        350,
+        111,
+        701,
+        349,
+        80
+      ],
+      "top5Labels" : [
+        "ibex",
+        "nematode",
+        "parachute",
+        "bighorn",
+        "black grouse"
+      ],
+      "top5Scores" : [
+        5.09765625,
+        4.4375,
+        4.24609375,
+        4.01171875,
+        3.642578125
+      ]
+    },
+    {
+      "groundTruthIndex" : 701,
+      "groundTruthLabel" : "parachute",
+      "imageID" : "images\/n03888257\/imagenette2-160-subset-500__n03888257__n03888257_3651.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03888257__n03888257_3651.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 413,
+      "predictedTop1Label" : "assault rifle",
+      "predictedTop1Score" : 4.18359375,
+      "top5Indices" : [
+        413,
+        691,
+        830,
+        586,
+        615
+      ],
+      "top5Labels" : [
+        "assault rifle",
+        "oxygen mask",
+        "stretcher",
+        "half track",
+        "knee pad"
+      ],
+      "top5Scores" : [
+        4.18359375,
+        3.708984375,
+        3.5625,
+        3.361328125,
+        3.349609375
+      ]
+    },
+    {
+      "groundTruthIndex" : 701,
+      "groundTruthLabel" : "parachute",
+      "imageID" : "images\/n03888257\/imagenette2-160-subset-500__n03888257__n03888257_5662.JPEG",
+      "imagePath" : "\/private\/var\/containers\/Bundle\/Application\/4D01D32A-B666-4384-B213-31BBF61E54F1\/CVTestsSUI.app\/imagenette2-160-subset-500__n03888257__n03888257_5662.JPEG",
+      "isTop5Correct" : false,
+      "predictedTop1Index" : 917,
+      "predictedTop1Label" : "comic book",
+      "predictedTop1Score" : 5.140625,
+      "top5Indices" : [
+        917,
+        64,
+        699,
+        998,
+        0
+      ],
+      "top5Labels" : [
+        "comic book",
+        "green mamba",
+        "panpipe",
+        "ear",
+        "tench"
+      ],
+      "top5Scores" : [
+        5.140625,
+        4.0703125,
+        3.40234375,
+        3.171875,
+        3.080078125
+      ]
+    }
+  ],
+  "modelFormat" : "INT8",
+  "modelName" : "MobileNetV2",
+  "perClassResults" : [
+    {
+      "classID" : "n01440764",
+      "classIndex" : 0,
+      "classLabel" : "tench",
+      "top1Accuracy" : 0.92,
+      "top1CorrectCount" : 46,
+      "top5Accuracy" : 0.98,
+      "top5CorrectCount" : 49,
+      "totalCount" : 50
+    },
+    {
+      "classID" : "n02102040",
+      "classIndex" : 217,
+      "classLabel" : "English springer",
+      "top1Accuracy" : 0.6,
+      "top1CorrectCount" : 30,
+      "top5Accuracy" : 0.8,
+      "top5CorrectCount" : 40,
+      "totalCount" : 50
+    },
+    {
+      "classID" : "n02979186",
+      "classIndex" : 482,
+      "classLabel" : "cassette player",
+      "top1Accuracy" : 0.66,
+      "top1CorrectCount" : 33,
+      "top5Accuracy" : 0.94,
+      "top5CorrectCount" : 47,
+      "totalCount" : 50
+    },
+    {
+      "classID" : "n03000684",
+      "classIndex" : 491,
+      "classLabel" : "chain saw",
+      "top1Accuracy" : 0.76,
+      "top1CorrectCount" : 38,
+      "top5Accuracy" : 0.88,
+      "top5CorrectCount" : 44,
+      "totalCount" : 50
+    },
+    {
+      "classID" : "n03028079",
+      "classIndex" : 497,
+      "classLabel" : "church",
+      "top1Accuracy" : 0.2,
+      "top1CorrectCount" : 10,
+      "top5Accuracy" : 0.82,
+      "top5CorrectCount" : 41,
+      "totalCount" : 50
+    },
+    {
+      "classID" : "n03394916",
+      "classIndex" : 566,
+      "classLabel" : "French horn",
+      "top1Accuracy" : 0.68,
+      "top1CorrectCount" : 34,
+      "top5Accuracy" : 0.88,
+      "top5CorrectCount" : 44,
+      "totalCount" : 50
+    },
+    {
+      "classID" : "n03417042",
+      "classIndex" : 569,
+      "classLabel" : "garbage truck",
+      "top1Accuracy" : 0.54,
+      "top1CorrectCount" : 27,
+      "top5Accuracy" : 0.84,
+      "top5CorrectCount" : 42,
+      "totalCount" : 50
+    },
+    {
+      "classID" : "n03425413",
+      "classIndex" : 571,
+      "classLabel" : "gas pump",
+      "top1Accuracy" : 0.66,
+      "top1CorrectCount" : 33,
+      "top5Accuracy" : 0.84,
+      "top5CorrectCount" : 42,
+      "totalCount" : 50
+    },
+    {
+      "classID" : "n03445777",
+      "classIndex" : 574,
+      "classLabel" : "golf ball",
+      "top1Accuracy" : 0.94,
+      "top1CorrectCount" : 47,
+      "top5Accuracy" : 0.96,
+      "top5CorrectCount" : 48,
+      "totalCount" : 50
+    },
+    {
+      "classID" : "n03888257",
+      "classIndex" : 701,
+      "classLabel" : "parachute",
+      "top1Accuracy" : 0.8,
+      "top1CorrectCount" : 40,
+      "top5Accuracy" : 0.86,
+      "top5CorrectCount" : 43,
+      "totalCount" : 50
+    }
+  ],
+  "timestamp" : "2026-05-19T11:08:30Z"
+}

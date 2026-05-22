@@ -1,0 +1,6 @@
+experiment=70DE0717-B58C-4A00-A9FD-46153B96A5F7 timestamp=2026-05-16T12:51:02Z
+dataset=imagenette2-160 subset=imagenette2-160-subset-500 size=500 images_per_class=50 measurement=fullPipeline
+note=compute=ALL reflects deployment behavior on available accelerators; it is not an isolated arithmetic-precision measurement
+selection_rule="deterministic random sample of 50 validation images per class with seed 20260420"
+
+dataset=imagenette2-160 subset=imagenette2-160-subset-500 version=v2 @ Resources/Datasets/imagenette2-160-subset-500 model=EfficientNetB0 format=INT8 compute=ALL top1=395/500 top1_acc=0.7900 top5=473/500 top5_acc=0.9460 mean=15.04ms median=15.04ms p90=15.77ms ref=FP32 top1_agree=0.9680 top1_diff=16/500 top5_agree=0.6820 top5_diff=159/500

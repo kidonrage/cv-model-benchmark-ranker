@@ -1,0 +1,3502 @@
+[
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__ILSVRC2012_val_00029930.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__ILSVRC2012_val_00029930.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_10150.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_10150.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_10211.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_10211.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_10290.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_10290.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_11190.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_11190.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_11400.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_11400.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_11590.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_11590.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_12151.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_12151.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_12620.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_12620.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_13702.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_13702.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_141.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_141.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_14150.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_14150.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_14172.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_14172.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_14402.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_14402.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_14731.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_14731.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_14790.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_14790.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_172.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_172.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_17501.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_17501.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_200.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_200.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_2102.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_2102.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_26320.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_26320.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_26631.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_26631.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_292.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_292.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_2921.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_2921.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_29551.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_29551.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_29731.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_29731.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_3782.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_3782.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_4221.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_4221.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_4611.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_4611.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_5690.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_5690.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_5861.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_5861.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_6021.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_6021.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_6130.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_6130.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_622.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_622.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_6301.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_6301.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_6751.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_6751.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_6760.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_6760.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_7492.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_7492.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_7531.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_7531.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_7632.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_7632.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_7772.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_7772.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_8052.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_8052.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_8191.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_8191.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_8521.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_8521.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_8710.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_8710.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_8801.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_8801.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_9020.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_9020.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_9442.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_9442.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_9572.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_9572.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/imagenette2-160-subset-500__n01440764__n01440764_9940.JPEG",
+    "fileName": "imagenette2-160-subset-500__n01440764__n01440764_9940.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__ILSVRC2012_val_00004650.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__ILSVRC2012_val_00004650.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__ILSVRC2012_val_00027182.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__ILSVRC2012_val_00027182.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_1151.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_1151.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_1241.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_1241.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_1252.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_1252.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_1261.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_1261.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_142.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_142.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_1590.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_1590.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_1660.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_1660.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_1720.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_1720.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_1740.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_1740.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_281.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_281.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_2852.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_2852.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_2920.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_2920.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_3061.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_3061.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_3221.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_3221.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_332.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_332.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_352.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_352.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_390.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_390.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_4020.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_4020.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_4090.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_4090.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_4262.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_4262.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_4320.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_4320.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_4481.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_4481.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_4650.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_4650.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_5502.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_5502.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_562.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_562.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_5681.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_5681.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_5802.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_5802.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_5950.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_5950.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_602.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_602.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_6152.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_6152.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_6232.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_6232.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_6240.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_6240.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_6262.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_6262.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_652.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_652.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_662.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_662.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_6652.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_6652.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_6851.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_6851.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_6992.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_6992.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_702.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_702.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_7082.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_7082.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_7091.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_7091.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_7270.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_7270.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_732.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_732.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_7761.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_7761.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_8372.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_8372.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_880.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_880.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_960.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_960.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/imagenette2-160-subset-500__n02102040__n02102040_990.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02102040__n02102040_990.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__ILSVRC2012_val_00008651.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__ILSVRC2012_val_00008651.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_10612.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_10612.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_10870.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_10870.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_11052.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_11052.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_11410.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_11410.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_11670.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_11670.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_12060.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_12060.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_12172.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_12172.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_12822.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_12822.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_13281.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_13281.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_13502.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_13502.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_13950.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_13950.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_1401.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_1401.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_14100.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_14100.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_1611.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_1611.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_17312.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_17312.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_18572.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_18572.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_18940.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_18940.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_2002.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_2002.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_20701.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_20701.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_22681.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_22681.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_23650.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_23650.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_2381.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_2381.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_24591.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_24591.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_2511.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_2511.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_27392.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_27392.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_2742.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_2742.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_27471.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_27471.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_3211.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_3211.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_3372.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_3372.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_3530.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_3530.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_5162.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_5162.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_5280.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_5280.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_562.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_562.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_5622.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_5622.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_5962.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_5962.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_5970.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_5970.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_6390.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_6390.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_6531.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_6531.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_6712.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_6712.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_6992.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_6992.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_7060.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_7060.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_731.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_731.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_7371.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_7371.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_872.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_872.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_8751.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_8751.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_8971.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_8971.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_9431.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_9431.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_9790.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_9790.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/imagenette2-160-subset-500__n02979186__n02979186_9811.JPEG",
+    "fileName": "imagenette2-160-subset-500__n02979186__n02979186_9811.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_1000.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_1000.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_10960.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_10960.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_1100.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_1100.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_11672.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_11672.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_12370.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_12370.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_12670.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_12670.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_1300.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_1300.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_13270.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_13270.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_13402.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_13402.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_13541.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_13541.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_14632.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_14632.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_15400.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_15400.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_15441.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_15441.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_15470.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_15470.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_16291.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_16291.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_16372.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_16372.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_16542.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_16542.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_16691.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_16691.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_1692.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_1692.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_17902.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_17902.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_18140.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_18140.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_19192.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_19192.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_19272.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_19272.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_19300.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_19300.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_20250.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_20250.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_2202.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_2202.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_23960.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_23960.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_2472.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_2472.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_25411.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_25411.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_2820.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_2820.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_28702.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_28702.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_30092.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_30092.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_3072.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_3072.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_31112.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_31112.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_31181.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_31181.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_32301.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_32301.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_3361.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_3361.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_35991.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_35991.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_3952.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_3952.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_4001.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_4001.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_4081.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_4081.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_481.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_481.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_5970.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_5970.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_7050.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_7050.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_7312.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_7312.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_7460.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_7460.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_882.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_882.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_900.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_900.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_9182.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_9182.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/imagenette2-160-subset-500__n03000684__n03000684_9470.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03000684__n03000684_9470.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__ILSVRC2012_val_00023000.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__ILSVRC2012_val_00023000.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__ILSVRC2012_val_00034220.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__ILSVRC2012_val_00034220.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_10060.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_10060.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_116072.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_116072.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_12802.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_12802.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_12812.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_12812.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_1332.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_1332.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_13331.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_13331.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_14371.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_14371.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_14582.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_14582.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_14860.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_14860.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_14900.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_14900.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_15102.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_15102.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_16731.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_16731.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_17351.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_17351.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_17551.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_17551.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_1870.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_1870.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_1922.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_1922.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_21591.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_21591.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_22500.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_22500.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_23510.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_23510.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_2592.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_2592.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_2660.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_2660.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_26601.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_26601.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_26842.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_26842.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_27060.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_27060.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_28662.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_28662.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_30232.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_30232.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_30642.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_30642.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_30751.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_30751.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_3260.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_3260.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_3320.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_3320.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_3432.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_3432.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_40120.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_40120.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_4731.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_4731.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_4902.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_4902.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_5260.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_5260.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_53111.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_53111.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_57572.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_57572.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_5942.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_5942.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_6110.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_6110.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_6292.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_6292.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_6720.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_6720.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_6831.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_6831.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_7752.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_7752.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_8132.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_8132.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_8911.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_8911.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_9580.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_9580.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_9632.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_9632.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/imagenette2-160-subset-500__n03028079__n03028079_9702.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03028079__n03028079_9702.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__ILSVRC2012_val_00015542.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__ILSVRC2012_val_00015542.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_10501.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_10501.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_10591.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_10591.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_2151.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_2151.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_23222.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_23222.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_23942.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_23942.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_25670.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_25670.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_25781.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_25781.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_26270.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_26270.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_26831.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_26831.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_27071.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_27071.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_28651.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_28651.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_29861.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_29861.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_29940.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_29940.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_30261.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_30261.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_30432.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_30432.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_30881.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_30881.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_32272.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_32272.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_32582.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_32582.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_32931.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_32931.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_33260.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_33260.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_33481.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_33481.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_3422.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_3422.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_35200.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_35200.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_36532.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_36532.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_3731.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_3731.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_37852.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_37852.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_38050.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_38050.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_38830.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_38830.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_42200.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_42200.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_42312.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_42312.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_4251.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_4251.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_42721.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_42721.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_43022.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_43022.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_44060.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_44060.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_45101.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_45101.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_46670.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_46670.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_47022.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_47022.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_47300.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_47300.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_47982.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_47982.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_49600.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_49600.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_49731.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_49731.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_51071.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_51071.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_51130.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_51130.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_540.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_540.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_58180.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_58180.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_59430.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_59430.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_6031.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_6031.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_62451.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_62451.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/imagenette2-160-subset-500__n03394916__n03394916_8120.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03394916__n03394916_8120.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__ILSVRC2012_val_00028190.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__ILSVRC2012_val_00028190.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_10300.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_10300.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_10520.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_10520.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_11552.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_11552.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_12031.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_12031.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_12190.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_12190.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_1330.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_1330.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_14690.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_14690.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_1492.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_1492.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_1651.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_1651.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_16871.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_16871.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_17862.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_17862.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_18582.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_18582.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_19020.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_19020.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_19812.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_19812.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_2060.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_2060.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_20892.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_20892.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_2211.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_2211.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_23771.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_23771.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_25411.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_25411.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_27320.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_27320.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_2822.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_2822.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_28742.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_28742.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_29342.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_29342.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_3141.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_3141.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_3272.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_3272.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_3280.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_3280.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_3331.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_3331.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_3482.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_3482.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_3600.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_3600.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_3752.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_3752.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_3792.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_3792.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_4200.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_4200.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_4491.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_4491.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_4551.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_4551.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_4560.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_4560.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_4600.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_4600.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_5110.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_5110.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_5301.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_5301.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_5320.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_5320.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_5380.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_5380.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_5682.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_5682.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_581.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_581.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_642.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_642.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_690.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_690.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_6981.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_6981.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_7111.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_7111.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_7472.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_7472.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_8581.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_8581.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/imagenette2-160-subset-500__n03417042__n03417042_8630.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03417042__n03417042_8630.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__ILSVRC2012_val_00001432.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__ILSVRC2012_val_00001432.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__ILSVRC2012_val_00009821.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__ILSVRC2012_val_00009821.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__ILSVRC2012_val_00032250.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__ILSVRC2012_val_00032250.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__ILSVRC2012_val_00044370.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__ILSVRC2012_val_00044370.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_10450.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_10450.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_10882.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_10882.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_11180.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_11180.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_11731.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_11731.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_12710.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_12710.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_12722.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_12722.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_12761.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_12761.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_13381.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_13381.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_13572.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_13572.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_13582.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_13582.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_13620.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_13620.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_13642.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_13642.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_13741.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_13741.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_14040.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_14040.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_14280.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_14280.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_14510.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_14510.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_14672.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_14672.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_15000.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_15000.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_1610.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_1610.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_16421.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_16421.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_16920.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_16920.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_16972.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_16972.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_17072.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_17072.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_17322.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_17322.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_17591.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_17591.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_17980.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_17980.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_18191.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_18191.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_18390.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_18390.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_18981.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_18981.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_20680.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_20680.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_212.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_212.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_21270.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_21270.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_21350.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_21350.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_24461.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_24461.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_24552.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_24552.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_251.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_251.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_260.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_260.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_27300.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_27300.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_27392.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_27392.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_28350.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_28350.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_4802.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_4802.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_5092.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_5092.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_8420.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_8420.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_8801.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_8801.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_9391.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_9391.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/imagenette2-160-subset-500__n03425413__n03425413_9652.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03425413__n03425413_9652.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__ILSVRC2012_val_00011431.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__ILSVRC2012_val_00011431.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_10030.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_10030.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_101.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_101.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_10622.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_10622.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_11150.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_11150.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_11401.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_11401.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_11690.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_11690.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_12480.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_12480.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_12772.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_12772.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_1292.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_1292.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_12920.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_12920.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_13462.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_13462.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_1482.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_1482.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_16220.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_16220.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_16332.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_16332.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_16360.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_16360.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_17042.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_17042.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_17311.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_17311.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_2270.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_2270.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_230.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_230.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_3060.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_3060.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_3192.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_3192.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_3260.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_3260.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_3291.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_3291.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_3301.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_3301.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_3321.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_3321.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_340.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_340.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_3471.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_3471.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_3651.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_3651.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_3722.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_3722.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_392.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_392.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_4042.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_4042.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_4291.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_4291.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_4561.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_4561.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_482.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_482.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_520.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_520.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_531.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_531.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_5590.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_5590.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_5720.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_5720.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_5971.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_5971.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_6380.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_6380.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_7001.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_7001.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_7601.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_7601.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_7670.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_7670.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_7791.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_7791.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_7991.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_7991.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_8192.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_8192.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_8332.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_8332.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_9900.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_9900.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/imagenette2-160-subset-500__n03445777__n03445777_9971.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03445777__n03445777_9971.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__ILSVRC2012_val_00002990.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__ILSVRC2012_val_00002990.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__ILSVRC2012_val_00009370.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__ILSVRC2012_val_00009370.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__ILSVRC2012_val_00014381.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__ILSVRC2012_val_00014381.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_10050.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_10050.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_11210.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_11210.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_11561.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_11561.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_11730.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_11730.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_12070.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_12070.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_121.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_121.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_12212.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_12212.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_12641.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_12641.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_13072.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_13072.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_13242.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_13242.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_14090.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_14090.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_14901.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_14901.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_15382.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_15382.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_16991.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_16991.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_171.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_171.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_17542.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_17542.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_18441.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_18441.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_19451.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_19451.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_19830.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_19830.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_20012.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_20012.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_21932.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_21932.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_22212.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_22212.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_22330.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_22330.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_25150.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_25150.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_28581.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_28581.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_29050.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_29050.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_29191.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_29191.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_29201.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_29201.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_30332.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_30332.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_30911.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_30911.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_3142.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_3142.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_32911.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_32911.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_33182.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_33182.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_35241.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_35241.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_35890.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_35890.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_3651.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_3651.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_39402.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_39402.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_43782.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_43782.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_5281.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_5281.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_5662.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_5662.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_5722.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_5722.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_66361.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_66361.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_67221.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_67221.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_7130.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_7130.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_8112.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_8112.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_8391.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_8391.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/imagenette2-160-subset-500__n03888257__n03888257_9082.JPEG",
+    "fileName": "imagenette2-160-subset-500__n03888257__n03888257_9082.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  }
+]

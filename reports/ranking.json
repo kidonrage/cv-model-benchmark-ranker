@@ -1,0 +1,257 @@
+{
+  "generatedAt": "2026-05-22T14:19:57.756920+00:00",
+  "scenario": {
+    "usageScenario": "single_image_analysis",
+    "priorityProfile": "disk_size_first",
+    "targetDeviceClass": "",
+    "requiredComputeUnits": null
+  },
+  "globalWarnings": [],
+  "recommendation": {
+    "modelId": "MobileNetV2_INT8_Palettized",
+    "name": "MobileNetV2 INT8 [ALL]",
+    "reasons": [
+      "passes all required scenario constraints",
+      "median fullPipeline latency: 15.85 ms",
+      "p90 latency: 16.25 ms",
+      "top-1 accuracy: 0.672",
+      "restricted top-1 accuracy: 0.976",
+      "top-5 accuracy: 0.880",
+      "model size: 8.9 MB",
+      "is 0.09 ms slower than the fastest eligible configuration, but provides a better overall scenario trade-off",
+      "has the smallest model size among eligible configurations",
+      "warning: selected configuration appears to use palettized/weight-compressed representation",
+      "warning: INT8-labeled model is interpreted as palettized/weight-compressed, not proven W8A8 integer inference",
+      "warning: low top-5 agreement with FP32 baseline: 0.786",
+      "warning: less interpretable optimization type compared with FP16/FP32"
+    ]
+  },
+  "ranking": [
+    {
+      "rank": 1,
+      "modelId": "MobileNetV2_INT8_Palettized",
+      "name": "MobileNetV2 INT8 [ALL]",
+      "family": "MobileNetV2",
+      "format": "INT8",
+      "optimizationType": "8-bit palettized weights",
+      "computeUnits": "ALL",
+      "eligible": true,
+      "failures": [],
+      "warnings": [
+        "INT8-labeled model is interpreted as palettized/weight-compressed, not proven W8A8 integer inference",
+        "low top-5 agreement with FP32 baseline: 0.786",
+        "less interpretable optimization type compared with FP16/FP32"
+      ],
+      "metrics": {
+        "medianMs": 15.85,
+        "p90Ms": 16.25,
+        "p95Ms": 16.45,
+        "inferenceMedianMs": 0.68,
+        "preprocessingMedianMs": 11.76,
+        "top1": 0.672,
+        "top5": 0.88,
+        "restrictedTop1": 0.976,
+        "top1Agree": 0.948,
+        "top5Agree": 0.786,
+        "restrictedTop1Agree": 1.0,
+        "modelSizeMb": 8.9,
+        "thermalState": "nominal",
+        "residentMemoryMb": 116.0
+      },
+      "scores": {
+        "quality": 0.82,
+        "latency": 0.9934047350620068,
+        "size": 1.0,
+        "interpretability": 0.65,
+        "thermal": 1.0,
+        "total": 0.9541809470124013
+      }
+    },
+    {
+      "rank": 2,
+      "modelId": "EfficientNetB0_INT8_Palettized",
+      "name": "EfficientNetB0 INT8 [ALL]",
+      "family": "EfficientNetB0",
+      "format": "INT8",
+      "optimizationType": "8-bit palettized weights",
+      "computeUnits": "ALL",
+      "eligible": true,
+      "failures": [],
+      "warnings": [
+        "INT8-labeled model is interpreted as palettized/weight-compressed, not proven W8A8 integer inference",
+        "low top-5 agreement with FP32 baseline: 0.660",
+        "less interpretable optimization type compared with FP16/FP32"
+      ],
+      "metrics": {
+        "medianMs": 16.95,
+        "p90Ms": 17.68,
+        "p95Ms": 17.95,
+        "inferenceMedianMs": 0.81,
+        "preprocessingMedianMs": 12.36,
+        "top1": 0.75,
+        "top5": 0.93,
+        "restrictedTop1": 0.984,
+        "top1Agree": 0.964,
+        "top5Agree": 0.66,
+        "restrictedTop1Agree": 1.0,
+        "modelSizeMb": 14.1,
+        "thermalState": "nominal",
+        "residentMemoryMb": 140.0
+      },
+      "scores": {
+        "quality": 0.8679,
+        "latency": 0.8726917747087561,
+        "size": 0.9273743016759778,
+        "interpretability": 0.65,
+        "thermal": 1.0,
+        "total": 0.8936479359473379
+      }
+    },
+    {
+      "rank": 3,
+      "modelId": "MobileNetV2_FP16",
+      "name": "MobileNetV2 FP16 [ALL]",
+      "family": "MobileNetV2",
+      "format": "FP16",
+      "optimizationType": "float16",
+      "computeUnits": "ALL",
+      "eligible": true,
+      "failures": [],
+      "warnings": [],
+      "metrics": {
+        "medianMs": 15.76,
+        "p90Ms": 16.29,
+        "p95Ms": 16.5,
+        "inferenceMedianMs": 0.82,
+        "preprocessingMedianMs": 11.6,
+        "top1": 0.668,
+        "top5": 0.878,
+        "restrictedTop1": 0.976,
+        "top1Agree": 0.98,
+        "top5Agree": 0.922,
+        "restrictedTop1Agree": 1.0,
+        "modelSizeMb": 24.8,
+        "thermalState": "nominal",
+        "residentMemoryMb": 118.0
+      },
+      "scores": {
+        "quality": 0.8178,
+        "latency": 0.9988782051282052,
+        "size": 0.7779329608938549,
+        "interpretability": 1.0,
+        "thermal": 1.0,
+        "total": 0.839205417561954
+      }
+    },
+    {
+      "rank": 4,
+      "modelId": "EfficientNetB0_FP16",
+      "name": "EfficientNetB0 FP16 [ALL]",
+      "family": "EfficientNetB0",
+      "format": "FP16",
+      "optimizationType": "float16",
+      "computeUnits": "ALL",
+      "eligible": true,
+      "failures": [],
+      "warnings": [
+        "low top-5 agreement with FP32 baseline: 0.716"
+      ],
+      "metrics": {
+        "medianMs": 16.87,
+        "p90Ms": 17.53,
+        "p95Ms": 17.8,
+        "inferenceMedianMs": 0.88,
+        "preprocessingMedianMs": 12.15,
+        "top1": 0.748,
+        "top5": 0.936,
+        "restrictedTop1": 0.984,
+        "top1Agree": 0.972,
+        "top5Agree": 0.716,
+        "restrictedTop1Agree": 1.0,
+        "modelSizeMb": 40.2,
+        "thermalState": "nominal",
+        "residentMemoryMb": 143.0
+      },
+      "scores": {
+        "quality": 0.8682000000000001,
+        "latency": 0.8827609632006475,
+        "size": 0.5628491620111732,
+        "interpretability": 1.0,
+        "thermal": 1.0,
+        "total": 0.6944916898468334
+      }
+    },
+    {
+      "rank": 5,
+      "modelId": "MobileNetV2_FP32",
+      "name": "MobileNetV2 FP32 [ALL]",
+      "family": "MobileNetV2",
+      "format": "FP32",
+      "optimizationType": "float32",
+      "computeUnits": "ALL",
+      "eligible": true,
+      "failures": [],
+      "warnings": [],
+      "metrics": {
+        "medianMs": 20.55,
+        "p90Ms": 20.83,
+        "p95Ms": 21.1,
+        "inferenceMedianMs": 7.71,
+        "preprocessingMedianMs": 11.41,
+        "top1": 0.674,
+        "top5": 0.878,
+        "restrictedTop1": 0.976,
+        "top1Agree": null,
+        "top5Agree": null,
+        "restrictedTop1Agree": null,
+        "modelSizeMb": 48.2,
+        "thermalState": "nominal",
+        "residentMemoryMb": 124.0
+      },
+      "scores": {
+        "quality": 0.8205,
+        "latency": 0.5205398310351805,
+        "size": 0.4511173184357542,
+        "interpretability": 0.85,
+        "thermal": 1.0,
+        "total": 0.5403533572684887
+      }
+    },
+    {
+      "rank": 6,
+      "modelId": "EfficientNetB0_FP32",
+      "name": "EfficientNetB0 FP32 [ALL]",
+      "family": "EfficientNetB0",
+      "format": "FP32",
+      "optimizationType": "float32",
+      "computeUnits": "ALL",
+      "eligible": true,
+      "failures": [],
+      "warnings": [],
+      "metrics": {
+        "medianMs": 24.63,
+        "p90Ms": 28.73,
+        "p95Ms": 29.2,
+        "inferenceMedianMs": 8.91,
+        "preprocessingMedianMs": 11.86,
+        "top1": 0.75,
+        "top5": 0.932,
+        "restrictedTop1": 0.984,
+        "top1Agree": null,
+        "top5Agree": null,
+        "restrictedTop1Agree": null,
+        "modelSizeMb": 80.5,
+        "thermalState": "nominal",
+        "residentMemoryMb": 151.0
+      },
+      "scores": {
+        "quality": 0.8683000000000001,
+        "latency": 0.0,
+        "size": 0.0,
+        "interpretability": 0.85,
+        "thermal": 1.0,
+        "total": 0.172745
+      }
+    }
+  ]
+}

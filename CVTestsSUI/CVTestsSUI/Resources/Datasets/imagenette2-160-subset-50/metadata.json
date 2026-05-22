@@ -1,0 +1,352 @@
+[
+  {
+    "relativePath": "images/n01440764/ILSVRC2012_val_00009111.JPEG",
+    "fileName": "ILSVRC2012_val_00009111.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/ILSVRC2012_val_00009191.JPEG",
+    "fileName": "ILSVRC2012_val_00009191.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/ILSVRC2012_val_00017472.JPEG",
+    "fileName": "ILSVRC2012_val_00017472.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/ILSVRC2012_val_00017700.JPEG",
+    "fileName": "ILSVRC2012_val_00017700.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n01440764/ILSVRC2012_val_00021740.JPEG",
+    "fileName": "ILSVRC2012_val_00021740.JPEG",
+    "expectedLabel": "tench",
+    "classFolder": "n01440764",
+    "imagenetIndex": 0
+  },
+  {
+    "relativePath": "images/n02102040/ILSVRC2012_val_00004650.JPEG",
+    "fileName": "ILSVRC2012_val_00004650.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/ILSVRC2012_val_00007032.JPEG",
+    "fileName": "ILSVRC2012_val_00007032.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/ILSVRC2012_val_00008162.JPEG",
+    "fileName": "ILSVRC2012_val_00008162.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/ILSVRC2012_val_00014280.JPEG",
+    "fileName": "ILSVRC2012_val_00014280.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02102040/ILSVRC2012_val_00016582.JPEG",
+    "fileName": "ILSVRC2012_val_00016582.JPEG",
+    "expectedLabel": "English springer",
+    "classFolder": "n02102040",
+    "imagenetIndex": 217
+  },
+  {
+    "relativePath": "images/n02979186/ILSVRC2012_val_00008651.JPEG",
+    "fileName": "ILSVRC2012_val_00008651.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/ILSVRC2012_val_00020400.JPEG",
+    "fileName": "ILSVRC2012_val_00020400.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/ILSVRC2012_val_00028911.JPEG",
+    "fileName": "ILSVRC2012_val_00028911.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/ILSVRC2012_val_00035160.JPEG",
+    "fileName": "ILSVRC2012_val_00035160.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n02979186/ILSVRC2012_val_00035482.JPEG",
+    "fileName": "ILSVRC2012_val_00035482.JPEG",
+    "expectedLabel": "cassette player",
+    "classFolder": "n02979186",
+    "imagenetIndex": 482
+  },
+  {
+    "relativePath": "images/n03000684/ILSVRC2012_val_00004262.JPEG",
+    "fileName": "ILSVRC2012_val_00004262.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/ILSVRC2012_val_00007460.JPEG",
+    "fileName": "ILSVRC2012_val_00007460.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/ILSVRC2012_val_00011170.JPEG",
+    "fileName": "ILSVRC2012_val_00011170.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/ILSVRC2012_val_00011951.JPEG",
+    "fileName": "ILSVRC2012_val_00011951.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03000684/ILSVRC2012_val_00017801.JPEG",
+    "fileName": "ILSVRC2012_val_00017801.JPEG",
+    "expectedLabel": "chain saw",
+    "classFolder": "n03000684",
+    "imagenetIndex": 491
+  },
+  {
+    "relativePath": "images/n03028079/ILSVRC2012_val_00003351.JPEG",
+    "fileName": "ILSVRC2012_val_00003351.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/ILSVRC2012_val_00003682.JPEG",
+    "fileName": "ILSVRC2012_val_00003682.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/ILSVRC2012_val_00004912.JPEG",
+    "fileName": "ILSVRC2012_val_00004912.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/ILSVRC2012_val_00007400.JPEG",
+    "fileName": "ILSVRC2012_val_00007400.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03028079/ILSVRC2012_val_00010770.JPEG",
+    "fileName": "ILSVRC2012_val_00010770.JPEG",
+    "expectedLabel": "church",
+    "classFolder": "n03028079",
+    "imagenetIndex": 497
+  },
+  {
+    "relativePath": "images/n03394916/ILSVRC2012_val_00001492.JPEG",
+    "fileName": "ILSVRC2012_val_00001492.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/ILSVRC2012_val_00003620.JPEG",
+    "fileName": "ILSVRC2012_val_00003620.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/ILSVRC2012_val_00004301.JPEG",
+    "fileName": "ILSVRC2012_val_00004301.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/ILSVRC2012_val_00007921.JPEG",
+    "fileName": "ILSVRC2012_val_00007921.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03394916/ILSVRC2012_val_00009651.JPEG",
+    "fileName": "ILSVRC2012_val_00009651.JPEG",
+    "expectedLabel": "French horn",
+    "classFolder": "n03394916",
+    "imagenetIndex": 566
+  },
+  {
+    "relativePath": "images/n03417042/ILSVRC2012_val_00002210.JPEG",
+    "fileName": "ILSVRC2012_val_00002210.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/ILSVRC2012_val_00006922.JPEG",
+    "fileName": "ILSVRC2012_val_00006922.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/ILSVRC2012_val_00008430.JPEG",
+    "fileName": "ILSVRC2012_val_00008430.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/ILSVRC2012_val_00022172.JPEG",
+    "fileName": "ILSVRC2012_val_00022172.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03417042/ILSVRC2012_val_00024560.JPEG",
+    "fileName": "ILSVRC2012_val_00024560.JPEG",
+    "expectedLabel": "garbage truck",
+    "classFolder": "n03417042",
+    "imagenetIndex": 569
+  },
+  {
+    "relativePath": "images/n03425413/ILSVRC2012_val_00000732.JPEG",
+    "fileName": "ILSVRC2012_val_00000732.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/ILSVRC2012_val_00001432.JPEG",
+    "fileName": "ILSVRC2012_val_00001432.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/ILSVRC2012_val_00004452.JPEG",
+    "fileName": "ILSVRC2012_val_00004452.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/ILSVRC2012_val_00004860.JPEG",
+    "fileName": "ILSVRC2012_val_00004860.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03425413/ILSVRC2012_val_00007471.JPEG",
+    "fileName": "ILSVRC2012_val_00007471.JPEG",
+    "expectedLabel": "gas pump",
+    "classFolder": "n03425413",
+    "imagenetIndex": 571
+  },
+  {
+    "relativePath": "images/n03445777/ILSVRC2012_val_00008161.JPEG",
+    "fileName": "ILSVRC2012_val_00008161.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/ILSVRC2012_val_00009902.JPEG",
+    "fileName": "ILSVRC2012_val_00009902.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/ILSVRC2012_val_00011431.JPEG",
+    "fileName": "ILSVRC2012_val_00011431.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/ILSVRC2012_val_00011581.JPEG",
+    "fileName": "ILSVRC2012_val_00011581.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03445777/ILSVRC2012_val_00014102.JPEG",
+    "fileName": "ILSVRC2012_val_00014102.JPEG",
+    "expectedLabel": "golf ball",
+    "classFolder": "n03445777",
+    "imagenetIndex": 574
+  },
+  {
+    "relativePath": "images/n03888257/ILSVRC2012_val_00001440.JPEG",
+    "fileName": "ILSVRC2012_val_00001440.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/ILSVRC2012_val_00002990.JPEG",
+    "fileName": "ILSVRC2012_val_00002990.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/ILSVRC2012_val_00006561.JPEG",
+    "fileName": "ILSVRC2012_val_00006561.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/ILSVRC2012_val_00009370.JPEG",
+    "fileName": "ILSVRC2012_val_00009370.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  },
+  {
+    "relativePath": "images/n03888257/ILSVRC2012_val_00010460.JPEG",
+    "fileName": "ILSVRC2012_val_00010460.JPEG",
+    "expectedLabel": "parachute",
+    "classFolder": "n03888257",
+    "imagenetIndex": 701
+  }
+]

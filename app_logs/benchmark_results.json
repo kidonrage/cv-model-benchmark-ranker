@@ -1,0 +1,191 @@
+{
+  "benchmarkInfo": {
+    "benchmarkAppVersion": "0.1.0",
+    "templateVersion": "0.1.0",
+    "planId": "single_image_balanced_v1"
+  },
+  "device": {
+    "name": "iPhone 14",
+    "model": "iPhone14,7",
+    "iosVersion": "18.6",
+    "computeUnits": "ALL"
+  },
+  "runs": [
+    {
+      "modelId": "MobileNetV2_FP32",
+      "family": "MobileNetV2",
+      "format": "FP32",
+      "optimizationType": "float32",
+      "computeUnits": "ALL",
+      "measurementMode": "fullPipeline",
+      "modelSizeMb": 48.2,
+      "latency": {
+        "fullPipelineMedianMs": 20.55,
+        "p90Ms": 20.83,
+        "p95Ms": 21.10,
+        "inferenceMedianMs": 7.71,
+        "preprocessingMedianMs": 11.41
+      },
+      "accuracy": {
+        "top1": 0.674,
+        "top5": 0.878,
+        "restrictedTop1": 0.976
+      },
+      "diagnostics": {
+        "thermalState": "nominal",
+        "residentMemoryMb": 124.0,
+        "hasSustainedBenchmark": false
+      }
+    },
+    {
+      "modelId": "MobileNetV2_FP16",
+      "family": "MobileNetV2",
+      "format": "FP16",
+      "optimizationType": "float16",
+      "computeUnits": "ALL",
+      "measurementMode": "fullPipeline",
+      "modelSizeMb": 24.8,
+      "latency": {
+        "fullPipelineMedianMs": 15.76,
+        "p90Ms": 16.29,
+        "p95Ms": 16.50,
+        "inferenceMedianMs": 0.82,
+        "preprocessingMedianMs": 11.60
+      },
+      "accuracy": {
+        "top1": 0.668,
+        "top5": 0.878,
+        "restrictedTop1": 0.976
+      },
+      "agreement": {
+        "top1": 0.980,
+        "top5": 0.922,
+        "restrictedTop1": 1.0
+      },
+      "diagnostics": {
+        "thermalState": "nominal",
+        "residentMemoryMb": 118.0,
+        "hasSustainedBenchmark": false
+      }
+    },
+    {
+      "modelId": "MobileNetV2_INT8_Palettized",
+      "family": "MobileNetV2",
+      "format": "INT8",
+      "optimizationType": "8-bit palettized weights",
+      "computeUnits": "ALL",
+      "measurementMode": "fullPipeline",
+      "modelSizeMb": 8.9,
+      "latency": {
+        "fullPipelineMedianMs": 15.85,
+        "p90Ms": 16.25,
+        "p95Ms": 16.45,
+        "inferenceMedianMs": 0.68,
+        "preprocessingMedianMs": 11.76
+      },
+      "accuracy": {
+        "top1": 0.672,
+        "top5": 0.880,
+        "restrictedTop1": 0.976
+      },
+      "agreement": {
+        "top1": 0.948,
+        "top5": 0.786,
+        "restrictedTop1": 1.0
+      },
+      "diagnostics": {
+        "thermalState": "nominal",
+        "residentMemoryMb": 116.0,
+        "hasSustainedBenchmark": false
+      }
+    },
+    {
+      "modelId": "EfficientNetB0_FP32",
+      "family": "EfficientNetB0",
+      "format": "FP32",
+      "optimizationType": "float32",
+      "computeUnits": "ALL",
+      "measurementMode": "fullPipeline",
+      "modelSizeMb": 80.5,
+      "latency": {
+        "fullPipelineMedianMs": 24.63,
+        "p90Ms": 28.73,
+        "p95Ms": 29.20,
+        "inferenceMedianMs": 8.91,
+        "preprocessingMedianMs": 11.86
+      },
+      "accuracy": {
+        "top1": 0.750,
+        "top5": 0.932,
+        "restrictedTop1": 0.984
+      },
+      "diagnostics": {
+        "thermalState": "nominal",
+        "residentMemoryMb": 151.0,
+        "hasSustainedBenchmark": false
+      }
+    },
+    {
+      "modelId": "EfficientNetB0_FP16",
+      "family": "EfficientNetB0",
+      "format": "FP16",
+      "optimizationType": "float16",
+      "computeUnits": "ALL",
+      "measurementMode": "fullPipeline",
+      "modelSizeMb": 40.2,
+      "latency": {
+        "fullPipelineMedianMs": 16.87,
+        "p90Ms": 17.53,
+        "p95Ms": 17.80,
+        "inferenceMedianMs": 0.88,
+        "preprocessingMedianMs": 12.15
+      },
+      "accuracy": {
+        "top1": 0.748,
+        "top5": 0.936,
+        "restrictedTop1": 0.984
+      },
+      "agreement": {
+        "top1": 0.972,
+        "top5": 0.716,
+        "restrictedTop1": 1.0
+      },
+      "diagnostics": {
+        "thermalState": "nominal",
+        "residentMemoryMb": 143.0,
+        "hasSustainedBenchmark": false
+      }
+    },
+    {
+      "modelId": "EfficientNetB0_INT8_Palettized",
+      "family": "EfficientNetB0",
+      "format": "INT8",
+      "optimizationType": "8-bit palettized weights",
+      "computeUnits": "ALL",
+      "measurementMode": "fullPipeline",
+      "modelSizeMb": 14.1,
+      "latency": {
+        "fullPipelineMedianMs": 16.95,
+        "p90Ms": 17.68,
+        "p95Ms": 17.95,
+        "inferenceMedianMs": 0.81,
+        "preprocessingMedianMs": 12.36
+      },
+      "accuracy": {
+        "top1": 0.750,
+        "top5": 0.930,
+        "restrictedTop1": 0.984
+      },
+      "agreement": {
+        "top1": 0.964,
+        "top5": 0.660,
+        "restrictedTop1": 1.0
+      },
+      "diagnostics": {
+        "thermalState": "nominal",
+        "residentMemoryMb": 140.0,
+        "hasSustainedBenchmark": false
+      }
+    }
+  ]
+}

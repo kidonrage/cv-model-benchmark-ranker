@@ -1,0 +1,14 @@
+{
+  "datasetName": "imagenette2-160",
+  "subsetID": "imagenette2-160-subset-500",
+  "subsetVersion": "v2",
+  "subsetSize": 500,
+  "imagesPerClass": 50,
+  "classCount": 10,
+  "sourceURL": "https://s3.amazonaws.com/fast-ai-imageclas/imagenette2-160.tgz",
+  "sourceArchiveName": "imagenette2-160.tgz",
+  "selectionRule": "deterministic random sample of 50 validation images per class with seed 20260420",
+  "bundleRelativePath": "Resources/Datasets/imagenette2-160-subset-500",
+  "metadataFileName": "imagenette2-160-subset-500_metadata.json",
+  "classMappingFileName": "imagenette2-160-subset-500_class_mapping.json"
+}

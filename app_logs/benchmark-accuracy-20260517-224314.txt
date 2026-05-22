@@ -1,0 +1,11 @@
+experiment=13D2AE3F-6E14-4157-A0B1-C8214DDCA832 timestamp=2026-05-17T19:42:11Z
+dataset=imagenette2-160 subset=imagenette2-160-subset-500 size=500 images_per_class=50 measurement=fullPipeline
+note=compute=ALL reflects deployment behavior on available accelerators; it is not an isolated arithmetic-precision measurement
+selection_rule="deterministic random sample of 50 validation images per class with seed 20260420"
+
+dataset=imagenette2-160 subset=imagenette2-160-subset-500 version=v2 @ Resources/Datasets/imagenette2-160-subset-500 model=MobileNetV2 format=FP32 compute=ALL top1=323/500 top1_acc=0.6460 top5=444/500 top5_acc=0.8880 mean=19.61ms median=18.53ms p90=21.13ms
+dataset=imagenette2-160 subset=imagenette2-160-subset-500 version=v2 @ Resources/Datasets/imagenette2-160-subset-500 model=MobileNetV2 format=FP16 compute=ALL top1=323/500 top1_acc=0.6460 top5=444/500 top5_acc=0.8880 mean=16.49ms median=16.48ms p90=17.00ms ref=FP32 top1_agree=1.0000 top1_diff=0/500 top5_agree=0.9760 top5_diff=12/500
+dataset=imagenette2-160 subset=imagenette2-160-subset-500 version=v2 @ Resources/Datasets/imagenette2-160-subset-500 model=MobileNetV2 format=INT8 compute=ALL top1=322/500 top1_acc=0.6440 top5=444/500 top5_acc=0.8880 mean=18.31ms median=16.75ms p90=21.77ms ref=FP32 top1_agree=0.9820 top1_diff=9/500 top5_agree=0.8020 top5_diff=99/500
+dataset=imagenette2-160 subset=imagenette2-160-subset-500 version=v2 @ Resources/Datasets/imagenette2-160-subset-500 model=EfficientNetB0 format=FP32 compute=ALL top1=383/500 top1_acc=0.7660 top5=475/500 top5_acc=0.9500 mean=27.35ms median=25.22ms p90=34.60ms
+dataset=imagenette2-160 subset=imagenette2-160-subset-500 version=v2 @ Resources/Datasets/imagenette2-160-subset-500 model=EfficientNetB0 format=FP16 compute=ALL top1=380/500 top1_acc=0.7600 top5=473/500 top5_acc=0.9460 mean=17.80ms median=17.55ms p90=18.81ms ref=FP32 top1_agree=0.9720 top1_diff=14/500 top5_agree=0.7540 top5_diff=123/500
+dataset=imagenette2-160 subset=imagenette2-160-subset-500 version=v2 @ Resources/Datasets/imagenette2-160-subset-500 model=EfficientNetB0 format=INT8 compute=ALL top1=380/500 top1_acc=0.7600 top5=474/500 top5_acc=0.9480 mean=18.17ms median=17.80ms p90=18.83ms ref=FP32 top1_agree=0.9620 top1_diff=19/500 top5_agree=0.7180 top5_diff=141/500

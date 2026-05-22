@@ -1,0 +1,11 @@
+{
+  "usageScenario": "single_image_analysis",
+  "priorityProfile": "disk_size_first",
+  "latencyBudgetMs": 25,
+  "p90LatencyBudgetMs": 35,
+  "minTop1Accuracy": 0.65,
+  "minRestrictedTop1Accuracy": 0.95,
+  "maxModelSizeMb": 100,
+  "preferInterpretableOptimization": true,
+  "allowPalettizedWeights": true
+}
