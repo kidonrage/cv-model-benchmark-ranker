@@ -26,7 +26,11 @@ final class FullBenchmarkViewModel {
     var exportedResultsURL: URL?
 
     var canRunBenchmark: Bool {
-        state != .running && state != .validatingPlan && readiness.manifestFound && readiness.planFound
+        state != .running &&
+        state != .validatingPlan &&
+        readiness.manifestFound &&
+        readiness.planFound &&
+        readiness.modelsReady
     }
 
     var canExportResults: Bool {
@@ -35,6 +39,21 @@ final class FullBenchmarkViewModel {
         }
 
         return lastResults.plan.experimentsSucceeded > 0 || !lastResults.runs.isEmpty
+    }
+
+    var runBlockers: [String] {
+        var blockers: [String] = []
+
+        if !readiness.manifestFound {
+            blockers.append("models_manifest.json not found")
+        }
+
+        if !readiness.planFound {
+            blockers.append("benchmark_plan.json not found")
+        }
+
+        blockers.append(contentsOf: readiness.modelErrors)
+        return blockers
     }
 
     func refreshReadiness() {

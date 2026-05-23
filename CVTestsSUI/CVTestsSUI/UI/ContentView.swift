@@ -18,11 +18,8 @@ struct ContentView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
                     planSummary
-                    readinessSummary
                     controls
                     progressSummary
-                    resultSummary
-                    debugSection
                 }
                 .padding()
             }
@@ -49,31 +46,8 @@ struct ContentView: View {
     private var planSummary: some View {
         GroupBox("Benchmark Plan") {
             VStack(alignment: .leading, spacing: 10) {
-                labeledValue("Plan ID", viewModel.readiness.planId ?? "unknown")
                 labeledValue("Models in manifest", viewModel.readiness.modelCount.formatted(.number))
                 labeledValue("Experiments in plan", viewModel.readiness.experimentCount.formatted(.number))
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-        }
-    }
-
-    private var readinessSummary: some View {
-        GroupBox("Readiness") {
-            VStack(alignment: .leading, spacing: 10) {
-                readinessRow(title: "Manifest", isReady: viewModel.readiness.manifestFound)
-                readinessRow(title: "Benchmark plan", isReady: viewModel.readiness.planFound)
-                readinessRow(title: "Models", isReady: viewModel.readiness.modelsReady)
-
-                if !viewModel.readiness.modelErrors.isEmpty {
-                    VStack(alignment: .leading, spacing: 4) {
-                        ForEach(viewModel.readiness.modelErrors, id: \.self) { error in
-                            Text(error)
-                                .font(.footnote.monospaced())
-                                .foregroundStyle(.red)
-                                .textSelection(.enabled)
-                        }
-                    }
-                }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
         }
@@ -100,12 +74,26 @@ struct ContentView: View {
             .buttonStyle(.bordered)
             .controlSize(.large)
             .disabled(!viewModel.canExportResults)
+
+            if !viewModel.runBlockers.isEmpty {
+                VStack(alignment: .leading, spacing: 4) {
+                    ForEach(viewModel.runBlockers, id: \.self) { blocker in
+                        Text(blocker)
+                            .font(.footnote.monospaced())
+                            .foregroundStyle(.red)
+                            .textSelection(.enabled)
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
         }
     }
 
     private var progressSummary: some View {
         GroupBox("Progress") {
             VStack(alignment: .leading, spacing: 10) {
+                labeledValue("Status", viewModel.state.title)
+
                 if let progress = viewModel.progress {
                     ProgressView(
                         value: Double(progress.currentExperimentIndex),
@@ -122,23 +110,13 @@ struct ContentView: View {
                     labeledValue("Measurement mode", progress.measurementMode)
                     labeledValue("Compute units", progress.computeUnits)
                 } else {
-                    Text("No benchmark progress yet")
+                    Text("No benchmark run in progress")
                         .foregroundStyle(.secondary)
                 }
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-        }
-    }
-
-    private var resultSummary: some View {
-        GroupBox("Last Result") {
-            VStack(alignment: .leading, spacing: 10) {
-                labeledValue("Status", viewModel.state.title)
 
                 if let lastResults = viewModel.lastResults {
                     labeledValue("Succeeded", lastResults.plan.experimentsSucceeded.formatted(.number))
                     labeledValue("Failed", lastResults.plan.experimentsFailed.formatted(.number))
-                    labeledValue("Schema", lastResults.schemaVersion)
                 }
 
                 if let error = viewModel.lastErrorMessage {
@@ -159,26 +137,6 @@ struct ContentView: View {
         }
     }
 
-    private var debugSection: some View {
-        DisclosureGroup("Debug / Advanced") {
-            VStack(alignment: .leading, spacing: 10) {
-                Text(
-                    "Manual model selection is no longer the primary path. " +
-                    "This build runs experiments from benchmark_plan.json and exports " +
-                    "benchmark_results.json for analyze_results.sh."
-                )
-                    .font(.footnote)
-                    .foregroundStyle(.secondary)
-
-                Button("Refresh readiness") {
-                    viewModel.refreshReadiness()
-                }
-                .buttonStyle(.bordered)
-            }
-            .padding(.top, 8)
-        }
-    }
-
     private func labeledValue(_ title: String, _ value: String) -> some View {
         HStack(alignment: .firstTextBaseline) {
             Text(title)
@@ -188,16 +146,6 @@ struct ContentView: View {
                 .font(.body.monospaced())
                 .multilineTextAlignment(.trailing)
                 .textSelection(.enabled)
-        }
-    }
-
-    private func readinessRow(title: String, isReady: Bool) -> some View {
-        HStack {
-            Text(title)
-            Spacer()
-            Text(isReady ? "found" : "not found")
-                .font(.body.monospaced())
-                .foregroundStyle(isReady ? .green : .red)
         }
     }
 
