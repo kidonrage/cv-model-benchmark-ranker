@@ -1,94 +1,460 @@
 # CV Model Benchmark Ranker
 
-Набор инструментов для сценарно-ориентированного выбора on-device Core ML модели компьютерного зрения для iOS-приложения.
+Набор инструментов для сценарно-ориентированного выбора on-device Core ML модели для iOS-приложения.
 
 Проект позволяет:
-- добавить несколько candidate-конфигураций моделей в формате `.mlpackage`;
-- прогнать benchmark на физическом iOS-устройстве;
-- экспортировать результаты benchmark в JSON;
-- автоматически отранжировать модели с учётом сценария использования: `single_image_analysis`, `camera_stream`, `old_device_or_no_ane`, `disk_size_sensitive` и др.;
-- получить итоговый `ranking_report.md` с рекомендованной конфигурацией модели и объяснением выбора.
 
-Основная идея: модель выбирается не только по isolated inference latency, а по совокупности факторов: `fullPipeline latency`, `p90/p95`, accuracy, restricted accuracy, model size, compute units, тип оптимизации и ограничения пользовательского сценария.
+- добавить candidate-модели в формате `.mlpackage`, `.mlmodel` или `.mlmodelc`;
+- автоматически скопировать модели в iOS benchmark-проект;
+- сгенерировать `models_manifest.json` и `benchmark_plan.json`;
+- прогнать benchmark на физическом iPhone;
+- экспортировать `benchmark_results.json`;
+- отранжировать модели с учётом сценария использования и профиля приоритета;
+- получить `ranking_report.md` с рекомендованной конфигурацией и объяснением выбора.
+
+Модель выбирается не по одной latency-метрике, а по совокупности факторов: `fullPipeline latency`, `p90/p95`, accuracy, restricted accuracy, model size, compute units, тип оптимизации и сценарий использования.
 
 ---
 
-## Структура проекта
+## 1. Общий workflow
+
+```text
+1. Положить candidate-модели в input_models/
+2. Запустить generate_benchmark_configs.sh
+3. Скрипт скопирует модели в iOS-проект
+4. Скрипт сгенерирует models_manifest.json и benchmark_plan.json
+5. Открыть CVTestsSUI в Xcode
+6. Запустить benchmark app на физическом iPhone
+7. Экспортировать benchmark_results.json
+8. Запустить analyze_results.sh
+9. Получить ranking_report.md и ranking.json
+```
+
+---
+
+## 2. Структура проекта
 
 ```text
 .
-├── CVBenchmarkApp/
-│   └── ...                       # iOS benchmark-приложение
-├── app_logs/
-│   └── benchmark_results.json    # JSON-лог после запуска benchmark на iPhone
-├── reports/
-│   ├── ranking_report.md         # итоговый markdown-отчёт
-│   └── ranking.json              # машинно-читаемый результат ранжирования
+├── README.md
+├── scenario_config.json
+│
+├── input_models/
+│   ├── MobileNetV2_FP16.mlpackage
+│   └── EfficientNetB0_FP16.mlpackage
+│
 ├── scripts/
-│   └── analyze_results.sh        # скрипт анализа benchmark-логов
-└── scenario_config.json          # описание сценария и ограничений ранжирования
+│   ├── generate_benchmark_configs.sh
+│   └── analyze_results.sh
+│
+├── CVTestsSUI/
+│   ├── CVTestsSUI.xcodeproj
+│   └── CVTestsSUI/
+│       ├── Resources/
+│       │   ├── ModelsRaw/
+│       │   ├── Configs/
+│       │   │   ├── model_profiles.json
+│       │   │   ├── models_manifest.json
+│       │   │   └── benchmark_plan.json
+│       │   ├── Labels/
+│       │   └── Datasets/
+│       └── ...
+│
+├── app_logs/
+│   └── benchmark_results.json
+│
+└── reports/
+    ├── ranking_report.md
+    └── ranking.json
 ```
 
 ---
 
-## Общий workflow
+## 3. Подготовка моделей
+
+Положите `.mlpackage`, `.mlmodel` или `.mlmodelc` файлы в папку:
 
 ```text
-1. Добавить candidate-модели в iOS benchmark-проект.
-2. Запустить benchmark-приложение на физическом iPhone.
-3. Экспортировать benchmark_results.json.
-4. Описать сценарий использования в scenario_config.json.
-5. Запустить analyze_results.sh.
-6. Получить ranking_report.md и ranking.json.
+input_models/
 ```
 
----
-
-## Шаг 1. Добавить candidate-модели в benchmark-проект
-
-Добавьте `.mlpackage`-файлы в iOS benchmark-проект.
-
-Пример candidate-конфигураций:
+Пример:
 
 ```text
-MobileNetV2_FP32.mlpackage
-MobileNetV2_FP16.mlpackage
-MobileNetV2_INT8.mlpackage
-EfficientNetB0_FP32.mlpackage
-EfficientNetB0_FP16.mlpackage
-EfficientNetB0_INT8.mlpackage
+input_models/
+├── MobileNetV2_FP32.mlpackage
+├── MobileNetV2_FP16.mlpackage
+├── MobileNetV2_INT8.mlpackage
+├── EfficientNetB0_FP32.mlpackage
+├── EfficientNetB0_FP16.mlpackage
+└── EfficientNetB0_INT8.mlpackage
 ```
 
-Важно: candidate-конфигурация — это не только архитектура модели, но и конкретный формат/тип оптимизации. Например:
+Candidate-конфигурация — это конкретная пара «модель + формат/оптимизация», например:
 
 ```text
-EfficientNetB0 FP32
+MobileNetV2 FP16
 EfficientNetB0 FP16
 EfficientNetB0 INT8 / palettized weights
 ```
 
 ---
 
-## Шаг 2. Запустить benchmark на физическом iPhone
+## 4. Настройка сценария
 
-Откройте iOS benchmark-проект в Xcode и запустите приложение на физическом устройстве.
+Файл:
 
-Benchmark должен собрать по каждой candidate-конфигурации:
+```text
+scenario_config.json
+```
 
-- `fullPipelineMedianMs`;
-- `p90Ms`;
-- `p95Ms`, если доступно;
-- `inferenceMedianMs`;
-- `preprocessingMedianMs`;
-- `top1`;
-- `top5`;
-- `restrictedTop1`;
-- `modelSizeMb`;
-- `computeUnits`;
-- `thermalState`;
-- дополнительные agreement-метрики, если доступны.
+описывает сценарий использования модели и правила ранжирования.
 
-После завершения benchmark экспортируйте результат в файл:
+Если файла нет, `generate_benchmark_configs.sh` создаст дефолтный `scenario_config.json`.
+
+Пример:
+
+```json
+{
+  "usageScenario": "single_image_analysis",
+  "priorityProfile": "balanced",
+  "targetDeviceClass": "modern_iphone_with_ane",
+
+  "datasetId": "imagenette2-160-subset-500",
+
+  "latencyBudgetMs": 25,
+  "p90LatencyBudgetMs": 35,
+  "minTop1Accuracy": 0.65,
+  "minRestrictedTop1Accuracy": 0.95,
+  "maxModelSizeMb": 100,
+
+  "preferInterpretableOptimization": true,
+  "allowPalettizedWeights": true,
+
+  "includeCpuOnlyReference": false,
+
+  "enableAccuracyBenchmark": true,
+  "enableSegmentedBenchmark": true,
+  "enableSustainedBenchmark": false,
+
+  "warmupRuns": 10,
+  "measuredRuns": 50,
+  "accuracyWarmupImages": 10,
+  "sustainedWarmupRuns": 100,
+  "sustainedMeasuredRuns": 10000
+}
+```
+
+### Поля `scenario_config.json`
+
+| Поле                              | Описание                                                                |
+| --------------------------------- | ----------------------------------------------------------------------- |
+| `usageScenario`                   | Сценарий использования модели                                           |
+| `priorityProfile`                 | Профиль приоритета для ранжирования                                     |
+| `targetDeviceClass`               | Целевой класс устройств                                                 |
+| `datasetId`                       | Dataset для benchmark                                                   |
+| `latencyBudgetMs`                 | Максимальная median latency                                             |
+| `p90LatencyBudgetMs`              | Максимальная p90 latency                                                |
+| `p95LatencyBudgetMs`              | Максимальная p95 latency                                                |
+| `minTop1Accuracy`                 | Минимальная top-1 accuracy                                              |
+| `minTop5Accuracy`                 | Минимальная top-5 accuracy                                              |
+| `minRestrictedTop1Accuracy`       | Минимальная restricted top-1 accuracy                                   |
+| `maxModelSizeMb`                  | Максимальный размер модели                                              |
+| `preferInterpretableOptimization` | При близких результатах предпочитать более интерпретируемые оптимизации |
+| `allowPalettizedWeights`          | Разрешить модели с palettized weights                                   |
+| `requiredComputeUnits`            | Использовать только результаты с указанным compute mode                 |
+| `includeCpuOnlyReference`         | Добавить CPU-only benchmark как reference                               |
+| `enableAccuracyBenchmark`         | Включить accuracy benchmark                                             |
+| `enableSegmentedBenchmark`        | Включить segmented benchmark                                            |
+| `enableSustainedBenchmark`        | Включить длительный sustained benchmark                                 |
+| `warmupRuns`                      | Warmup-запуски для performance benchmark                                |
+| `measuredRuns`                    | Measured-запуски для performance benchmark                              |
+| `accuracyWarmupImages`            | Warmup-изображения для accuracy benchmark                               |
+| `sustainedWarmupRuns`             | Warmup-запуски для sustained benchmark                                  |
+| `sustainedMeasuredRuns`           | Measured-запуски для sustained benchmark                                |
+
+---
+
+## 5. Настройка профилей моделей
+
+Файл:
+
+```text
+CVTestsSUI/CVTestsSUI/Resources/Configs/model_profiles.json
+```
+
+описывает известные семейства моделей, их input/output contract и preprocessing profile.
+
+Если файла нет, `generate_benchmark_configs.sh` создаст дефолтный `model_profiles.json` для `MobileNetV2` и `EfficientNetB0`.
+
+Пример:
+
+```json
+{
+  "families": [
+    {
+      "family": "MobileNetV2",
+      "match": ["mobilenetv2", "mobile_net_v2", "mobile-net-v2"],
+      "preprocessingProfile": "mobilenetv2_imagenet",
+      "input": {
+        "type": "multiArray",
+        "shape": [1, 3, 224, 224],
+        "channelOrder": "CHW"
+      },
+      "output": {
+        "name": "var_824",
+        "labelMapping": "imagenet_labels.json"
+      }
+    },
+    {
+      "family": "EfficientNetB0",
+      "match": ["efficientnetb0", "efficientnet_b0", "efficient-net-b0"],
+      "preprocessingProfile": "efficientnetb0_imagenet",
+      "input": {
+        "type": "multiArray",
+        "shape": [1, 3, 224, 224],
+        "channelOrder": "CHW"
+      },
+      "output": {
+        "name": "var_1150",
+        "labelMapping": "imagenet_labels.json"
+      }
+    }
+  ],
+  "preprocessingProfiles": {
+    "mobilenetv2_imagenet": {
+      "resizeShortSide": 232,
+      "cropSize": 224,
+      "interpolation": "bilinear",
+      "colorSpace": "RGB",
+      "channelOrder": "CHW",
+      "mean": [0.485, 0.456, 0.406],
+      "std": [0.229, 0.224, 0.225]
+    },
+    "efficientnetb0_imagenet": {
+      "resizeShortSide": 256,
+      "cropSize": 224,
+      "interpolation": "bicubic",
+      "colorSpace": "RGB",
+      "channelOrder": "CHW",
+      "mean": [0.485, 0.456, 0.406],
+      "std": [0.229, 0.224, 0.225]
+    }
+  }
+}
+```
+
+Preprocessing нельзя безопасно угадать только по `.mlpackage`, поэтому для новой архитектуры нужно один раз добавить family profile.
+
+Если модель неизвестна, скрипт остановится с ошибкой:
+
+```text
+Unknown model family for 'ResNet50_FP16'.
+Add a family profile to model_profiles.json or run with --allow-unknown.
+```
+
+---
+
+## 6. Генерация benchmark-конфигов
+
+Основной скрипт:
+
+```text
+scripts/generate_benchmark_configs.sh
+```
+
+Он:
+
+```text
+1. Берёт модели из input_models/
+2. Копирует их в CVTestsSUI/CVTestsSUI/Resources/ModelsRaw/
+3. Создаёт model_profiles.json, если его нет
+4. Создаёт scenario_config.json, если его нет
+5. Генерирует models_manifest.json
+6. Генерирует benchmark_plan.json
+```
+
+### Запуск без параметров
+
+```bash
+./scripts/generate_benchmark_configs.sh
+```
+
+Дефолтные пути:
+
+| Сущность           | Путь                                                            |
+| ------------------ | --------------------------------------------------------------- |
+| input models       | `./input_models`                                                |
+| iOS project        | `./CVTestsSUI`                                                  |
+| project models dir | `./CVTestsSUI/CVTestsSUI/Resources/ModelsRaw`                   |
+| configs output dir | `./CVTestsSUI/CVTestsSUI/Resources/Configs`                     |
+| profiles           | `./CVTestsSUI/CVTestsSUI/Resources/Configs/model_profiles.json` |
+| scenario           | `./scenario_config.json`                                        |
+
+### Запуск с параметрами
+
+```bash
+./scripts/generate_benchmark_configs.sh \
+  --project-name CVTestsSUI \
+  --input-models ./input_models \
+  --project-models-dir ./CVTestsSUI/CVTestsSUI/Resources/ModelsRaw \
+  --profiles ./CVTestsSUI/CVTestsSUI/Resources/Configs/model_profiles.json \
+  --scenario ./scenario_config.json \
+  --output-dir ./CVTestsSUI/CVTestsSUI/Resources/Configs
+```
+
+### Параметры
+
+| Параметр               | Значение по умолчанию                                                   | Описание                                  |
+| ---------------------- | ----------------------------------------------------------------------- | ----------------------------------------- |
+| `--project-name`       | `CVTestsSUI`                                                            | Имя iOS/Xcode проекта                     |
+| `--project-root`       | `./<project-name>`                                                      | Корневая папка проекта                    |
+| `--input-models`       | `./input_models`                                                        | Папка с исходными моделями                |
+| `--project-models-dir` | `./<project-name>/<project-name>/Resources/ModelsRaw`                   | Папка, куда копируются модели             |
+| `--profiles`           | `./<project-name>/<project-name>/Resources/Configs/model_profiles.json` | Путь к model profiles                     |
+| `--scenario`           | `./scenario_config.json`                                                | Путь к scenario config                    |
+| `--output-dir`         | `./<project-name>/<project-name>/Resources/Configs`                     | Папка для генерации конфигов              |
+| `--allow-unknown`      | `false`                                                                 | Не падать на неизвестных моделях          |
+| `--no-clean-models`    | `false`                                                                 | Не очищать `ModelsRaw` перед копированием |
+| `--help`               | —                                                                       | Показать справку                          |
+
+---
+
+## 7. Сгенерированные файлы
+
+### `models_manifest.json`
+
+Путь:
+
+```text
+CVTestsSUI/CVTestsSUI/Resources/Configs/models_manifest.json
+```
+
+Описывает модели, которые есть в benchmark:
+
+```json
+{
+  "generatedAt": "2026-05-23T12:00:00Z",
+  "projectName": "CVTestsSUI",
+  "modelsDir": "CVTestsSUI/CVTestsSUI/Resources/ModelsRaw",
+  "models": [
+    {
+      "id": "MobileNetV2_FP16",
+      "sourceFile": "MobileNetV2_FP16.mlpackage",
+      "compiledResourceName": "MobileNetV2_FP16",
+      "compiledExtension": "mlmodelc",
+      "family": "MobileNetV2",
+      "format": "FP16",
+      "optimizationType": "float16",
+      "modelSizeMb": 24.8,
+      "supported": true,
+      "preprocessingProfile": "mobilenetv2_imagenet",
+      "input": {
+        "type": "multiArray",
+        "shape": [1, 3, 224, 224],
+        "channelOrder": "CHW"
+      },
+      "output": {
+        "name": "var_824",
+        "labelMapping": "imagenet_labels.json"
+      },
+      "warnings": []
+    }
+  ],
+  "preprocessingProfiles": {}
+}
+```
+
+iOS-приложение использует этот файл, чтобы понять, какие модели есть в benchmark и какой preprocessing применять.
+
+### `benchmark_plan.json`
+
+Путь:
+
+```text
+CVTestsSUI/CVTestsSUI/Resources/Configs/benchmark_plan.json
+```
+
+Описывает, какие эксперименты должно выполнить iOS benchmark-приложение:
+
+```json
+{
+  "planId": "single_image_analysis_balanced_generated",
+  "usageScenario": "single_image_analysis",
+  "priorityProfile": "balanced",
+  "datasetId": "imagenette2-160-subset-500",
+  "computeUnits": ["ALL"],
+  "experiments": [
+    {
+      "experimentId": "MobileNetV2_FP16__ALL__performance__fullPipeline",
+      "modelId": "MobileNetV2_FP16",
+      "computeUnits": "ALL",
+      "benchmarkType": "performance",
+      "measurementMode": "fullPipeline",
+      "inputMode": "realImage",
+      "datasetId": "imagenette2-160-subset-500",
+      "warmupRuns": 10,
+      "measuredRuns": 50
+    }
+  ]
+}
+```
+
+В новой логике приложение не требует ручного выбора модели, режима и compute units. Оно читает `benchmark_plan.json` и выполняет весь plan.
+
+---
+
+## 8. Настройка Xcode для моделей
+
+Скрипт копирует модели в:
+
+```text
+CVTestsSUI/CVTestsSUI/Resources/ModelsRaw
+```
+
+Но он **не редактирует `.xcodeproj`**.
+
+Чтобы приложение увидело модели, нужно один раз настроить Xcode-проект: добавить Build Phase, который компилирует все модели из `Resources/ModelsRaw` в app bundle.
+
+Пример build phase script:
+
+```bash
+MODELS_DIR="${SRCROOT}/CVTestsSUI/Resources/ModelsRaw"
+OUTPUT_DIR="${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
+
+if [ -d "$MODELS_DIR" ]; then
+  find "$MODELS_DIR" -maxdepth 1 \( -name "*.mlpackage" -o -name "*.mlmodel" \) -print0 | while IFS= read -r -d '' MODEL_PATH; do
+    echo "Compiling Core ML model: $MODEL_PATH"
+    xcrun coremlcompiler compile "$MODEL_PATH" "$OUTPUT_DIR"
+  done
+fi
+```
+
+После этого новые модели можно добавлять без ручного изменения `.xcodeproj`.
+
+---
+
+## 9. Запуск benchmark на iPhone
+
+Откройте проект:
+
+```text
+CVTestsSUI/CVTestsSUI.xcodeproj
+```
+
+Запустите приложение на физическом iPhone.
+
+Приложение должно:
+
+```text
+1. Прочитать models_manifest.json
+2. Прочитать benchmark_plan.json
+3. Выполнить все experiments из benchmark_plan.json
+4. Собрать latency/accuracy/resource diagnostics
+5. Экспортировать benchmark_results.json
+```
+
+Ожидаемый результат:
 
 ```text
 app_logs/benchmark_results.json
@@ -96,14 +462,16 @@ app_logs/benchmark_results.json
 
 ---
 
-## Шаг 3. Подготовить `benchmark_results.json`
+## 10. Формат `benchmark_results.json`
 
-Файл `benchmark_results.json` содержит результаты измерений, полученные на устройстве.
-
-Минимальный пример:
+Пример:
 
 ```json
 {
+  "benchmarkInfo": {
+    "benchmarkAppVersion": "0.1.0",
+    "planId": "single_image_analysis_balanced_generated"
+  },
   "device": {
     "name": "iPhone 14",
     "model": "iPhone14,7",
@@ -122,9 +490,9 @@ app_logs/benchmark_results.json
       "latency": {
         "fullPipelineMedianMs": 15.76,
         "p90Ms": 16.29,
-        "p95Ms": 16.50,
+        "p95Ms": 16.5,
         "inferenceMedianMs": 0.82,
-        "preprocessingMedianMs": 11.60
+        "preprocessingMedianMs": 11.6
       },
       "accuracy": {
         "top1": 0.668,
@@ -132,7 +500,7 @@ app_logs/benchmark_results.json
         "restrictedTop1": 0.976
       },
       "agreement": {
-        "top1": 0.980,
+        "top1": 0.98,
         "top5": 0.922,
         "restrictedTop1": 1.0
       },
@@ -146,216 +514,11 @@ app_logs/benchmark_results.json
 }
 ```
 
-### Поля `benchmark_results.json`
-
-| Поле | Описание |
-|---|---|
-| `device.name` | Название устройства |
-| `device.model` | Идентификатор модели устройства |
-| `device.iosVersion` | Версия iOS |
-| `device.computeUnits` | Общий режим compute units, если он один для всего прогона |
-| `runs[]` | Массив результатов по candidate-конфигурациям |
-| `runs[].modelId` | Уникальный идентификатор модели |
-| `runs[].family` | Семейство модели, например `MobileNetV2` |
-| `runs[].format` | Формат: `FP32`, `FP16`, `INT8` |
-| `runs[].optimizationType` | Фактический тип оптимизации |
-| `runs[].computeUnits` | `ALL`, `CPU_ONLY` и т.д. |
-| `runs[].modelSizeMb` | Размер модели в МБ |
-| `runs[].latency.fullPipelineMedianMs` | Median latency полного pipeline |
-| `runs[].latency.p90Ms` | p90 latency |
-| `runs[].latency.p95Ms` | p95 latency |
-| `runs[].latency.inferenceMedianMs` | Median latency самого inference |
-| `runs[].latency.preprocessingMedianMs` | Median latency preprocessing |
-| `runs[].accuracy.top1` | Top-1 accuracy |
-| `runs[].accuracy.top5` | Top-5 accuracy |
-| `runs[].accuracy.restrictedTop1` | Restricted top-1 accuracy |
-| `runs[].agreement.top1` | Совпадение top-1 с FP32 baseline |
-| `runs[].agreement.top5` | Совпадение top-5 с FP32 baseline |
-| `runs[].diagnostics.thermalState` | Thermal state устройства |
-| `runs[].diagnostics.hasSustainedBenchmark` | Был ли выполнен длительный sustained benchmark |
-
 ---
 
-## Шаг 4. Подготовить `scenario_config.json`
+## 11. Анализ результатов
 
-Файл `scenario_config.json` описывает сценарий использования модели и правила ранжирования.
-
-Пример для balanced-сценария анализа одиночного изображения:
-
-```json
-{
-  "usageScenario": "single_image_analysis",
-  "priorityProfile": "balanced",
-  "targetDeviceClass": "modern_iphone_with_ane",
-  "latencyBudgetMs": 25,
-  "p90LatencyBudgetMs": 35,
-  "minTop1Accuracy": 0.65,
-  "minRestrictedTop1Accuracy": 0.95,
-  "maxModelSizeMb": 100,
-  "preferInterpretableOptimization": true,
-  "allowPalettizedWeights": true
-}
-```
-
-### Поля `scenario_config.json`
-
-| Поле | Обязательное | Описание |
-|---|---:|---|
-| `usageScenario` | Да | Сценарий использования модели |
-| `priorityProfile` | Да | Профиль приоритета для ранжирования |
-| `targetDeviceClass` | Нет | Целевой класс устройств |
-| `latencyBudgetMs` | Нет | Максимальная допустимая median latency |
-| `p90LatencyBudgetMs` | Нет | Максимальная допустимая p90 latency |
-| `p95LatencyBudgetMs` | Нет | Максимальная допустимая p95 latency |
-| `minTop1Accuracy` | Нет | Минимальная top-1 accuracy |
-| `minTop5Accuracy` | Нет | Минимальная top-5 accuracy |
-| `minRestrictedTop1Accuracy` | Нет | Минимальная restricted top-1 accuracy |
-| `maxModelSizeMb` | Нет | Максимальный размер модели |
-| `preferInterpretableOptimization` | Нет | При близких результатах предпочитать более интерпретируемые оптимизации |
-| `allowPalettizedWeights` | Нет | Разрешить модели с palettized weights |
-| `requiredComputeUnits` | Нет | Принудительно использовать только результаты с указанным compute mode |
-
----
-
-## Поддерживаемые `usageScenario`
-
-### `single_image_analysis`
-
-Для сценариев, где приложение анализирует одно изображение за раз.
-
-Пример: классификация фотографии, анализ изображения из галереи, разовый запуск модели.
-
-Основные метрики:
-
-- `fullPipelineMedianMs`;
-- `p90Ms`;
-- `top1`;
-- `top5`;
-- `restrictedTop1`;
-- `modelSizeMb`.
-
----
-
-### `camera_stream`
-
-Для сценариев частого запуска модели на кадрах камеры.
-
-Пример: live camera, AR, near real-time обработка.
-
-Основные метрики:
-
-- `p90Ms`;
-- `p95Ms`;
-- sustained latency;
-- thermal state;
-- battery/resource diagnostics;
-- preprocessing latency.
-
-Если в `benchmark_results.json` нет sustained benchmark, скрипт добавит warning.
-
----
-
-### `old_device_or_no_ane`
-
-Для сценариев поддержки старых устройств или устройств без эффективного Neural Engine path.
-
-Основные метрики:
-
-- `CPU_ONLY` latency;
-- memory usage;
-- model size;
-- accuracy.
-
-Если в логе нет `CPU_ONLY` результатов, скрипт добавит warning и выполнит ранжирование по доступным данным.
-
----
-
-### `disk_size_sensitive`
-
-Для сценариев, где критичен размер приложения или модели.
-
-Основные метрики:
-
-- `modelSizeMb`;
-- минимальные пороги accuracy;
-- latency budget;
-- тип оптимизации.
-
-В этом сценарии `INT8 / palettized` модели могут получить более высокий ranking, если проходят latency/accuracy thresholds.
-
----
-
-## Поддерживаемые `priorityProfile`
-
-### `balanced`
-
-Компромисс между качеством, задержкой и интерпретируемостью.
-
-Используется по умолчанию для обычного product-сценария.
-
----
-
-### `latency_first`
-
-Приоритет — минимальная задержка.
-
-Логика:
-
-```text
-1. Отфильтровать модели, не проходящие минимальную accuracy.
-2. Отсортировать оставшиеся по latency.
-3. При близкой latency учитывать model size и интерпретируемость.
-```
-
----
-
-### `accuracy_first`
-
-Приоритет — качество модели.
-
-Логика:
-
-```text
-1. Отфильтровать модели, не проходящие latency budget.
-2. Отсортировать оставшиеся по top-1/top-5/restricted top-1.
-3. При близкой accuracy учитывать latency.
-```
-
----
-
-### `disk_size_first`
-
-Приоритет — минимальный размер модели.
-
-Логика:
-
-```text
-1. Отфильтровать модели, не проходящие accuracy и latency thresholds.
-2. Отсортировать оставшиеся по model size.
-3. Добавить warning для palettized/INT8-like моделей, если они не являются доказанным W8A8 INT8 inference.
-```
-
----
-
-### `conservative_deployment`
-
-Приоритет — предсказуемость и простота интерпретации оптимизации.
-
-Подходит для случаев, когда нежелательно выбирать плохо интерпретируемые low-precision варианты.
-
----
-
-### `energy_first`
-
-Приоритет — потенциальная энергоэффективность и устойчивость при длительной работе.
-
-Важно: для корректного применения этого профиля желательно иметь sustained benchmark и thermal/battery diagnostics.
-
----
-
-## Шаг 5. Запустить анализ результатов
-
-Команда:
+После экспорта `benchmark_results.json` запустите:
 
 ```bash
 ./scripts/analyze_results.sh \
@@ -364,163 +527,53 @@ app_logs/benchmark_results.json
   --output-dir ./reports
 ```
 
-### Параметры команды
-
-| Параметр | Обязательный | Описание |
-|---|---:|---|
-| `--results` | Да | Путь к JSON-файлу с результатами benchmark |
-| `--scenario` | Да | Путь к JSON-файлу со сценарием и ограничениями |
-| `--output-dir` | Нет | Папка для сохранения отчётов. По умолчанию `reports` |
-| `--help` | Нет | Показать справку |
-
----
-
-## Шаг 6. Посмотреть результат
-
-После выполнения команды будут сгенерированы файлы:
+На выходе будут созданы:
 
 ```text
 reports/ranking_report.md
 reports/ranking.json
 ```
 
-### `ranking_report.md`
+### Параметры `analyze_results.sh`
 
-Markdown-отчёт для человека.
-
-Содержит:
-
-- описание сценария;
-- информацию об устройстве;
-- предупреждения;
-- рекомендованную candidate-конфигурацию;
-- объяснение выбора;
-- таблицу ранжирования;
-- компоненты итогового score.
-
-Пример рекомендации:
-
-```markdown
-Recommended configuration: **EfficientNetB0 FP16 [ALL]**
-
-Reasons:
-
-- passes all required scenario constraints;
-- median fullPipeline latency: 16.87 ms;
-- top-1 accuracy: 0.748;
-- restricted top-1 accuracy: 0.984;
-- top-5 accuracy: 0.936;
-- is 1.11 ms slower than the fastest eligible configuration, but provides a better overall scenario trade-off.
-```
-
-### `ranking.json`
-
-Машинно-читаемый результат.
-
-Может использоваться для последующей визуализации, CI или интеграции с другими инструментами.
+| Параметр       | Описание                                             |
+| -------------- | ---------------------------------------------------- |
+| `--results`    | Путь к JSON-файлу с результатами benchmark           |
+| `--scenario`   | Путь к JSON-файлу со сценарием и ограничениями       |
+| `--output-dir` | Папка для сохранения отчётов. По умолчанию `reports` |
+| `--help`       | Показать справку                                     |
 
 ---
 
-## Примеры сценариев
+## 12. Сценарии и профили ранжирования
 
-### Balanced single-image analysis
+### `usageScenario`
 
-```json
-{
-  "usageScenario": "single_image_analysis",
-  "priorityProfile": "balanced",
-  "targetDeviceClass": "modern_iphone_with_ane",
-  "latencyBudgetMs": 25,
-  "p90LatencyBudgetMs": 35,
-  "minTop1Accuracy": 0.65,
-  "minRestrictedTop1Accuracy": 0.95,
-  "maxModelSizeMb": 100,
-  "preferInterpretableOptimization": true,
-  "allowPalettizedWeights": true
-}
-```
+| Сценарий                | Когда использовать                          | Основные метрики                                                      |
+| ----------------------- | ------------------------------------------- | --------------------------------------------------------------------- |
+| `single_image_analysis` | Разовый анализ изображения                  | median/p90 fullPipeline latency, top-1, top-5, restricted top-1, size |
+| `camera_stream`         | Live camera, AR, частый inference           | p90/p95, sustained latency, thermal state, preprocessing latency      |
+| `old_device_or_no_ane`  | Старые iPhone или слабый Neural Engine path | CPU-only latency, memory, size, accuracy                              |
+| `disk_size_sensitive`   | Критичен размер приложения/модели           | model size, accuracy thresholds, latency budget, optimization type    |
 
----
+### `priorityProfile`
 
-### Latency-first
-
-```json
-{
-  "usageScenario": "single_image_analysis",
-  "priorityProfile": "latency_first",
-  "latencyBudgetMs": 25,
-  "p90LatencyBudgetMs": 35,
-  "minTop1Accuracy": 0.65,
-  "minRestrictedTop1Accuracy": 0.95,
-  "maxModelSizeMb": 100,
-  "preferInterpretableOptimization": true,
-  "allowPalettizedWeights": true
-}
-```
+| Профиль                   | Приоритет                                      | Логика                                                       |
+| ------------------------- | ---------------------------------------------- | ------------------------------------------------------------ |
+| `balanced`                | Баланс качества, задержки и интерпретируемости | Выбирает лучший quality-latency trade-off                    |
+| `latency_first`           | Минимальная задержка                           | Сначала фильтр по accuracy, затем сортировка по latency      |
+| `accuracy_first`          | Максимальное качество                          | Сначала фильтр по latency, затем сортировка по accuracy      |
+| `disk_size_first`         | Минимальный размер                             | Сначала фильтр по latency/accuracy, затем сортировка по size |
+| `conservative_deployment` | Предсказуемость                                | Штрафует плохо интерпретируемые low-precision варианты       |
+| `energy_first`            | Долгая работа без перегрева                    | Желателен sustained benchmark и thermal/battery diagnostics  |
 
 ---
 
-### Disk-size-first
-
-```json
-{
-  "usageScenario": "disk_size_sensitive",
-  "priorityProfile": "disk_size_first",
-  "latencyBudgetMs": 30,
-  "p90LatencyBudgetMs": 40,
-  "minRestrictedTop1Accuracy": 0.95,
-  "maxModelSizeMb": 20,
-  "preferInterpretableOptimization": false,
-  "allowPalettizedWeights": true
-}
-```
-
----
-
-### Camera stream
-
-```json
-{
-  "usageScenario": "camera_stream",
-  "priorityProfile": "latency_first",
-  "targetFps": 30,
-  "frameBudgetMs": 33.3,
-  "latencyBudgetMs": 25,
-  "p90LatencyBudgetMs": 25,
-  "p95LatencyBudgetMs": 30,
-  "minRestrictedTop1Accuracy": 0.95,
-  "maxModelSizeMb": 100,
-  "preferInterpretableOptimization": true,
-  "allowPalettizedWeights": true
-}
-```
-
----
-
-### Old device / no ANE
-
-```json
-{
-  "usageScenario": "old_device_or_no_ane",
-  "priorityProfile": "latency_first",
-  "targetDeviceClass": "old_iphone_or_no_ane",
-  "requiredComputeUnits": "CPU_ONLY",
-  "latencyBudgetMs": 40,
-  "p90LatencyBudgetMs": 60,
-  "minRestrictedTop1Accuracy": 0.95,
-  "maxModelSizeMb": 100,
-  "preferInterpretableOptimization": true,
-  "allowPalettizedWeights": true
-}
-```
-
----
-
-## Интерпретация INT8 / palettized моделей
+## 13. Интерпретация INT8 / palettized моделей
 
 Если модель обозначена как `INT8`, но фактически использует `8-bit palettized weights`, она не считается доказанным полноценным W8A8 INT8 inference.
 
-Скрипт добавляет warning для таких моделей:
+Анализатор добавляет warning:
 
 ```text
 INT8-labeled model is interpreted as palettized/weight-compressed, not proven W8A8 integer inference
@@ -530,12 +583,45 @@ INT8-labeled model is interpreted as palettized/weight-compressed, not proven W8
 
 ---
 
-## Ограничения
+## 14. Быстрый старт
 
-Текущий набор инструментов является MVP и имеет ограничения:
+```bash
+# 1. Подготовить папки
+mkdir -p input_models scripts reports app_logs
 
-- не выполняет benchmark самостоятельно, а анализирует уже экспортированный JSON-лог;
+# 2. Положить модели в input_models/
+# Например:
+# input_models/MobileNetV2_FP16.mlpackage
+# input_models/EfficientNetB0_FP16.mlpackage
+
+# 3. Сгенерировать конфиги benchmark
+./scripts/generate_benchmark_configs.sh
+
+# 4. Открыть Xcode-проект
+open ./CVTestsSUI/CVTestsSUI.xcodeproj
+
+# 5. Запустить benchmark на физическом iPhone
+# После завершения экспортировать benchmark_results.json в app_logs/
+
+# 6. Проанализировать результаты
+./scripts/analyze_results.sh \
+  --results ./app_logs/benchmark_results.json \
+  --scenario ./scenario_config.json \
+  --output-dir ./reports
+
+# 7. Открыть отчёт
+open ./reports/ranking_report.md
+```
+
+---
+
+## 15. Ограничения MVP
+
+Текущая версия:
+
+- не редактирует `.xcodeproj`;
 - не определяет автоматически корректный preprocessing для произвольной модели;
+- требует family profile для новой архитектуры;
 - не доказывает наличие полноценного W8A8 INT8 inference;
 - для stream-сценариев использует p90/p95 как proxy, если нет sustained benchmark;
 - для old-device/no-ANE сценариев требует `CPU_ONLY` результатов или отдельного запуска на целевом устройстве;
@@ -543,18 +629,24 @@ INT8-labeled model is interpreted as palettized/weight-compressed, not proven W8
 
 ---
 
-## Требования
+## 16. Требования
 
-Для анализа результатов требуется:
+Для генерации конфигов и анализа результатов:
 
 ```text
 bash
 python3
 ```
 
-На macOS обычно достаточно системного `bash` и установленного `python3`.
+Для запуска benchmark-приложения:
 
-Проверка:
+```text
+Xcode
+физическое iOS-устройство
+Core ML-compatible модели
+```
+
+Проверка Python:
 
 ```bash
 python3 --version
@@ -562,59 +654,34 @@ python3 --version
 
 ---
 
-## Быстрый старт
-
-```bash
-# 1. Подготовить папки
-mkdir -p scripts app_logs reports
-
-# 2. Положить benchmark log
-cp benchmark_results.json ./app_logs/benchmark_results.json
-
-# 3. Подготовить scenario_config.json
-cat > scenario_config.json <<'JSON'
-{
-  "usageScenario": "single_image_analysis",
-  "priorityProfile": "balanced",
-  "targetDeviceClass": "modern_iphone_with_ane",
-  "latencyBudgetMs": 25,
-  "p90LatencyBudgetMs": 35,
-  "minTop1Accuracy": 0.65,
-  "minRestrictedTop1Accuracy": 0.95,
-  "maxModelSizeMb": 100,
-  "preferInterpretableOptimization": true,
-  "allowPalettizedWeights": true
-}
-JSON
-
-# 4. Запустить анализ
-./scripts/analyze_results.sh \
-  --results ./app_logs/benchmark_results.json \
-  --scenario ./scenario_config.json \
-  --output-dir ./reports
-
-# 5. Открыть отчёт
-open ./reports/ranking_report.md
-```
-
----
-
-## Итог
-
-Этот набор инструментов реализует сценарно-ориентированную методику выбора Core ML модели для iOS-приложения.
+## 17. Итог
 
 На вход подаются:
 
 ```text
-benchmark_results.json
+input_models/
 scenario_config.json
+model_profiles.json
 ```
 
-На выходе формируются:
+Генерируются:
+
+```text
+models_manifest.json
+benchmark_plan.json
+```
+
+После запуска benchmark на устройстве получается:
+
+```text
+benchmark_results.json
+```
+
+После анализа формируются:
 
 ```text
 ranking_report.md
 ranking.json
 ```
 
-Результат — рекомендованная candidate-конфигурация модели для заданного сценария использования и профиля приоритета.
+Итоговый результат — рекомендованная candidate-конфигурация Core ML модели для заданного сценария использования и профиля приоритета.
