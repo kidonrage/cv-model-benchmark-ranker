@@ -170,11 +170,10 @@ struct FullBenchmarkOrchestrator {
     ) throws -> BenchmarkRunResult {
         let datasetID = experiment.datasetId ?? plan.datasetId ?? BenchmarkDefaults.realImageDatasetID
         let configuration = BenchmarkRunConfiguration(
-            performanceProtocol: .mainBenchmark,
+            modelID: experiment.modelId,
             inputMode: experiment.inputMode.benchmarkInputMode,
             measurementMode: experiment.measurementMode,
             computeUnits: experiment.computeUnits,
-            target: .model(experiment.modelId),
             runs: experiment.measuredRuns ?? BenchmarkDefaults.runs,
             warmup: experiment.warmupRuns ?? BenchmarkDefaults.warmup,
             realImageDatasetID: datasetID
@@ -213,7 +212,7 @@ struct FullBenchmarkOrchestrator {
         let configuration = AccuracyBenchmarkRunConfiguration(
             datasetID: datasetID,
             computeUnits: experiment.computeUnits,
-            target: .model(experiment.modelId),
+            modelID: experiment.modelId,
             warmupImages: experiment.warmupImages ?? AccuracyBenchmarkDefaults.warmupImages
         )
         let output = try accuracyRunner.run(configuration: configuration)

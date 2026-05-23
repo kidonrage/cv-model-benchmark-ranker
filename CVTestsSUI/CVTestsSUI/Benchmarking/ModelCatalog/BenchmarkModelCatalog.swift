@@ -101,20 +101,16 @@ enum BenchmarkModelCatalog {
         }
     ]
 
-    static func resolve(target: BenchmarkTarget) throws -> [BenchmarkModelDescriptor] {
-        switch target {
-        case .allModels:
-            return all
-        case .model(let modelID):
-            guard let descriptor = descriptor(withID: modelID) else {
-                throw PipelineBenchmarkError.modelNotFound(modelID)
-            }
-            return [descriptor]
-        }
-    }
-
     static func descriptor(withID id: String) -> BenchmarkModelDescriptor? {
         all.first(where: { $0.id == id })
+    }
+
+    static func requiredDescriptor(withID id: String) throws -> BenchmarkModelDescriptor {
+        guard let descriptor = descriptor(withID: id) else {
+            throw PipelineBenchmarkError.modelNotFound(id)
+        }
+
+        return descriptor
     }
 
     static func descriptor(family: ModelFamily, format: ModelFormat) -> BenchmarkModelDescriptor? {

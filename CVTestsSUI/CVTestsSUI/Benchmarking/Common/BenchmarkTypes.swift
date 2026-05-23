@@ -129,84 +129,11 @@ enum ModelFormat: String {
     case int8 = "INT8"
 }
 
-enum BenchmarkTarget: Equatable {
-    case allModels
-    case model(String)
-}
-
-enum BenchmarkPerformanceProtocol: String, CaseIterable, Identifiable {
-    case mainBenchmark
-    case sustainedEnergyThermal
-
-    var id: String { rawValue }
-
-    var title: String {
-        switch self {
-        case .mainBenchmark:
-            return "Main benchmark"
-        case .sustainedEnergyThermal:
-            return "Sustained energy and thermal"
-        }
-    }
-
-    var description: String {
-        switch self {
-        case .mainBenchmark:
-            return "Short objective run for latency, memory footprint, and model size."
-        case .sustainedEnergyThermal:
-            return "Long continuous run for thermal drift, sustained throughput, and Instruments capture."
-        }
-    }
-
-    var recommendedConditions: String {
-        switch self {
-        case .mainBenchmark:
-            return "Use a real device. Start from thermalState=nominal."
-        case .sustainedEnergyThermal:
-            return "Run on a real unplugged device from thermalState=nominal. Capture Instruments in parallel."
-        }
-    }
-
-    var inputMode: BenchmarkInputMode { .realImage }
-
-    var measurementMode: MeasurementMode { .fullPipeline }
-
-    var defaultComputeUnits: BenchmarkComputeUnits { .all }
-
-    var runs: Int {
-        switch self {
-        case .mainBenchmark:
-            return 50
-        case .sustainedEnergyThermal:
-            return 10_000
-        }
-    }
-
-    var warmup: Int {
-        switch self {
-        case .mainBenchmark:
-            return 10
-        case .sustainedEnergyThermal:
-            return 100
-        }
-    }
-
-    var allowsAllModelsTarget: Bool {
-        switch self {
-        case .mainBenchmark:
-            return true
-        case .sustainedEnergyThermal:
-            return false
-        }
-    }
-}
-
 struct BenchmarkRunConfiguration {
-    let performanceProtocol: BenchmarkPerformanceProtocol
+    let modelID: String
     let inputMode: BenchmarkInputMode
     let measurementMode: MeasurementMode
     let computeUnits: BenchmarkComputeUnits
-    let target: BenchmarkTarget
     let runs: Int
     let warmup: Int
     let realImageDatasetID: String
@@ -255,7 +182,7 @@ struct BenchmarkExecutionOutput {
 struct AccuracyBenchmarkRunConfiguration {
     let datasetID: String
     let computeUnits: BenchmarkComputeUnits
-    let target: BenchmarkTarget
+    let modelID: String
     let warmupImages: Int
 }
 

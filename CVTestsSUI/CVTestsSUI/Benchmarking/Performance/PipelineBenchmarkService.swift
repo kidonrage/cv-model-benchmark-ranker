@@ -62,42 +62,40 @@ struct PipelineBenchmarkService {
     private let preprocessor = ImagePreprocessor()
 
     func run(configuration: BenchmarkRunConfiguration) throws -> BenchmarkExecutionOutput {
-        let descriptors = try BenchmarkModelCatalog.resolve(target: configuration.target)
+        let descriptor = try BenchmarkModelCatalog.requiredDescriptor(withID: configuration.modelID)
         let sourceImage = try loadSourceImageIfNeeded(configuration: configuration)
 
         let experimentID = UUID().uuidString
         let timestamp = Date()
         var records: [BenchmarkResultRecord] = []
 
-        for descriptor in descriptors {
-            let modelConfiguration = MLModelConfiguration()
-            modelConfiguration.computeUnits = configuration.computeUnits.mlComputeUnits
-            let resourceMonitor = BenchmarkResourceMonitor(modelDescriptor: descriptor)
-            resourceMonitor.begin()
-            defer {
-                resourceMonitor.restoreBatteryMonitoringIfNeeded()
-            }
+        let modelConfiguration = MLModelConfiguration()
+        modelConfiguration.computeUnits = configuration.computeUnits.mlComputeUnits
+        let resourceMonitor = BenchmarkResourceMonitor(modelDescriptor: descriptor)
+        resourceMonitor.begin()
+        defer {
+            resourceMonitor.restoreBatteryMonitoringIfNeeded()
+        }
 
-            let context = try PipelineBenchmarkContext(
+        let context = try PipelineBenchmarkContext(
+            descriptor: descriptor,
+            model: descriptor.load(modelConfiguration),
+            configuration: configuration,
+            sourceImage: sourceImage,
+            preprocessor: preprocessor
+        )
+        let measurements = try measurements(for: context, resourceMonitor: resourceMonitor)
+        let resourceDiagnostics = resourceMonitor.finish()
+        records = measurements.allBenchmarks.map {
+            makeRecord(
+                from: $0,
                 descriptor: descriptor,
-                model: descriptor.load(modelConfiguration),
                 configuration: configuration,
-                sourceImage: sourceImage,
-                preprocessor: preprocessor
+                experimentID: experimentID,
+                timestamp: timestamp,
+                resourceDiagnostics: resourceDiagnostics,
+                pipelineMetrics: $0.segment == .total ? measurements.pipelineMetrics : nil
             )
-            let measurements = try measurements(for: context, resourceMonitor: resourceMonitor)
-            let resourceDiagnostics = resourceMonitor.finish()
-            records += measurements.allBenchmarks.map {
-                makeRecord(
-                    from: $0,
-                    descriptor: descriptor,
-                    configuration: configuration,
-                    experimentID: experimentID,
-                    timestamp: timestamp,
-                    resourceDiagnostics: resourceDiagnostics,
-                    pipelineMetrics: $0.segment == .total ? measurements.pipelineMetrics : nil
-                )
-            }
         }
 
         return BenchmarkExecutionOutput(
@@ -149,14 +147,6 @@ struct PipelineBenchmarkService {
             let totalMeasured = try measure(.total, context: context, resourceMonitor: resourceMonitor) {
                 try context.runFullPipeline()
             }
-            guard context.configuration.performanceProtocol != .sustainedEnergyThermal else {
-                return PipelineBenchmarkMeasurements(
-                    totalMeasured: totalMeasured,
-                    segments: [],
-                    pipelineMetrics: nil
-                )
-            }
-
             let segmentMeasurements = try collectPipelineSegments(
                 context: context,
                 resourceMonitor: resourceMonitor
@@ -344,7 +334,7 @@ struct PipelineBenchmarkService {
     }
 
     private func shouldClearCaches(runIndex: Int, context: PipelineBenchmarkContext) -> Bool {
-        context.configuration.performanceProtocol == .sustainedEnergyThermal
+        context.configuration.runs >= Self.sustainedCacheMaintenanceStride
             && runIndex.isMultiple(of: Self.sustainedCacheMaintenanceStride)
     }
 }

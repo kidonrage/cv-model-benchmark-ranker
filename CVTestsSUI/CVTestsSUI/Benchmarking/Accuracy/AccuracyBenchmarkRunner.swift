@@ -105,7 +105,9 @@ struct AccuracyBenchmarkRunner {
 
     func run(configuration: AccuracyBenchmarkRunConfiguration) throws -> AccuracyBenchmarkExecutionOutput {
         let dataset = try datasetManager.dataset(withID: configuration.datasetID)
-        let requestedDescriptors = try BenchmarkModelCatalog.resolve(target: configuration.target)
+        let requestedDescriptors = [
+            try BenchmarkModelCatalog.requiredDescriptor(withID: configuration.modelID)
+        ]
         let evaluationPlan = makeEvaluationPlan(requestedDescriptors: requestedDescriptors)
         let labelResolver = try LabelMappingResolver()
         let timestamp = Date()

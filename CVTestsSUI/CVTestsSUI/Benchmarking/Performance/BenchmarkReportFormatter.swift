@@ -21,7 +21,6 @@ enum BenchmarkReportFormatter {
 
         var lines: [String] = [
             "experiment=\(firstRecord.experimentID) timestamp=\(dateFormatter.string(from: firstRecord.timestamp))",
-            "protocol=\(configuration.performanceProtocol.rawValue)",
             "runs=\(configuration.runs) warmup=\(configuration.warmup) input=\(configuration.inputMode.rawValue) measurement=\(configuration.measurementMode.rawValue) compute=\(configuration.computeUnits.reportValue)",
             "note=batteryLevelDelta is a coarse battery diagnostic, not exact energy consumption",
             configuration.inputMode == .realImage
