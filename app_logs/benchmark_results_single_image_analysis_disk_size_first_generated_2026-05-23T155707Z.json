@@ -1,0 +1,781 @@
+{
+  "benchmarkInfo" : {
+    "benchmarkAppVersion" : "1.0",
+    "finishedAt" : "2026-05-23T15:57:02Z",
+    "planId" : "single_image_analysis_disk_size_first_generated",
+    "startedAt" : "2026-05-23T15:54:26Z",
+    "status" : "completed"
+  },
+  "device" : {
+    "modelIdentifier" : "iPhone14,7",
+    "name" : "iPhone",
+    "systemName" : "iOS",
+    "systemVersion" : "26.4.2",
+    "thermalStateAtEnd" : "serious",
+    "thermalStateAtStart" : "serious"
+  },
+  "plan" : {
+    "experimentsFailed" : 0,
+    "experimentsSucceeded" : 18,
+    "experimentsTotal" : 18
+  },
+  "runs" : [
+    {
+      "artifacts" : {
+        "legacyTextLogPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-performance-20260523-185430.txt"
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2-160-subset-500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 59.984375,
+        "thermalState" : "serious"
+      },
+      "experimentId" : "EfficientNetB0_FP16__ALL__performance__fullPipeline",
+      "family" : "EfficientNetB0",
+      "format" : "FP16",
+      "latency" : {
+        "fullPipelineMedianMs" : 15.871942043304443,
+        "imageLoadingMedianMs" : 0.07796287536621094,
+        "inferenceMedianMs" : 1.0799765586853027,
+        "maxMs" : 16.646981239318848,
+        "meanMs" : 15.846445560455322,
+        "medianMs" : 15.871942043304443,
+        "minMs" : 14.485001564025879,
+        "p90Ms" : 16.52766466140747,
+        "p95Ms" : 16.617196798324585,
+        "postprocessingMedianMs" : 2.71451473236084,
+        "preprocessingMedianMs" : 12.321054935455322,
+        "stdDevMs" : 0.5607284986083926
+      },
+      "measurementMode" : "fullPipeline",
+      "modelId" : "EfficientNetB0_FP16",
+      "modelSizeMb" : 10.182,
+      "optimizationType" : "float16",
+      "protocol" : {
+        "measuredRuns" : 50,
+        "warmupRuns" : 10
+      },
+      "status" : "success"
+    },
+    {
+      "artifacts" : {
+        "legacyTextLogPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-performance-20260523-185432.txt"
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2-160-subset-500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 61.96875,
+        "thermalState" : "serious"
+      },
+      "experimentId" : "EfficientNetB0_FP16__ALL__performance__segmented",
+      "family" : "EfficientNetB0",
+      "format" : "FP16",
+      "latency" : {
+        "fullPipelineMedianMs" : 16.568005084991455,
+        "imageLoadingMedianMs" : 0.08249282836914062,
+        "inferenceMedianMs" : 0.9015202522277832,
+        "maxMs" : 17.794013023376465,
+        "meanMs" : 16.638095378875732,
+        "medianMs" : 16.568005084991455,
+        "minMs" : 16.11006259918213,
+        "p90Ms" : 17.044341564178467,
+        "p95Ms" : 17.36953854560852,
+        "postprocessingMedianMs" : 2.362966537475586,
+        "preprocessingMedianMs" : 12.683987617492676,
+        "stdDevMs" : 0.33004246290743916
+      },
+      "measurementMode" : "segmented",
+      "modelId" : "EfficientNetB0_FP16",
+      "modelSizeMb" : 10.182,
+      "optimizationType" : "float16",
+      "protocol" : {
+        "measuredRuns" : 50,
+        "warmupRuns" : 10
+      },
+      "status" : "success"
+    },
+    {
+      "accuracy" : {
+        "correctRestrictedTop1" : 492,
+        "correctTop1" : 375,
+        "correctTop5" : 468,
+        "restrictedTop1" : 0.984,
+        "top1" : 0.75,
+        "top5" : 0.936,
+        "totalImages" : 500
+      },
+      "artifacts" : {
+        "csvPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-accuracy-20260523-185432-EfficientNetB0-FP16-13F7ADD8-accuracy_per_class.csv",
+        "legacyTextLogPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-accuracy-20260523-185432.txt",
+        "mistakesJsonPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-accuracy-20260523-185432-EfficientNetB0-FP16-13F7ADD8-accuracy_details.json"
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2-160-subset-500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 63.609375,
+        "thermalState" : "serious"
+      },
+      "experimentId" : "EfficientNetB0_FP16__ALL__accuracy__fullPipeline",
+      "family" : "EfficientNetB0",
+      "format" : "FP16",
+      "latency" : {
+        "fullPipelineMedianMs" : 17.174959182739258,
+        "maxMs" : 24.464011192321777,
+        "meanMs" : 17.20503258705139,
+        "medianMs" : 17.174959182739258,
+        "minMs" : 16.06595516204834,
+        "p90Ms" : 17.64531135559082,
+        "p95Ms" : 17.84921884536743,
+        "stdDevMs" : 0.5375709409463953
+      },
+      "measurementMode" : "fullPipeline",
+      "modelId" : "EfficientNetB0_FP16",
+      "modelSizeMb" : 10.182,
+      "optimizationType" : "float16",
+      "protocol" : {
+        "warmupImages" : 10
+      },
+      "status" : "success"
+    },
+    {
+      "artifacts" : {
+        "legacyTextLogPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-performance-20260523-185458.txt"
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2-160-subset-500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 105.90625,
+        "thermalState" : "serious"
+      },
+      "experimentId" : "EfficientNetB0_FP32__ALL__performance__fullPipeline",
+      "family" : "EfficientNetB0",
+      "format" : "FP32",
+      "latency" : {
+        "fullPipelineMedianMs" : 25.28446912765503,
+        "imageLoadingMedianMs" : 0.07700920104980469,
+        "inferenceMedianMs" : 8.186519145965576,
+        "maxMs" : 29.723048210144043,
+        "meanMs" : 25.12777328491211,
+        "medianMs" : 25.28446912765503,
+        "minMs" : 20.905017852783203,
+        "p90Ms" : 29.21309471130371,
+        "p95Ms" : 29.358351230621338,
+        "postprocessingMedianMs" : 2.340078353881836,
+        "preprocessingMedianMs" : 13.646543025970459,
+        "stdDevMs" : 2.943218029165084
+      },
+      "measurementMode" : "fullPipeline",
+      "modelId" : "EfficientNetB0_FP32",
+      "modelSizeMb" : 20.219,
+      "optimizationType" : "float32",
+      "protocol" : {
+        "measuredRuns" : 50,
+        "warmupRuns" : 10
+      },
+      "status" : "success"
+    },
+    {
+      "artifacts" : {
+        "legacyTextLogPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-performance-20260523-185501.txt"
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2-160-subset-500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 105.96875,
+        "thermalState" : "serious"
+      },
+      "experimentId" : "EfficientNetB0_FP32__ALL__performance__segmented",
+      "family" : "EfficientNetB0",
+      "format" : "FP32",
+      "latency" : {
+        "fullPipelineMedianMs" : 25.411486625671387,
+        "imageLoadingMedianMs" : 0.08797645568847656,
+        "inferenceMedianMs" : 8.305549621582031,
+        "maxMs" : 29.155969619750977,
+        "meanMs" : 24.94121551513672,
+        "medianMs" : 25.411486625671387,
+        "minMs" : 20.784974098205566,
+        "p90Ms" : 28.743302822113037,
+        "p95Ms" : 28.930777311325073,
+        "postprocessingMedianMs" : 2.341032028198242,
+        "preprocessingMedianMs" : 13.743042945861816,
+        "stdDevMs" : 2.983405154427869
+      },
+      "measurementMode" : "segmented",
+      "modelId" : "EfficientNetB0_FP32",
+      "modelSizeMb" : 20.219,
+      "optimizationType" : "float32",
+      "protocol" : {
+        "measuredRuns" : 50,
+        "warmupRuns" : 10
+      },
+      "status" : "success"
+    },
+    {
+      "accuracy" : {
+        "correctRestrictedTop1" : 492,
+        "correctTop1" : 375,
+        "correctTop5" : 467,
+        "restrictedTop1" : 0.984,
+        "top1" : 0.75,
+        "top5" : 0.934,
+        "totalImages" : 500
+      },
+      "artifacts" : {
+        "csvPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-accuracy-20260523-185501-EfficientNetB0-FP32-D77EC4CB-accuracy_per_class.csv",
+        "legacyTextLogPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-accuracy-20260523-185501.txt",
+        "mistakesJsonPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-accuracy-20260523-185501-EfficientNetB0-FP32-D77EC4CB-accuracy_details.json"
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2-160-subset-500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 104.9375,
+        "thermalState" : "serious"
+      },
+      "experimentId" : "EfficientNetB0_FP32__ALL__accuracy__fullPipeline",
+      "family" : "EfficientNetB0",
+      "format" : "FP32",
+      "latency" : {
+        "fullPipelineMedianMs" : 24.67745542526245,
+        "maxMs" : 29.97291088104248,
+        "meanMs" : 24.7060067653656,
+        "medianMs" : 24.67745542526245,
+        "minMs" : 20.719051361083984,
+        "p90Ms" : 28.784406185150146,
+        "p95Ms" : 29.057806730270386,
+        "stdDevMs" : 2.615681622156636
+      },
+      "measurementMode" : "fullPipeline",
+      "modelId" : "EfficientNetB0_FP32",
+      "modelSizeMb" : 20.219,
+      "optimizationType" : "float32",
+      "protocol" : {
+        "warmupImages" : 10
+      },
+      "status" : "success"
+    },
+    {
+      "artifacts" : {
+        "legacyTextLogPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-performance-20260523-185517.txt"
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2-160-subset-500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 103.34375,
+        "thermalState" : "serious"
+      },
+      "experimentId" : "EfficientNetB0_INT8__ALL__performance__fullPipeline",
+      "family" : "EfficientNetB0",
+      "format" : "INT8",
+      "latency" : {
+        "fullPipelineMedianMs" : 17.73250102996826,
+        "imageLoadingMedianMs" : 0.08797645568847656,
+        "inferenceMedianMs" : 0.9080171585083008,
+        "maxMs" : 18.813014030456543,
+        "meanMs" : 17.863917350769043,
+        "medianMs" : 17.73250102996826,
+        "minMs" : 17.179012298583984,
+        "p90Ms" : 18.534862995147705,
+        "p95Ms" : 18.625205755233765,
+        "postprocessingMedianMs" : 2.507030963897705,
+        "preprocessingMedianMs" : 13.800501823425293,
+        "stdDevMs" : 0.4206593466951415
+      },
+      "measurementMode" : "fullPipeline",
+      "modelId" : "EfficientNetB0_INT8",
+      "modelSizeMb" : 5.245,
+      "optimizationType" : "unknown_int8_or_weight_compression",
+      "protocol" : {
+        "measuredRuns" : 50,
+        "warmupRuns" : 10
+      },
+      "status" : "success"
+    },
+    {
+      "artifacts" : {
+        "legacyTextLogPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-performance-20260523-185520.txt"
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2-160-subset-500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 99.34375,
+        "thermalState" : "serious"
+      },
+      "experimentId" : "EfficientNetB0_INT8__ALL__performance__segmented",
+      "family" : "EfficientNetB0",
+      "format" : "INT8",
+      "latency" : {
+        "fullPipelineMedianMs" : 17.66103506088257,
+        "imageLoadingMedianMs" : 0.08797645568847656,
+        "inferenceMedianMs" : 0.9005069732666016,
+        "maxMs" : 18.852949142456055,
+        "meanMs" : 17.76662588119507,
+        "medianMs" : 17.66103506088257,
+        "minMs" : 17.09902286529541,
+        "p90Ms" : 18.415188789367676,
+        "p95Ms" : 18.672049045562744,
+        "postprocessingMedianMs" : 2.516031265258789,
+        "preprocessingMedianMs" : 13.777971267700195,
+        "stdDevMs" : 0.4503557789991764
+      },
+      "measurementMode" : "segmented",
+      "modelId" : "EfficientNetB0_INT8",
+      "modelSizeMb" : 5.245,
+      "optimizationType" : "unknown_int8_or_weight_compression",
+      "protocol" : {
+        "measuredRuns" : 50,
+        "warmupRuns" : 10
+      },
+      "status" : "success"
+    },
+    {
+      "accuracy" : {
+        "correctRestrictedTop1" : 492,
+        "correctTop1" : 374,
+        "correctTop5" : 467,
+        "restrictedTop1" : 0.984,
+        "top1" : 0.748,
+        "top5" : 0.934,
+        "totalImages" : 500
+      },
+      "artifacts" : {
+        "csvPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-accuracy-20260523-185520-EfficientNetB0-INT8-7152B1A4-accuracy_per_class.csv",
+        "legacyTextLogPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-accuracy-20260523-185520.txt",
+        "mistakesJsonPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-accuracy-20260523-185520-EfficientNetB0-INT8-7152B1A4-accuracy_details.json"
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2-160-subset-500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 98.453125,
+        "thermalState" : "serious"
+      },
+      "experimentId" : "EfficientNetB0_INT8__ALL__accuracy__fullPipeline",
+      "family" : "EfficientNetB0",
+      "format" : "INT8",
+      "latency" : {
+        "fullPipelineMedianMs" : 17.59946346282959,
+        "maxMs" : 19.140005111694336,
+        "meanMs" : 17.681349992752075,
+        "medianMs" : 17.59946346282959,
+        "minMs" : 17.034053802490234,
+        "p90Ms" : 18.330371379852295,
+        "p95Ms" : 18.49426031112671,
+        "stdDevMs" : 0.38668075965334003
+      },
+      "measurementMode" : "fullPipeline",
+      "modelId" : "EfficientNetB0_INT8",
+      "modelSizeMb" : 5.245,
+      "optimizationType" : "unknown_int8_or_weight_compression",
+      "protocol" : {
+        "warmupImages" : 10
+      },
+      "status" : "success"
+    },
+    {
+      "artifacts" : {
+        "legacyTextLogPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-performance-20260523-185550.txt"
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2-160-subset-500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 103.40625,
+        "thermalState" : "serious"
+      },
+      "experimentId" : "MobileNetV2_FP16__ALL__performance__fullPipeline",
+      "family" : "MobileNetV2",
+      "format" : "FP16",
+      "latency" : {
+        "fullPipelineMedianMs" : 27.50098705291748,
+        "imageLoadingMedianMs" : 0.14203786849975586,
+        "inferenceMedianMs" : 0.8924603462219238,
+        "maxMs" : 28.040051460266113,
+        "meanMs" : 27.51912832260132,
+        "medianMs" : 27.50098705291748,
+        "minMs" : 27.284979820251465,
+        "p90Ms" : 27.665817737579346,
+        "p95Ms" : 27.73383855819702,
+        "postprocessingMedianMs" : 3.932952880859375,
+        "preprocessingMedianMs" : 21.942973136901855,
+        "stdDevMs" : 0.1364308184935133
+      },
+      "measurementMode" : "fullPipeline",
+      "modelId" : "MobileNetV2_FP16",
+      "modelSizeMb" : 6.741,
+      "optimizationType" : "float16",
+      "protocol" : {
+        "measuredRuns" : 50,
+        "warmupRuns" : 10
+      },
+      "status" : "success"
+    },
+    {
+      "artifacts" : {
+        "legacyTextLogPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-performance-20260523-185552.txt"
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2-160-subset-500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 99.390625,
+        "thermalState" : "serious"
+      },
+      "experimentId" : "MobileNetV2_FP16__ALL__performance__segmented",
+      "family" : "MobileNetV2",
+      "format" : "FP16",
+      "latency" : {
+        "fullPipelineMedianMs" : 20.28954029083252,
+        "imageLoadingMedianMs" : 0.11301040649414062,
+        "inferenceMedianMs" : 0.8440017700195312,
+        "maxMs" : 21.507978439331055,
+        "meanMs" : 20.345845222473145,
+        "medianMs" : 20.28954029083252,
+        "minMs" : 20.032048225402832,
+        "p90Ms" : 20.48647403717041,
+        "p95Ms" : 20.757967233657837,
+        "postprocessingMedianMs" : 3.1169652938842773,
+        "preprocessingMedianMs" : 17.54850149154663,
+        "stdDevMs" : 0.24066756418770782
+      },
+      "measurementMode" : "segmented",
+      "modelId" : "MobileNetV2_FP16",
+      "modelSizeMb" : 6.741,
+      "optimizationType" : "float16",
+      "protocol" : {
+        "measuredRuns" : 50,
+        "warmupRuns" : 10
+      },
+      "status" : "success"
+    },
+    {
+      "accuracy" : {
+        "correctRestrictedTop1" : 487,
+        "correctTop1" : 338,
+        "correctTop5" : 441,
+        "restrictedTop1" : 0.974,
+        "top1" : 0.676,
+        "top5" : 0.882,
+        "totalImages" : 500
+      },
+      "artifacts" : {
+        "csvPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-accuracy-20260523-185552-MobileNetV2-FP16-54B9FACA-accuracy_per_class.csv",
+        "legacyTextLogPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-accuracy-20260523-185552.txt",
+        "mistakesJsonPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-accuracy-20260523-185552-MobileNetV2-FP16-54B9FACA-accuracy_details.json"
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2-160-subset-500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 98.546875,
+        "thermalState" : "serious"
+      },
+      "experimentId" : "MobileNetV2_FP16__ALL__accuracy__fullPipeline",
+      "family" : "MobileNetV2",
+      "format" : "FP16",
+      "latency" : {
+        "fullPipelineMedianMs" : 20.46799659729004,
+        "maxMs" : 29.57296371459961,
+        "meanMs" : 20.375062704086304,
+        "medianMs" : 20.46799659729004,
+        "minMs" : 18.596887588500977,
+        "p90Ms" : 20.740032196044922,
+        "p95Ms" : 20.924323797225952,
+        "stdDevMs" : 0.7114799088220908
+      },
+      "measurementMode" : "fullPipeline",
+      "modelId" : "MobileNetV2_FP16",
+      "modelSizeMb" : 6.741,
+      "optimizationType" : "float16",
+      "protocol" : {
+        "warmupImages" : 10
+      },
+      "status" : "success"
+    },
+    {
+      "artifacts" : {
+        "legacyTextLogPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-performance-20260523-185620.txt"
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2-160-subset-500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 108,
+        "thermalState" : "serious"
+      },
+      "experimentId" : "MobileNetV2_FP32__ALL__performance__fullPipeline",
+      "family" : "MobileNetV2",
+      "format" : "FP32",
+      "latency" : {
+        "fullPipelineMedianMs" : 24.393558502197266,
+        "imageLoadingMedianMs" : 0.0940561294555664,
+        "inferenceMedianMs" : 3.7145018577575684,
+        "maxMs" : 24.68395233154297,
+        "meanMs" : 23.98158550262451,
+        "medianMs" : 24.393558502197266,
+        "minMs" : 20.875096321105957,
+        "p90Ms" : 24.513733386993408,
+        "p95Ms" : 24.615508317947388,
+        "postprocessingMedianMs" : 2.6110410690307617,
+        "preprocessingMedianMs" : 16.193032264709473,
+        "stdDevMs" : 1.0645697850977978
+      },
+      "measurementMode" : "fullPipeline",
+      "modelId" : "MobileNetV2_FP32",
+      "modelSizeMb" : 13.387,
+      "optimizationType" : "float32",
+      "protocol" : {
+        "measuredRuns" : 50,
+        "warmupRuns" : 10
+      },
+      "status" : "success"
+    },
+    {
+      "artifacts" : {
+        "legacyTextLogPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-performance-20260523-185623.txt"
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2-160-subset-500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 108.015625,
+        "thermalState" : "serious"
+      },
+      "experimentId" : "MobileNetV2_FP32__ALL__performance__segmented",
+      "family" : "MobileNetV2",
+      "format" : "FP32",
+      "latency" : {
+        "fullPipelineMedianMs" : 22.18806743621826,
+        "imageLoadingMedianMs" : 0.0890493392944336,
+        "inferenceMedianMs" : 8.126974105834961,
+        "maxMs" : 22.515058517456055,
+        "meanMs" : 22.190918922424316,
+        "medianMs" : 22.18806743621826,
+        "minMs" : 22.037982940673828,
+        "p90Ms" : 22.272193431854248,
+        "p95Ms" : 22.29670286178589,
+        "postprocessingMedianMs" : 2.276003360748291,
+        "preprocessingMedianMs" : 15.070497989654541,
+        "stdDevMs" : 0.08696484544524351
+      },
+      "measurementMode" : "segmented",
+      "modelId" : "MobileNetV2_FP32",
+      "modelSizeMb" : 13.387,
+      "optimizationType" : "float32",
+      "protocol" : {
+        "measuredRuns" : 50,
+        "warmupRuns" : 10
+      },
+      "status" : "success"
+    },
+    {
+      "accuracy" : {
+        "correctRestrictedTop1" : 487,
+        "correctTop1" : 338,
+        "correctTop5" : 439,
+        "restrictedTop1" : 0.974,
+        "top1" : 0.676,
+        "top5" : 0.878,
+        "totalImages" : 500
+      },
+      "artifacts" : {
+        "csvPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-accuracy-20260523-185623-MobileNetV2-FP32-53BA13B9-accuracy_per_class.csv",
+        "legacyTextLogPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-accuracy-20260523-185623.txt",
+        "mistakesJsonPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-accuracy-20260523-185623-MobileNetV2-FP32-53BA13B9-accuracy_details.json"
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2-160-subset-500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 106.890625,
+        "thermalState" : "serious"
+      },
+      "experimentId" : "MobileNetV2_FP32__ALL__accuracy__fullPipeline",
+      "family" : "MobileNetV2",
+      "format" : "FP32",
+      "latency" : {
+        "fullPipelineMedianMs" : 23.401081562042236,
+        "maxMs" : 26.437044143676758,
+        "meanMs" : 22.87075710296631,
+        "medianMs" : 23.401081562042236,
+        "minMs" : 19.08695697784424,
+        "p90Ms" : 24.559056758880615,
+        "p95Ms" : 24.679458141326904,
+        "stdDevMs" : 1.5326783633926653
+      },
+      "measurementMode" : "fullPipeline",
+      "modelId" : "MobileNetV2_FP32",
+      "modelSizeMb" : 13.387,
+      "optimizationType" : "float32",
+      "protocol" : {
+        "warmupImages" : 10
+      },
+      "status" : "success"
+    },
+    {
+      "artifacts" : {
+        "legacyTextLogPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-performance-20260523-185638.txt"
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2-160-subset-500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 105.09375,
+        "thermalState" : "serious"
+      },
+      "experimentId" : "MobileNetV2_INT8__ALL__performance__fullPipeline",
+      "family" : "MobileNetV2",
+      "format" : "INT8",
+      "latency" : {
+        "fullPipelineMedianMs" : 18.7075138092041,
+        "imageLoadingMedianMs" : 0.09500980377197266,
+        "inferenceMedianMs" : 0.8023977279663086,
+        "maxMs" : 19.127964973449707,
+        "meanMs" : 18.692164421081543,
+        "medianMs" : 18.7075138092041,
+        "minMs" : 18.260955810546875,
+        "p90Ms" : 18.8446044921875,
+        "p95Ms" : 18.86407732963562,
+        "postprocessingMedianMs" : 2.826988697052002,
+        "preprocessingMedianMs" : 14.789462089538574,
+        "stdDevMs" : 0.15659112034316386
+      },
+      "measurementMode" : "fullPipeline",
+      "modelId" : "MobileNetV2_INT8",
+      "modelSizeMb" : 3.473,
+      "optimizationType" : "unknown_int8_or_weight_compression",
+      "protocol" : {
+        "measuredRuns" : 50,
+        "warmupRuns" : 10
+      },
+      "status" : "success"
+    },
+    {
+      "artifacts" : {
+        "legacyTextLogPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-performance-20260523-185641.txt"
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2-160-subset-500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 101.109375,
+        "thermalState" : "serious"
+      },
+      "experimentId" : "MobileNetV2_INT8__ALL__performance__segmented",
+      "family" : "MobileNetV2",
+      "format" : "INT8",
+      "latency" : {
+        "fullPipelineMedianMs" : 18.684446811676025,
+        "imageLoadingMedianMs" : 0.09500980377197266,
+        "inferenceMedianMs" : 0.8195042610168457,
+        "maxMs" : 19.054889678955078,
+        "meanMs" : 18.703503608703613,
+        "medianMs" : 18.684446811676025,
+        "minMs" : 18.548011779785156,
+        "p90Ms" : 18.883788585662842,
+        "p95Ms" : 18.900835514068604,
+        "postprocessingMedianMs" : 2.8145313262939453,
+        "preprocessingMedianMs" : 14.931440353393555,
+        "stdDevMs" : 0.1101075743309544
+      },
+      "measurementMode" : "segmented",
+      "modelId" : "MobileNetV2_INT8",
+      "modelSizeMb" : 3.473,
+      "optimizationType" : "unknown_int8_or_weight_compression",
+      "protocol" : {
+        "measuredRuns" : 50,
+        "warmupRuns" : 10
+      },
+      "status" : "success"
+    },
+    {
+      "accuracy" : {
+        "correctRestrictedTop1" : 487,
+        "correctTop1" : 338,
+        "correctTop5" : 440,
+        "restrictedTop1" : 0.974,
+        "top1" : 0.676,
+        "top5" : 0.88,
+        "totalImages" : 500
+      },
+      "artifacts" : {
+        "csvPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-accuracy-20260523-185641-MobileNetV2-INT8-0D0081AF-accuracy_per_class.csv",
+        "legacyTextLogPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-accuracy-20260523-185641.txt",
+        "mistakesJsonPath" : "\/var\/mobile\/Containers\/Data\/Application\/5645586A-BBDE-4B0E-9492-A1B733523251\/Documents\/benchmark-accuracy-20260523-185641-MobileNetV2-INT8-0D0081AF-accuracy_details.json"
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2-160-subset-500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 100.25,
+        "thermalState" : "serious"
+      },
+      "experimentId" : "MobileNetV2_INT8__ALL__accuracy__fullPipeline",
+      "family" : "MobileNetV2",
+      "format" : "INT8",
+      "latency" : {
+        "fullPipelineMedianMs" : 18.711984157562256,
+        "maxMs" : 22.890090942382812,
+        "meanMs" : 18.422800540924072,
+        "medianMs" : 18.711984157562256,
+        "minMs" : 17.101049423217773,
+        "p90Ms" : 19.057130813598633,
+        "p95Ms" : 19.216150045394894,
+        "stdDevMs" : 0.7210343613120757
+      },
+      "measurementMode" : "fullPipeline",
+      "modelId" : "MobileNetV2_INT8",
+      "modelSizeMb" : 3.473,
+      "optimizationType" : "unknown_int8_or_weight_compression",
+      "protocol" : {
+        "warmupImages" : 10
+      },
+      "status" : "success"
+    }
+  ],
+  "schemaVersion" : "1.0"
+}
