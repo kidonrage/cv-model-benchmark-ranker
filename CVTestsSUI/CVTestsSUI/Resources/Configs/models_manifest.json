@@ -1,0 +1,210 @@
+{
+  "generatedAt": "2026-05-23T14:36:10.478252+00:00",
+  "projectName": "CVTestsSUI",
+  "projectRoot": "CVTestsSUI",
+  "modelsDir": "CVTestsSUI/CVTestsSUI/Resources/ModelsRaw",
+  "models": [
+    {
+      "id": "EfficientNetB0_FP16",
+      "sourceFile": "EfficientNetB0_FP16.mlpackage",
+      "compiledResourceName": "EfficientNetB0_FP16",
+      "compiledExtension": "mlmodelc",
+      "family": "EfficientNetB0",
+      "format": "FP16",
+      "optimizationType": "float16",
+      "modelSizeMb": 10.182,
+      "supported": true,
+      "preprocessingProfile": "efficientnetb0_imagenet",
+      "input": {
+        "type": "multiArray",
+        "shape": [
+          1,
+          3,
+          224,
+          224
+        ],
+        "channelOrder": "CHW"
+      },
+      "output": {
+        "name": "var_1150",
+        "labelMapping": "imagenet_labels.json"
+      },
+      "warnings": []
+    },
+    {
+      "id": "EfficientNetB0_FP32",
+      "sourceFile": "EfficientNetB0_FP32.mlpackage",
+      "compiledResourceName": "EfficientNetB0_FP32",
+      "compiledExtension": "mlmodelc",
+      "family": "EfficientNetB0",
+      "format": "FP32",
+      "optimizationType": "float32",
+      "modelSizeMb": 20.219,
+      "supported": true,
+      "preprocessingProfile": "efficientnetb0_imagenet",
+      "input": {
+        "type": "multiArray",
+        "shape": [
+          1,
+          3,
+          224,
+          224
+        ],
+        "channelOrder": "CHW"
+      },
+      "output": {
+        "name": "var_1150",
+        "labelMapping": "imagenet_labels.json"
+      },
+      "warnings": []
+    },
+    {
+      "id": "EfficientNetB0_INT8",
+      "sourceFile": "EfficientNetB0_INT8.mlpackage",
+      "compiledResourceName": "EfficientNetB0_INT8",
+      "compiledExtension": "mlmodelc",
+      "family": "EfficientNetB0",
+      "format": "INT8",
+      "optimizationType": "unknown_int8_or_weight_compression",
+      "modelSizeMb": 5.245,
+      "supported": true,
+      "preprocessingProfile": "efficientnetb0_imagenet",
+      "input": {
+        "type": "multiArray",
+        "shape": [
+          1,
+          3,
+          224,
+          224
+        ],
+        "channelOrder": "CHW"
+      },
+      "output": {
+        "name": "var_1150",
+        "labelMapping": "imagenet_labels.json"
+      },
+      "warnings": [
+        "INT8-labeled model has unknown actual optimization type. Verify .mlpackage structure before interpreting it as INT8."
+      ]
+    },
+    {
+      "id": "MobileNetV2_FP16",
+      "sourceFile": "MobileNetV2_FP16.mlpackage",
+      "compiledResourceName": "MobileNetV2_FP16",
+      "compiledExtension": "mlmodelc",
+      "family": "MobileNetV2",
+      "format": "FP16",
+      "optimizationType": "float16",
+      "modelSizeMb": 6.741,
+      "supported": true,
+      "preprocessingProfile": "mobilenetv2_imagenet",
+      "input": {
+        "type": "multiArray",
+        "shape": [
+          1,
+          3,
+          224,
+          224
+        ],
+        "channelOrder": "CHW"
+      },
+      "output": {
+        "name": "var_824",
+        "labelMapping": "imagenet_labels.json"
+      },
+      "warnings": []
+    },
+    {
+      "id": "MobileNetV2_FP32",
+      "sourceFile": "MobileNetV2_FP32.mlpackage",
+      "compiledResourceName": "MobileNetV2_FP32",
+      "compiledExtension": "mlmodelc",
+      "family": "MobileNetV2",
+      "format": "FP32",
+      "optimizationType": "float32",
+      "modelSizeMb": 13.387,
+      "supported": true,
+      "preprocessingProfile": "mobilenetv2_imagenet",
+      "input": {
+        "type": "multiArray",
+        "shape": [
+          1,
+          3,
+          224,
+          224
+        ],
+        "channelOrder": "CHW"
+      },
+      "output": {
+        "name": "var_824",
+        "labelMapping": "imagenet_labels.json"
+      },
+      "warnings": []
+    },
+    {
+      "id": "MobileNetV2_INT8",
+      "sourceFile": "MobileNetV2_INT8.mlpackage",
+      "compiledResourceName": "MobileNetV2_INT8",
+      "compiledExtension": "mlmodelc",
+      "family": "MobileNetV2",
+      "format": "INT8",
+      "optimizationType": "unknown_int8_or_weight_compression",
+      "modelSizeMb": 3.473,
+      "supported": true,
+      "preprocessingProfile": "mobilenetv2_imagenet",
+      "input": {
+        "type": "multiArray",
+        "shape": [
+          1,
+          3,
+          224,
+          224
+        ],
+        "channelOrder": "CHW"
+      },
+      "output": {
+        "name": "var_824",
+        "labelMapping": "imagenet_labels.json"
+      },
+      "warnings": [
+        "INT8-labeled model has unknown actual optimization type. Verify .mlpackage structure before interpreting it as INT8."
+      ]
+    }
+  ],
+  "preprocessingProfiles": {
+    "mobilenetv2_imagenet": {
+      "resizeShortSide": 232,
+      "cropSize": 224,
+      "interpolation": "bilinear",
+      "colorSpace": "RGB",
+      "channelOrder": "CHW",
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    },
+    "efficientnetb0_imagenet": {
+      "resizeShortSide": 256,
+      "cropSize": 224,
+      "interpolation": "bicubic",
+      "colorSpace": "RGB",
+      "channelOrder": "CHW",
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    }
+  }
+}

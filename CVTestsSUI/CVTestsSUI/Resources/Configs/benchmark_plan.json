@@ -1,0 +1,206 @@
+{
+  "generatedAt": "2026-05-23T14:36:10.478768+00:00",
+  "projectName": "CVTestsSUI",
+  "planId": "single_image_analysis_disk_size_first_generated",
+  "usageScenario": "single_image_analysis",
+  "priorityProfile": "disk_size_first",
+  "datasetId": "imagenette2-160-subset-500",
+  "computeUnits": [
+    "ALL"
+  ],
+  "experiments": [
+    {
+      "experimentId": "EfficientNetB0_FP16__ALL__performance__fullPipeline",
+      "modelId": "EfficientNetB0_FP16",
+      "computeUnits": "ALL",
+      "benchmarkType": "performance",
+      "measurementMode": "fullPipeline",
+      "inputMode": "realImage",
+      "datasetId": "imagenette2-160-subset-500",
+      "warmupRuns": 10,
+      "measuredRuns": 50
+    },
+    {
+      "experimentId": "EfficientNetB0_FP16__ALL__performance__segmented",
+      "modelId": "EfficientNetB0_FP16",
+      "computeUnits": "ALL",
+      "benchmarkType": "performance",
+      "measurementMode": "segmented",
+      "inputMode": "realImage",
+      "datasetId": "imagenette2-160-subset-500",
+      "warmupRuns": 10,
+      "measuredRuns": 50
+    },
+    {
+      "experimentId": "EfficientNetB0_FP16__ALL__accuracy__fullPipeline",
+      "modelId": "EfficientNetB0_FP16",
+      "computeUnits": "ALL",
+      "benchmarkType": "accuracy",
+      "measurementMode": "fullPipeline",
+      "inputMode": "dataset",
+      "datasetId": "imagenette2-160-subset-500",
+      "warmupImages": 10
+    },
+    {
+      "experimentId": "EfficientNetB0_FP32__ALL__performance__fullPipeline",
+      "modelId": "EfficientNetB0_FP32",
+      "computeUnits": "ALL",
+      "benchmarkType": "performance",
+      "measurementMode": "fullPipeline",
+      "inputMode": "realImage",
+      "datasetId": "imagenette2-160-subset-500",
+      "warmupRuns": 10,
+      "measuredRuns": 50
+    },
+    {
+      "experimentId": "EfficientNetB0_FP32__ALL__performance__segmented",
+      "modelId": "EfficientNetB0_FP32",
+      "computeUnits": "ALL",
+      "benchmarkType": "performance",
+      "measurementMode": "segmented",
+      "inputMode": "realImage",
+      "datasetId": "imagenette2-160-subset-500",
+      "warmupRuns": 10,
+      "measuredRuns": 50
+    },
+    {
+      "experimentId": "EfficientNetB0_FP32__ALL__accuracy__fullPipeline",
+      "modelId": "EfficientNetB0_FP32",
+      "computeUnits": "ALL",
+      "benchmarkType": "accuracy",
+      "measurementMode": "fullPipeline",
+      "inputMode": "dataset",
+      "datasetId": "imagenette2-160-subset-500",
+      "warmupImages": 10
+    },
+    {
+      "experimentId": "EfficientNetB0_INT8__ALL__performance__fullPipeline",
+      "modelId": "EfficientNetB0_INT8",
+      "computeUnits": "ALL",
+      "benchmarkType": "performance",
+      "measurementMode": "fullPipeline",
+      "inputMode": "realImage",
+      "datasetId": "imagenette2-160-subset-500",
+      "warmupRuns": 10,
+      "measuredRuns": 50
+    },
+    {
+      "experimentId": "EfficientNetB0_INT8__ALL__performance__segmented",
+      "modelId": "EfficientNetB0_INT8",
+      "computeUnits": "ALL",
+      "benchmarkType": "performance",
+      "measurementMode": "segmented",
+      "inputMode": "realImage",
+      "datasetId": "imagenette2-160-subset-500",
+      "warmupRuns": 10,
+      "measuredRuns": 50
+    },
+    {
+      "experimentId": "EfficientNetB0_INT8__ALL__accuracy__fullPipeline",
+      "modelId": "EfficientNetB0_INT8",
+      "computeUnits": "ALL",
+      "benchmarkType": "accuracy",
+      "measurementMode": "fullPipeline",
+      "inputMode": "dataset",
+      "datasetId": "imagenette2-160-subset-500",
+      "warmupImages": 10
+    },
+    {
+      "experimentId": "MobileNetV2_FP16__ALL__performance__fullPipeline",
+      "modelId": "MobileNetV2_FP16",
+      "computeUnits": "ALL",
+      "benchmarkType": "performance",
+      "measurementMode": "fullPipeline",
+      "inputMode": "realImage",
+      "datasetId": "imagenette2-160-subset-500",
+      "warmupRuns": 10,
+      "measuredRuns": 50
+    },
+    {
+      "experimentId": "MobileNetV2_FP16__ALL__performance__segmented",
+      "modelId": "MobileNetV2_FP16",
+      "computeUnits": "ALL",
+      "benchmarkType": "performance",
+      "measurementMode": "segmented",
+      "inputMode": "realImage",
+      "datasetId": "imagenette2-160-subset-500",
+      "warmupRuns": 10,
+      "measuredRuns": 50
+    },
+    {
+      "experimentId": "MobileNetV2_FP16__ALL__accuracy__fullPipeline",
+      "modelId": "MobileNetV2_FP16",
+      "computeUnits": "ALL",
+      "benchmarkType": "accuracy",
+      "measurementMode": "fullPipeline",
+      "inputMode": "dataset",
+      "datasetId": "imagenette2-160-subset-500",
+      "warmupImages": 10
+    },
+    {
+      "experimentId": "MobileNetV2_FP32__ALL__performance__fullPipeline",
+      "modelId": "MobileNetV2_FP32",
+      "computeUnits": "ALL",
+      "benchmarkType": "performance",
+      "measurementMode": "fullPipeline",
+      "inputMode": "realImage",
+      "datasetId": "imagenette2-160-subset-500",
+      "warmupRuns": 10,
+      "measuredRuns": 50
+    },
+    {
+      "experimentId": "MobileNetV2_FP32__ALL__performance__segmented",
+      "modelId": "MobileNetV2_FP32",
+      "computeUnits": "ALL",
+      "benchmarkType": "performance",
+      "measurementMode": "segmented",
+      "inputMode": "realImage",
+      "datasetId": "imagenette2-160-subset-500",
+      "warmupRuns": 10,
+      "measuredRuns": 50
+    },
+    {
+      "experimentId": "MobileNetV2_FP32__ALL__accuracy__fullPipeline",
+      "modelId": "MobileNetV2_FP32",
+      "computeUnits": "ALL",
+      "benchmarkType": "accuracy",
+      "measurementMode": "fullPipeline",
+      "inputMode": "dataset",
+      "datasetId": "imagenette2-160-subset-500",
+      "warmupImages": 10
+    },
+    {
+      "experimentId": "MobileNetV2_INT8__ALL__performance__fullPipeline",
+      "modelId": "MobileNetV2_INT8",
+      "computeUnits": "ALL",
+      "benchmarkType": "performance",
+      "measurementMode": "fullPipeline",
+      "inputMode": "realImage",
+      "datasetId": "imagenette2-160-subset-500",
+      "warmupRuns": 10,
+      "measuredRuns": 50
+    },
+    {
+      "experimentId": "MobileNetV2_INT8__ALL__performance__segmented",
+      "modelId": "MobileNetV2_INT8",
+      "computeUnits": "ALL",
+      "benchmarkType": "performance",
+      "measurementMode": "segmented",
+      "inputMode": "realImage",
+      "datasetId": "imagenette2-160-subset-500",
+      "warmupRuns": 10,
+      "measuredRuns": 50
+    },
+    {
+      "experimentId": "MobileNetV2_INT8__ALL__accuracy__fullPipeline",
+      "modelId": "MobileNetV2_INT8",
+      "computeUnits": "ALL",
+      "benchmarkType": "accuracy",
+      "measurementMode": "fullPipeline",
+      "inputMode": "dataset",
+      "datasetId": "imagenette2-160-subset-500",
+      "warmupImages": 10
+    }
+  ],
+  "warnings": []
+}
