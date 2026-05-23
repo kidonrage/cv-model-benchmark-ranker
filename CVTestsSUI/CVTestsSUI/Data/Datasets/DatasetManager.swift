@@ -115,6 +115,26 @@ struct AccuracyDataset: Identifiable {
 }
 
 struct DatasetManager {
+    private struct DatasetManifestLocation {
+        let datasetID: String
+        let fileName: String
+    }
+
+    private static let datasetManifestLocations = [
+        DatasetManifestLocation(
+            datasetID: "imagenet-hard-50-subset-2500",
+            fileName: "imagenet-hard-50-subset-2500_manifest"
+        ),
+        DatasetManifestLocation(
+            datasetID: "imagenette2-160-subset-50",
+            fileName: "manifest"
+        ),
+        DatasetManifestLocation(
+            datasetID: "imagenette2-160-subset-500",
+            fileName: "imagenette2-160-subset-500_manifest"
+        )
+    ]
+
     private let fileManager = FileManager.default
     private let decoder = JSONDecoder()
     private let bundle: Bundle
@@ -125,46 +145,28 @@ struct DatasetManager {
 
     func availableDatasets() throws -> [AccuracyDataset] {
         let bundleFileIndex = try makeBundleFileIndex()
-        let manifestURLs = try findManifestURLs()
-        return try manifestURLs
+        return try Self.datasetManifestLocations
+            .map { try manifestURL(for: $0) }
             .map { try loadDataset($0, bundleFileIndex: bundleFileIndex) }
             .sorted { $0.manifest.subsetID < $1.manifest.subsetID }
     }
 
     func dataset(withID datasetID: String) throws -> AccuracyDataset {
         let bundleFileIndex = try makeBundleFileIndex()
-        let manifestURLs = try findManifestURLs()
-        for manifestURL in manifestURLs {
-            let manifest = try decode(AccuracyDatasetManifest.self, from: manifestURL)
-            if manifest.subsetID == datasetID {
-                return try loadDataset(manifestURL, bundleFileIndex: bundleFileIndex)
-            }
+        guard let location = Self.datasetManifestLocations.first(where: { $0.datasetID == datasetID }) else {
+            throw DatasetManagerError.datasetManifestMissing(datasetID)
         }
 
-        throw DatasetManagerError.datasetManifestMissing(datasetID)
+        let manifestURL = try manifestURL(for: location)
+        return try loadDataset(manifestURL, bundleFileIndex: bundleFileIndex)
     }
 
-    private func findManifestURLs() throws -> [URL] {
-        guard let resourceRoot = bundle.resourceURL else {
-            throw DatasetManagerError.resourcesDirectoryMissing
+    private func manifestURL(for location: DatasetManifestLocation) throws -> URL {
+        if let url = bundle.url(forResource: location.fileName, withExtension: "json") {
+            return url
         }
 
-        let enumerator = fileManager.enumerator(
-            at: resourceRoot,
-            includingPropertiesForKeys: [.isRegularFileKey],
-            options: [.skipsHiddenFiles]
-        )
-
-        var manifestURLs: [URL] = []
-        while let fileURL = enumerator?.nextObject() as? URL {
-            let fileName = fileURL.lastPathComponent
-            guard fileName == "manifest.json" || fileName.hasSuffix("_manifest.json") else {
-                continue
-            }
-            manifestURLs.append(fileURL)
-        }
-
-        return manifestURLs
+        throw DatasetManagerError.datasetManifestMissing(location.datasetID)
     }
 
     private func loadDataset(
