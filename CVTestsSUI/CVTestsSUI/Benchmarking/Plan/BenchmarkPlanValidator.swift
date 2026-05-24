@@ -13,6 +13,7 @@ enum BenchmarkPlanValidationError: LocalizedError, Sendable {
     case modelMissingFromCatalog(String)
     case preprocessingProfileMissing(modelID: String, profileID: String)
     case emptyPlan
+    case missingDatasetID(String)
 
     var errorDescription: String? {
         switch self {
@@ -26,6 +27,8 @@ enum BenchmarkPlanValidationError: LocalizedError, Sendable {
             return "Preprocessing profile \(profileID) not found for model \(modelID)"
         case .emptyPlan:
             return "benchmark_plan.json contains no experiments"
+        case .missingDatasetID(let experimentID):
+            return "Experiment must declare datasetId explicitly: \(experimentID)"
         }
     }
 }
@@ -39,6 +42,10 @@ struct BenchmarkPlanValidator {
         let manifestModelsByID = Dictionary(uniqueKeysWithValues: manifest.models.map { ($0.id, $0) })
 
         for experiment in plan.experiments {
+            guard experiment.datasetId != nil else {
+                throw BenchmarkPlanValidationError.missingDatasetID(experiment.experimentId)
+            }
+
             guard let manifestModel = manifestModelsByID[experiment.modelId] else {
                 throw BenchmarkPlanValidationError.unknownModelID(experiment.modelId)
             }

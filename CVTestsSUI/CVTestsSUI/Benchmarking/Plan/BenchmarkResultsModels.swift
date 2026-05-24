@@ -102,6 +102,7 @@ struct BenchmarkRunResult: Encodable, Sendable {
     let computeUnits: String
     let measurementMode: String
     let datasetId: String?
+    let dataset: BenchmarkDatasetSummary?
     let modelSizeMb: Double?
     let `protocol`: BenchmarkProtocolSummary?
     let latency: BenchmarkLatencySummary?
@@ -109,6 +110,25 @@ struct BenchmarkRunResult: Encodable, Sendable {
     let diagnostics: BenchmarkRunDiagnostics?
     let artifacts: BenchmarkArtifacts
     let error: BenchmarkRunError?
+}
+
+struct BenchmarkDatasetSummary: Encodable, Sendable {
+    let datasetId: String
+    let source: String
+    let taskType: DatasetTaskType
+    let imageCount: Int
+    let classCount: Int
+    let hasGroundTruth: Bool
+    let hasOutputIndexMapping: Bool
+    let role: DatasetRole
+    let classes: [BenchmarkDatasetClassSummary]
+}
+
+struct BenchmarkDatasetClassSummary: Encodable, Sendable {
+    let classId: String
+    let displayName: String
+    let outputIndex: Int?
+    let imageCount: Int
 }
 
 struct BenchmarkProtocolSummary: Encodable, Sendable {
@@ -134,12 +154,24 @@ struct BenchmarkLatencySummary: Encodable, Sendable {
 
 struct BenchmarkAccuracySummary: Encodable, Sendable {
     let top1: Double
-    let top5: Double
-    let restrictedTop1: Double
+    let top5: Double?
+    let restrictedTop1: Double?
     let totalImages: Int
     let correctTop1: Int
-    let correctTop5: Int
-    let correctRestrictedTop1: Int
+    let correctTop5: Int?
+    let correctRestrictedTop1: Int?
+    let perClassAccuracy: [BenchmarkPerClassAccuracySummary]?
+}
+
+struct BenchmarkPerClassAccuracySummary: Encodable, Sendable {
+    let classId: String?
+    let displayName: String?
+    let outputIndex: Int
+    let totalImages: Int
+    let correctTop1: Int
+    let correctTop5: Int?
+    let top1: Double
+    let top5: Double?
 }
 
 struct BenchmarkRunDiagnostics: Encodable, Sendable {

@@ -308,13 +308,13 @@ struct AccuracyBenchmarkExecutionOutput {
 enum BenchmarkDefaults {
     static let runs = 50
     static let warmup = 10
-    static let realImageDatasetID = "imagenette2-160-subset-500"
+    static let realImageDatasetID = "imagenette2_160_subset_500"
     static let inputShape = [1, 3, 224, 224]
     static let inputWidth = 224
     static let inputHeight = 224
 }
 
 enum AccuracyBenchmarkDefaults {
-    static let datasetID = "imagenette2-160-subset-500"
+    static let datasetID = "imagenette2_160_subset_500"
     static let warmupImages = 3
 }

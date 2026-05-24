@@ -108,6 +108,10 @@ struct AccuracyBenchmarkRunner {
         let requestedDescriptors = [
             try BenchmarkModelCatalog.requiredDescriptor(withID: configuration.modelID)
         ]
+        try dataset.validateForAccuracy(
+            modelID: configuration.modelID,
+            outputClassCount: requestedDescriptors[0].outputClassCount
+        )
         let evaluationPlan = makeEvaluationPlan(requestedDescriptors: requestedDescriptors)
         let labelResolver = try LabelMappingResolver()
         let timestamp = Date()
@@ -278,14 +282,18 @@ struct AccuracyBenchmarkRunner {
                     throw AccuracyBenchmarkError.evaluationUnavailable(item.fileName)
                 }
 
-                let classInfo = dataset.classInfo(for: item.imagenetIndex)
+                guard let outputIndex = item.outputIndex else {
+                    throw DatasetManagerError.datasetOutputIndexMappingMissing(dataset.id)
+                }
+
+                let classInfo = dataset.classInfo(for: outputIndex)
                 return .success(
                     AccuracySampleMeasurement(
                         imageID: item.id,
                         imagePath: imageURL.path(),
-                        groundTruthIndex: item.imagenetIndex,
-                        groundTruthLabel: nonEmptyLabel(item.expectedLabel) ?? classInfo?.expectedLabel,
-                        groundTruthClassID: classInfo?.classID ?? nonEmptyLabel(item.classFolder),
+                        groundTruthIndex: outputIndex,
+                        groundTruthLabel: nonEmptyLabel(item.displayName) ?? classInfo?.displayName,
+                        groundTruthClassID: classInfo?.classId ?? nonEmptyLabel(item.classId),
                         latencyMs: latency,
                         top1Prediction: evaluation.top1Prediction,
                         top5Predictions: evaluation.top5Predictions,
@@ -327,14 +335,17 @@ struct AccuracyBenchmarkRunner {
             from: logits,
             constrainedTo: restrictedClassIndices
         )
+        guard let outputIndex = item.outputIndex else {
+            throw DatasetManagerError.datasetOutputIndexMappingMissing(item.classId)
+        }
 
         return AccuracyImageEvaluation(
             top1Prediction: predictions.first,
             top5Predictions: predictions,
             restrictedTop1Index: restrictedTop1Index,
-            isTop1Correct: predictions.first?.index == item.imagenetIndex,
-            isTop5Correct: predictions.contains(where: { $0.index == item.imagenetIndex }),
-            isRestrictedTop1Correct: restrictedTop1Index == item.imagenetIndex
+            isTop1Correct: predictions.first?.index == outputIndex,
+            isTop5Correct: predictions.contains(where: { $0.index == outputIndex }),
+            isRestrictedTop1Correct: restrictedTop1Index == outputIndex
         )
     }
 
@@ -428,11 +439,11 @@ struct AccuracyBenchmarkRunner {
         return AccuracyBenchmarkResult(
             experimentID: experimentID,
             timestamp: timestamp,
-            datasetName: dataset.manifest.datasetName,
-            datasetSubsetID: dataset.manifest.subsetID,
-            datasetVersionOrPath: "\(dataset.manifest.subsetVersion) @ \(dataset.manifest.bundleRelativePath)",
-            datasetImagesPerClass: dataset.manifest.imagesPerClass,
-            datasetSelectionRule: dataset.manifest.selectionRule,
+            datasetName: dataset.metadata.datasetId,
+            datasetSubsetID: dataset.metadata.datasetId,
+            datasetVersionOrPath: dataset.rootURL.path(),
+            datasetImagesPerClass: dataset.metadata.classCount > 0 ? totalImages / max(dataset.metadata.classCount, 1) : 0,
+            datasetSelectionRule: "filesystem_discovery",
             subsetSize: totalImages,
             totalImages: totalImages,
             modelName: measurements.descriptor.family.rawValue,
@@ -646,7 +657,7 @@ struct AccuracyBenchmarkRunner {
     }
 
     private func restrictedClassIndices(for dataset: AccuracyDataset) -> [Int] {
-        Array(Set(dataset.items.map(\.imagenetIndex))).sorted()
+        Array(Set(dataset.items.compactMap(\.outputIndex))).sorted()
     }
 
     private func accuracy(correctCount: Int, totalCount: Int) -> Double {

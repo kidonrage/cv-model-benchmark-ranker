@@ -16,6 +16,7 @@ struct BenchmarkModelDescriptor {
     let id: String
     let family: ModelFamily
     let format: ModelFormat
+    let outputClassCount: Int
     let expectedInputDataType: MLMultiArrayDataType
     let inputPreprocessing: ImagePreprocessingConfiguration
     let load: (MLModelConfiguration) throws -> BenchmarkLoadedModel
@@ -31,6 +32,7 @@ enum BenchmarkModelCatalog {
             id: "MobileNetV2_FP32",
             family: .mobileNetV2,
             format: .fp32,
+            outputClassCount: 1000,
             expectedInputDataType: .float32,
             inputPreprocessing: .mobileNetV2Torchvision
         ) { configuration in
@@ -43,6 +45,7 @@ enum BenchmarkModelCatalog {
             id: "MobileNetV2_FP16",
             family: .mobileNetV2,
             format: .fp16,
+            outputClassCount: 1000,
             expectedInputDataType: .float16,
             inputPreprocessing: .mobileNetV2Torchvision
         ) { configuration in
@@ -55,6 +58,7 @@ enum BenchmarkModelCatalog {
             id: "MobileNetV2_INT8",
             family: .mobileNetV2,
             format: .int8,
+            outputClassCount: 1000,
             expectedInputDataType: .float16,
             inputPreprocessing: .mobileNetV2Torchvision
         ) { configuration in
@@ -67,6 +71,7 @@ enum BenchmarkModelCatalog {
             id: "EfficientNetB0_FP32",
             family: .efficientNetB0,
             format: .fp32,
+            outputClassCount: 1000,
             expectedInputDataType: .float32,
             inputPreprocessing: .efficientNetB0Torchvision
         ) { configuration in
@@ -79,6 +84,7 @@ enum BenchmarkModelCatalog {
             id: "EfficientNetB0_FP16",
             family: .efficientNetB0,
             format: .fp16,
+            outputClassCount: 1000,
             expectedInputDataType: .float16,
             inputPreprocessing: .efficientNetB0Torchvision
         ) { configuration in
@@ -91,6 +97,7 @@ enum BenchmarkModelCatalog {
             id: "EfficientNetB0_INT8",
             family: .efficientNetB0,
             format: .int8,
+            outputClassCount: 1000,
             expectedInputDataType: .float16,
             inputPreprocessing: .efficientNetB0Torchvision
         ) { configuration in

@@ -10,7 +10,42 @@ import Foundation
 struct BenchmarkPlan: Decodable, Sendable {
     let planId: String
     let datasetId: String?
+    let datasets: BenchmarkPlanDatasets?
     let experiments: [BenchmarkPlanExperiment]
+}
+
+struct BenchmarkPlanDatasets: Decodable, Encodable, Sendable {
+    let primaryDatasetId: String
+    let validationDatasetIds: [String]
+    let hardDatasetIds: [String]
+    let smokeDatasetId: String?
+
+    func role(for datasetId: String) -> DatasetRole {
+        if datasetId == primaryDatasetId {
+            return .primary
+        }
+        if validationDatasetIds.contains(datasetId) {
+            return .validation
+        }
+        if hardDatasetIds.contains(datasetId) {
+            return .hard
+        }
+        if smokeDatasetId == datasetId {
+            return .smoke
+        }
+        return .unspecified
+    }
+
+    var allDatasetIds: [String] {
+        var ordered: [String] = [primaryDatasetId]
+        ordered.append(contentsOf: validationDatasetIds)
+        ordered.append(contentsOf: hardDatasetIds)
+        if let smokeDatasetId {
+            ordered.append(smokeDatasetId)
+        }
+        var seen = Set<String>()
+        return ordered.filter { seen.insert($0).inserted }
+    }
 }
 
 struct BenchmarkPlanExperiment: Decodable, Identifiable, Sendable {

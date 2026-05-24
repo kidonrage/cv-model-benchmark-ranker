@@ -16,6 +16,7 @@ struct FullBenchmarkOrchestrator {
     private let planLoader = BenchmarkPlanLoader()
     private let manifestLoader = ModelsManifestLoader()
     private let validator = BenchmarkPlanValidator()
+    private let datasetManager = DatasetManager()
     private let performanceRunner = PipelineBenchmarkService()
     private let accuracyRunner = AccuracyBenchmarkRunner()
     private let logStore = BenchmarkLogStore()
@@ -169,6 +170,8 @@ struct FullBenchmarkOrchestrator {
         manifestModel: ManifestModel
     ) throws -> BenchmarkRunResult {
         let datasetID = experiment.datasetId ?? plan.datasetId ?? BenchmarkDefaults.realImageDatasetID
+        let dataset = try datasetManager.dataset(withID: datasetID)
+        try dataset.validateForPerformance()
         let configuration = BenchmarkRunConfiguration(
             modelID: experiment.modelId,
             inputMode: experiment.inputMode.benchmarkInputMode,
@@ -184,6 +187,7 @@ struct FullBenchmarkOrchestrator {
             for: experiment,
             manifestModel: manifestModel,
             datasetID: datasetID,
+            datasetSummary: datasetSummary(for: dataset, datasetID: datasetID, plan: plan),
             protocolSummary: BenchmarkProtocolSummary(
                 warmupRuns: configuration.warmup,
                 measuredRuns: configuration.runs,
@@ -209,6 +213,12 @@ struct FullBenchmarkOrchestrator {
         manifestModel: ManifestModel
     ) throws -> BenchmarkRunResult {
         let datasetID = experiment.datasetId ?? plan.datasetId ?? AccuracyBenchmarkDefaults.datasetID
+        let descriptor = try BenchmarkModelCatalog.requiredDescriptor(withID: experiment.modelId)
+        let dataset = try datasetManager.dataset(withID: datasetID)
+        try dataset.validateForAccuracy(
+            modelID: experiment.modelId,
+            outputClassCount: descriptor.outputClassCount
+        )
         let configuration = AccuracyBenchmarkRunConfiguration(
             datasetID: datasetID,
             computeUnits: experiment.computeUnits,
@@ -230,6 +240,7 @@ struct FullBenchmarkOrchestrator {
             for: experiment,
             manifestModel: manifestModel,
             datasetID: datasetID,
+            datasetSummary: datasetSummary(for: dataset, datasetID: datasetID, plan: plan),
             protocolSummary: BenchmarkProtocolSummary(
                 warmupRuns: nil,
                 measuredRuns: nil,
@@ -256,7 +267,19 @@ struct FullBenchmarkOrchestrator {
                 totalImages: result.totalImages,
                 correctTop1: result.top1CorrectCount,
                 correctTop5: result.top5CorrectCount,
-                correctRestrictedTop1: result.correctRestrictedTop1
+                correctRestrictedTop1: result.correctRestrictedTop1,
+                perClassAccuracy: result.perClassResults.map {
+                    BenchmarkPerClassAccuracySummary(
+                        classId: $0.classID,
+                        displayName: $0.classLabel,
+                        outputIndex: $0.classIndex,
+                        totalImages: $0.totalCount,
+                        correctTop1: $0.top1CorrectCount,
+                        correctTop5: $0.top5CorrectCount,
+                        top1: $0.top1Accuracy,
+                        top5: $0.top5Accuracy
+                    )
+                }
             ),
             diagnostics: BenchmarkRunDiagnostics.from(result.resourceDiagnostics, hasSustainedBenchmark: false),
             artifacts: BenchmarkArtifacts(
@@ -272,6 +295,7 @@ struct FullBenchmarkOrchestrator {
         for experiment: BenchmarkPlanExperiment,
         manifestModel: ManifestModel,
         datasetID: String?,
+        datasetSummary: BenchmarkDatasetSummary?,
         protocolSummary: BenchmarkProtocolSummary?,
         latency: BenchmarkLatencySummary?,
         accuracy: BenchmarkAccuracySummary?,
@@ -288,6 +312,7 @@ struct FullBenchmarkOrchestrator {
             computeUnits: experiment.computeUnits.reportValue,
             measurementMode: experiment.measurementMode.rawValue,
             datasetId: datasetID,
+            dataset: datasetSummary,
             modelSizeMb: manifestModel.modelSizeMb,
             protocol: protocolSummary,
             latency: latency,
@@ -313,6 +338,7 @@ struct FullBenchmarkOrchestrator {
             computeUnits: experiment.computeUnits.reportValue,
             measurementMode: experiment.measurementMode.rawValue,
             datasetId: experiment.datasetId,
+            dataset: nil,
             modelSizeMb: manifestModel?.modelSizeMb,
             protocol: nil,
             latency: nil,
@@ -360,6 +386,31 @@ private extension FullBenchmarkOrchestrator {
         records.first { $0.measuredSegment == segment && $0.isApplicable }
     }
 
+    private func datasetSummary(
+        for dataset: AccuracyDataset,
+        datasetID: String,
+        plan: BenchmarkPlan
+    ) -> BenchmarkDatasetSummary {
+        BenchmarkDatasetSummary(
+            datasetId: datasetID,
+            source: dataset.metadata.source,
+            taskType: dataset.metadata.taskType,
+            imageCount: dataset.metadata.imageCount,
+            classCount: dataset.metadata.classCount,
+            hasGroundTruth: dataset.metadata.hasGroundTruth,
+            hasOutputIndexMapping: dataset.metadata.hasOutputIndexMapping,
+            role: plan.datasets?.role(for: datasetID) ?? .unspecified,
+            classes: dataset.metadata.classes.map {
+                BenchmarkDatasetClassSummary(
+                    classId: $0.classId,
+                    displayName: $0.displayName,
+                    outputIndex: $0.outputIndex,
+                    imageCount: $0.imageCount
+                )
+            }
+        )
+    }
+
     private func appVersion() -> String {
         Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "0.1.0"
     }
@@ -384,10 +435,20 @@ private extension FullBenchmarkOrchestrator {
             return "unknown_model_id"
         case BenchmarkPlanValidationError.preprocessingProfileMissing:
             return "preprocessing_profile_not_found"
+        case BenchmarkPlanValidationError.missingDatasetID:
+            return "dataset_id_missing"
         case PipelineBenchmarkError.modelNotFound:
             return "model_not_found"
-        case DatasetManagerError.datasetManifestMissing:
+        case DatasetManagerError.datasetNotFound:
             return "dataset_not_found"
+        case DatasetManagerError.datasetEmpty:
+            return "dataset_empty"
+        case DatasetManagerError.datasetHasNoClassFolders:
+            return "dataset_missing_class_folders"
+        case DatasetManagerError.datasetOutputIndexMappingMissing:
+            return "dataset_output_index_mapping_missing"
+        case DatasetManagerError.datasetOutputIndexOutOfRange:
+            return "dataset_output_index_out_of_range"
         case AccuracyBenchmarkError.missingImageFile:
             return "dataset_image_not_found"
         case AccuracyBenchmarkError.imageDecodingFailed:

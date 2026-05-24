@@ -13,6 +13,11 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C67729012F1ADEB6004EFF8B /* CVTestsSUI */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			explicitFolders = (
+				Resources/Datasets/imagenet_hard_50_subset_2500/151_chihuahua,
+				Resources/Datasets/imagenet_hard_50_subset_2500/155_shih_tzu,
+				Resources/Datasets/imagenet_hard_50_subset_2500/779_school_bus,
+			);
 			path = CVTestsSUI;
 			sourceTree = "<group>";
 		};
@@ -55,6 +60,7 @@
 				C67728FB2F1ADEB6004EFF8B /* Sources */,
 				C67728FC2F1ADEB6004EFF8B /* Frameworks */,
 				C67728FD2F1ADEB6004EFF8B /* Resources */,
+				C6A1D5013A9A000100000001 /* Copy Dataset Directories */,
 			);
 			buildRules = (
 			);
@@ -113,6 +119,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C6A1D5013A9A000100000001 /* Copy Dataset Directories */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/CVTestsSUI/Resources/Datasets",
+			);
+			name = "Copy Dataset Directories";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Datasets",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -eu\nSOURCE_DATASETS_DIR=\"${SRCROOT}/CVTestsSUI/Resources/Datasets\"\nTARGET_DATASETS_DIR=\"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Datasets\"\n\nif [ ! -d \"${SOURCE_DATASETS_DIR}\" ]; then\n  echo \"error: datasets directory missing at ${SOURCE_DATASETS_DIR}\" >&2\n  exit 1\nfi\n\nrm -rf \"${TARGET_DATASETS_DIR}\"\nmkdir -p \"${TARGET_DATASETS_DIR}\"\nditto \"${SOURCE_DATASETS_DIR}\" \"${TARGET_DATASETS_DIR}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C67728FB2F1ADEB6004EFF8B /* Sources */ = {
@@ -255,6 +285,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RNXT6P5KC8;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = AppInfo.plist;
@@ -286,6 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RNXT6P5KC8;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = AppInfo.plist;
