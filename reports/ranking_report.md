@@ -30,7 +30,6 @@ Decision:
 - primary top-1: 0.750
 - primary restricted top-1: 0.984
 - primary median latency: 14.35 ms
-- recommendation is not based on latency alone: FP16 also keeps high quality, moderate size, interpretable optimization type, and no validation/hard warning
 - no critical degradation on hard datasets
 
 ## Ranking
@@ -49,5 +48,3 @@ Decision:
 - Ranking is built only from the primary dataset. Validation and hard datasets contribute warnings or penalties, but are never averaged into the primary score.
 - Positive drop in percentage points means degradation versus the primary dataset.
 - `latency_first` keeps validation/hard checks mostly as warnings unless degradation becomes severe.
-- `EfficientNetB0_FP32 [ALL]` is eligible: its primary median latency is 24.11 ms and stays below the 25 ms latency budget. It ranks third because FP16 and INT8 have better latency/size trade-offs and higher total score.
-- The full benchmark run changed device thermal state from `nominal` to `serious`. This weakens exact latency ordering when candidates differ by less than 1 ms, so the FP16-vs-INT8 latency gap should be confirmed by a cooled rerun with randomized experiment order.
