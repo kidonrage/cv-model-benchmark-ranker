@@ -280,6 +280,12 @@ scripts/generate_benchmark_configs.sh
 ./scripts/generate_benchmark_configs.sh
 ```
 
+Чтобы после генерации сразу открыть Xcode-проект:
+
+```bash
+./scripts/generate_benchmark_configs.sh --open
+```
+
 Дефолтные пути:
 
 | Сущность           | Путь                                                            |
@@ -316,6 +322,8 @@ scripts/generate_benchmark_configs.sh
 | `--output-dir`         | `./<project-name>/<project-name>/Resources/Configs`                     | Папка для генерации конфигов              |
 | `--allow-unknown`      | `false`                                                                 | Не падать на неизвестных моделях          |
 | `--no-clean-models`    | `false`                                                                 | Не очищать `ModelsRaw` перед копированием |
+| `--no-clean-datasets`  | `false`                                                                 | Не очищать `Datasets` перед копированием  |
+| `--open`               | `false`                                                                 | Открыть `./<project-name>/<project-name>.xcodeproj` после генерации |
 | `--help`               | —                                                                       | Показать справку                          |
 
 ---
@@ -594,16 +602,13 @@ mkdir -p input_models scripts reports app_logs
 # input_models/MobileNetV2_FP16.mlpackage
 # input_models/EfficientNetB0_FP16.mlpackage
 
-# 3. Сгенерировать конфиги benchmark
-./scripts/generate_benchmark_configs.sh
+# 3. Сгенерировать конфиги benchmark и сразу открыть Xcode-проект
+./scripts/generate_benchmark_configs.sh --open
 
-# 4. Открыть Xcode-проект
-open ./CVTestsSUI/CVTestsSUI.xcodeproj
-
-# 5. Запустить benchmark на физическом iPhone
+# 4. Запустить benchmark на физическом iPhone
 # После завершения экспортировать benchmark_results.json в app_logs/
 
-# 6. Проанализировать результаты
+# 5. Проанализировать результаты
 ./scripts/analyze_results.sh \
   --results ./app_logs/benchmark_results.json \
   --scenario ./scenario_config.json \

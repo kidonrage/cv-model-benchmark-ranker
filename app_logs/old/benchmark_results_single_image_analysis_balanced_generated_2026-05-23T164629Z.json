@@ -1,0 +1,961 @@
+{
+  "benchmarkInfo" : {
+    "benchmarkAppVersion" : "1.0",
+    "finishedAt" : "2026-05-23T16:46:28Z",
+    "planId" : "single_image_analysis_balanced_generated",
+    "startedAt" : "2026-05-23T16:46:27Z",
+    "status" : "completedWithFailures"
+  },
+  "device" : {
+    "modelIdentifier" : "iPhone14,7",
+    "name" : "iPhone",
+    "systemName" : "iOS",
+    "systemVersion" : "26.4.2",
+    "thermalStateAtEnd" : "fair",
+    "thermalStateAtStart" : "fair"
+  },
+  "plan" : {
+    "experimentsFailed" : 36,
+    "experimentsSucceeded" : 0,
+    "experimentsTotal" : 36
+  },
+  "runs" : [
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2_160_subset_500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.53125,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "EfficientNetB0_FP16__imagenette2_160_subset_500__ALL__performance__fullPipeline",
+      "family" : "EfficientNetB0",
+      "format" : "FP16",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "EfficientNetB0_FP16",
+      "modelSizeMb" : 10.182,
+      "optimizationType" : "float16",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2_160_subset_500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.6875,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "EfficientNetB0_FP16__imagenette2_160_subset_500__ALL__performance__segmented",
+      "family" : "EfficientNetB0",
+      "format" : "FP16",
+      "measurementMode" : "segmented",
+      "modelId" : "EfficientNetB0_FP16",
+      "modelSizeMb" : 10.182,
+      "optimizationType" : "float16",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2_160_subset_500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.734375,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "EfficientNetB0_FP16__imagenette2_160_subset_500__ALL__accuracy__fullPipeline",
+      "family" : "EfficientNetB0",
+      "format" : "FP16",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "EfficientNetB0_FP16",
+      "modelSizeMb" : 10.182,
+      "optimizationType" : "float16",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenet_hard_50_subset_2500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.734375,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "EfficientNetB0_FP16__imagenet_hard_50_subset_2500__ALL__performance__fullPipeline",
+      "family" : "EfficientNetB0",
+      "format" : "FP16",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "EfficientNetB0_FP16",
+      "modelSizeMb" : 10.182,
+      "optimizationType" : "float16",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenet_hard_50_subset_2500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.734375,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "EfficientNetB0_FP16__imagenet_hard_50_subset_2500__ALL__performance__segmented",
+      "family" : "EfficientNetB0",
+      "format" : "FP16",
+      "measurementMode" : "segmented",
+      "modelId" : "EfficientNetB0_FP16",
+      "modelSizeMb" : 10.182,
+      "optimizationType" : "float16",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenet_hard_50_subset_2500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.6875,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "EfficientNetB0_FP16__imagenet_hard_50_subset_2500__ALL__accuracy__fullPipeline",
+      "family" : "EfficientNetB0",
+      "format" : "FP16",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "EfficientNetB0_FP16",
+      "modelSizeMb" : 10.182,
+      "optimizationType" : "float16",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2_160_subset_500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.6875,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "EfficientNetB0_FP32__imagenette2_160_subset_500__ALL__performance__fullPipeline",
+      "family" : "EfficientNetB0",
+      "format" : "FP32",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "EfficientNetB0_FP32",
+      "modelSizeMb" : 20.219,
+      "optimizationType" : "float32",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2_160_subset_500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.671875,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "EfficientNetB0_FP32__imagenette2_160_subset_500__ALL__performance__segmented",
+      "family" : "EfficientNetB0",
+      "format" : "FP32",
+      "measurementMode" : "segmented",
+      "modelId" : "EfficientNetB0_FP32",
+      "modelSizeMb" : 20.219,
+      "optimizationType" : "float32",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2_160_subset_500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.671875,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "EfficientNetB0_FP32__imagenette2_160_subset_500__ALL__accuracy__fullPipeline",
+      "family" : "EfficientNetB0",
+      "format" : "FP32",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "EfficientNetB0_FP32",
+      "modelSizeMb" : 20.219,
+      "optimizationType" : "float32",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenet_hard_50_subset_2500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.71875,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "EfficientNetB0_FP32__imagenet_hard_50_subset_2500__ALL__performance__fullPipeline",
+      "family" : "EfficientNetB0",
+      "format" : "FP32",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "EfficientNetB0_FP32",
+      "modelSizeMb" : 20.219,
+      "optimizationType" : "float32",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenet_hard_50_subset_2500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.71875,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "EfficientNetB0_FP32__imagenet_hard_50_subset_2500__ALL__performance__segmented",
+      "family" : "EfficientNetB0",
+      "format" : "FP32",
+      "measurementMode" : "segmented",
+      "modelId" : "EfficientNetB0_FP32",
+      "modelSizeMb" : 20.219,
+      "optimizationType" : "float32",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenet_hard_50_subset_2500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.75,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "EfficientNetB0_FP32__imagenet_hard_50_subset_2500__ALL__accuracy__fullPipeline",
+      "family" : "EfficientNetB0",
+      "format" : "FP32",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "EfficientNetB0_FP32",
+      "modelSizeMb" : 20.219,
+      "optimizationType" : "float32",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2_160_subset_500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.75,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "EfficientNetB0_INT8__imagenette2_160_subset_500__ALL__performance__fullPipeline",
+      "family" : "EfficientNetB0",
+      "format" : "INT8",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "EfficientNetB0_INT8",
+      "modelSizeMb" : 5.245,
+      "optimizationType" : "unknown_int8_or_weight_compression",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2_160_subset_500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.765625,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "EfficientNetB0_INT8__imagenette2_160_subset_500__ALL__performance__segmented",
+      "family" : "EfficientNetB0",
+      "format" : "INT8",
+      "measurementMode" : "segmented",
+      "modelId" : "EfficientNetB0_INT8",
+      "modelSizeMb" : 5.245,
+      "optimizationType" : "unknown_int8_or_weight_compression",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2_160_subset_500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.765625,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "EfficientNetB0_INT8__imagenette2_160_subset_500__ALL__accuracy__fullPipeline",
+      "family" : "EfficientNetB0",
+      "format" : "INT8",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "EfficientNetB0_INT8",
+      "modelSizeMb" : 5.245,
+      "optimizationType" : "unknown_int8_or_weight_compression",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenet_hard_50_subset_2500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.765625,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "EfficientNetB0_INT8__imagenet_hard_50_subset_2500__ALL__performance__fullPipeline",
+      "family" : "EfficientNetB0",
+      "format" : "INT8",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "EfficientNetB0_INT8",
+      "modelSizeMb" : 5.245,
+      "optimizationType" : "unknown_int8_or_weight_compression",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenet_hard_50_subset_2500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.703125,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "EfficientNetB0_INT8__imagenet_hard_50_subset_2500__ALL__performance__segmented",
+      "family" : "EfficientNetB0",
+      "format" : "INT8",
+      "measurementMode" : "segmented",
+      "modelId" : "EfficientNetB0_INT8",
+      "modelSizeMb" : 5.245,
+      "optimizationType" : "unknown_int8_or_weight_compression",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenet_hard_50_subset_2500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.703125,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "EfficientNetB0_INT8__imagenet_hard_50_subset_2500__ALL__accuracy__fullPipeline",
+      "family" : "EfficientNetB0",
+      "format" : "INT8",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "EfficientNetB0_INT8",
+      "modelSizeMb" : 5.245,
+      "optimizationType" : "unknown_int8_or_weight_compression",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2_160_subset_500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.703125,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "MobileNetV2_FP16__imagenette2_160_subset_500__ALL__performance__fullPipeline",
+      "family" : "MobileNetV2",
+      "format" : "FP16",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "MobileNetV2_FP16",
+      "modelSizeMb" : 6.741,
+      "optimizationType" : "float16",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2_160_subset_500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.703125,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "MobileNetV2_FP16__imagenette2_160_subset_500__ALL__performance__segmented",
+      "family" : "MobileNetV2",
+      "format" : "FP16",
+      "measurementMode" : "segmented",
+      "modelId" : "MobileNetV2_FP16",
+      "modelSizeMb" : 6.741,
+      "optimizationType" : "float16",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2_160_subset_500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.703125,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "MobileNetV2_FP16__imagenette2_160_subset_500__ALL__accuracy__fullPipeline",
+      "family" : "MobileNetV2",
+      "format" : "FP16",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "MobileNetV2_FP16",
+      "modelSizeMb" : 6.741,
+      "optimizationType" : "float16",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenet_hard_50_subset_2500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.703125,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "MobileNetV2_FP16__imagenet_hard_50_subset_2500__ALL__performance__fullPipeline",
+      "family" : "MobileNetV2",
+      "format" : "FP16",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "MobileNetV2_FP16",
+      "modelSizeMb" : 6.741,
+      "optimizationType" : "float16",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenet_hard_50_subset_2500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.703125,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "MobileNetV2_FP16__imagenet_hard_50_subset_2500__ALL__performance__segmented",
+      "family" : "MobileNetV2",
+      "format" : "FP16",
+      "measurementMode" : "segmented",
+      "modelId" : "MobileNetV2_FP16",
+      "modelSizeMb" : 6.741,
+      "optimizationType" : "float16",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenet_hard_50_subset_2500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.78125,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "MobileNetV2_FP16__imagenet_hard_50_subset_2500__ALL__accuracy__fullPipeline",
+      "family" : "MobileNetV2",
+      "format" : "FP16",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "MobileNetV2_FP16",
+      "modelSizeMb" : 6.741,
+      "optimizationType" : "float16",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2_160_subset_500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.765625,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "MobileNetV2_FP32__imagenette2_160_subset_500__ALL__performance__fullPipeline",
+      "family" : "MobileNetV2",
+      "format" : "FP32",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "MobileNetV2_FP32",
+      "modelSizeMb" : 13.387,
+      "optimizationType" : "float32",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2_160_subset_500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.828125,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "MobileNetV2_FP32__imagenette2_160_subset_500__ALL__performance__segmented",
+      "family" : "MobileNetV2",
+      "format" : "FP32",
+      "measurementMode" : "segmented",
+      "modelId" : "MobileNetV2_FP32",
+      "modelSizeMb" : 13.387,
+      "optimizationType" : "float32",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2_160_subset_500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.828125,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "MobileNetV2_FP32__imagenette2_160_subset_500__ALL__accuracy__fullPipeline",
+      "family" : "MobileNetV2",
+      "format" : "FP32",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "MobileNetV2_FP32",
+      "modelSizeMb" : 13.387,
+      "optimizationType" : "float32",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenet_hard_50_subset_2500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.859375,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "MobileNetV2_FP32__imagenet_hard_50_subset_2500__ALL__performance__fullPipeline",
+      "family" : "MobileNetV2",
+      "format" : "FP32",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "MobileNetV2_FP32",
+      "modelSizeMb" : 13.387,
+      "optimizationType" : "float32",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenet_hard_50_subset_2500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.859375,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "MobileNetV2_FP32__imagenet_hard_50_subset_2500__ALL__performance__segmented",
+      "family" : "MobileNetV2",
+      "format" : "FP32",
+      "measurementMode" : "segmented",
+      "modelId" : "MobileNetV2_FP32",
+      "modelSizeMb" : 13.387,
+      "optimizationType" : "float32",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenet_hard_50_subset_2500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.890625,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "MobileNetV2_FP32__imagenet_hard_50_subset_2500__ALL__accuracy__fullPipeline",
+      "family" : "MobileNetV2",
+      "format" : "FP32",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "MobileNetV2_FP32",
+      "modelSizeMb" : 13.387,
+      "optimizationType" : "float32",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2_160_subset_500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.890625,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "MobileNetV2_INT8__imagenette2_160_subset_500__ALL__performance__fullPipeline",
+      "family" : "MobileNetV2",
+      "format" : "INT8",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "MobileNetV2_INT8",
+      "modelSizeMb" : 3.473,
+      "optimizationType" : "unknown_int8_or_weight_compression",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2_160_subset_500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.890625,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "MobileNetV2_INT8__imagenette2_160_subset_500__ALL__performance__segmented",
+      "family" : "MobileNetV2",
+      "format" : "INT8",
+      "measurementMode" : "segmented",
+      "modelId" : "MobileNetV2_INT8",
+      "modelSizeMb" : 3.473,
+      "optimizationType" : "unknown_int8_or_weight_compression",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenette2_160_subset_500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.890625,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "MobileNetV2_INT8__imagenette2_160_subset_500__ALL__accuracy__fullPipeline",
+      "family" : "MobileNetV2",
+      "format" : "INT8",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "MobileNetV2_INT8",
+      "modelSizeMb" : 3.473,
+      "optimizationType" : "unknown_int8_or_weight_compression",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenet_hard_50_subset_2500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.890625,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "MobileNetV2_INT8__imagenet_hard_50_subset_2500__ALL__performance__fullPipeline",
+      "family" : "MobileNetV2",
+      "format" : "INT8",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "MobileNetV2_INT8",
+      "modelSizeMb" : 3.473,
+      "optimizationType" : "unknown_int8_or_weight_compression",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenet_hard_50_subset_2500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.890625,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "MobileNetV2_INT8__imagenet_hard_50_subset_2500__ALL__performance__segmented",
+      "family" : "MobileNetV2",
+      "format" : "INT8",
+      "measurementMode" : "segmented",
+      "modelId" : "MobileNetV2_INT8",
+      "modelSizeMb" : 3.473,
+      "optimizationType" : "unknown_int8_or_weight_compression",
+      "status" : "failed"
+    },
+    {
+      "artifacts" : {
+
+      },
+      "computeUnits" : "ALL",
+      "datasetId" : "imagenet_hard_50_subset_2500",
+      "diagnostics" : {
+        "batteryLevel" : 1,
+        "batteryState" : "full",
+        "hasSustainedBenchmark" : false,
+        "residentMemoryMb" : 76.890625,
+        "thermalState" : "fair"
+      },
+      "error" : {
+        "code" : "benchmark_runner_error",
+        "message" : "Datasets directory not found in app bundle"
+      },
+      "experimentId" : "MobileNetV2_INT8__imagenet_hard_50_subset_2500__ALL__accuracy__fullPipeline",
+      "family" : "MobileNetV2",
+      "format" : "INT8",
+      "measurementMode" : "fullPipeline",
+      "modelId" : "MobileNetV2_INT8",
+      "modelSizeMb" : 3.473,
+      "optimizationType" : "unknown_int8_or_weight_compression",
+      "status" : "failed"
+    }
+  ],
+  "schemaVersion" : "1.0"
+}

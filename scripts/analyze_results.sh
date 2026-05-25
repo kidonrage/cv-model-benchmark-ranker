@@ -69,20 +69,20 @@ mkdir -p "$OUTPUT_DIR"
 
 python3 - "$RESULTS_FILE" "$SCENARIO_FILE" "$OUTPUT_DIR" <<'PY'
 import json
-import sys
 import math
-from pathlib import Path
+import sys
 from datetime import datetime, timezone
+from pathlib import Path
 
 results_path = Path(sys.argv[1])
 scenario_path = Path(sys.argv[2])
 output_dir = Path(sys.argv[3])
 
-with results_path.open("r", encoding="utf-8") as f:
-    results = json.load(f)
+with results_path.open("r", encoding="utf-8") as handle:
+    results = json.load(handle)
 
-with scenario_path.open("r", encoding="utf-8") as f:
-    scenario = json.load(f)
+with scenario_path.open("r", encoding="utf-8") as handle:
+    scenario = json.load(handle)
 
 
 def nested_get(obj, path):
@@ -113,6 +113,15 @@ def as_float(value):
         return None
 
 
+def as_int(value):
+    if value is None:
+        return None
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return None
+
+
 def as_str(value):
     if value is None:
         return None
@@ -134,6 +143,10 @@ def normalize_compute(value):
     return str(value).strip()
 
 
+def normalize_dataset_id(value):
+    return str(value).strip().replace("-", "_")
+
+
 def fmt_num(value, digits=3, suffix=""):
     if value is None:
         return "—"
@@ -146,43 +159,56 @@ def fmt_ms(value):
     return f"{value:.2f} ms"
 
 
+def fmt_pp(value):
+    if value is None:
+        return "—"
+    return f"{value:.2f} pp"
+
+
 def fmt_mb(value):
     if value is None:
         return "—"
     return f"{value:.1f} MB"
 
 
-def is_palettized(candidate):
-    text = " ".join([
-        str(candidate.get("format") or ""),
-        str(candidate.get("optimizationType") or ""),
-        str(candidate.get("modelId") or "")
-    ]).lower()
-    return "palett" in text or "lut" in text
+def quality_raw(metrics):
+    parts = []
+    if metrics.get("top1") is not None:
+        parts.append((metrics["top1"], 0.45))
+    if metrics.get("restrictedTop1") is not None:
+        parts.append((metrics["restrictedTop1"], 0.35))
+    if metrics.get("top5") is not None:
+        parts.append((metrics["top5"], 0.20))
+    if not parts:
+        return None
+    total_weight = sum(weight for _, weight in parts)
+    return sum(value * weight for value, weight in parts) / total_weight
 
 
-def is_int8_label(candidate):
-    text = " ".join([
-        str(candidate.get("format") or ""),
-        str(candidate.get("optimizationType") or ""),
-        str(candidate.get("modelId") or "")
-    ]).lower()
-    return "int8" in text or "8bit" in text or "8-bit" in text
+def norm_lower(value, values):
+    if value is None:
+        return 0.0
+    valid = [entry for entry in values if entry is not None]
+    if not valid:
+        return 0.0
+    lo, hi = min(valid), max(valid)
+    if math.isclose(lo, hi):
+        return 1.0
+    return max(0.0, min(1.0, (hi - value) / (hi - lo)))
 
 
 def interpretability_score(candidate):
     fmt = str(candidate.get("format") or "").upper()
     opt = str(candidate.get("optimizationType") or "").lower()
-
     if "FP16" in fmt or "float16" in opt:
         return 1.0
     if "FP32" in fmt or "float32" in opt:
         return 0.85
     if "w8a8" in opt or "integer" in opt:
         return 0.80
-    if is_palettized(candidate):
+    if "palett" in opt or "lut" in opt:
         return 0.65
-    if is_int8_label(candidate):
+    if "int8" in fmt or "int8" in opt:
         return 0.55
     return 0.70
 
@@ -200,568 +226,464 @@ def thermal_score(candidate):
     return 0.70
 
 
-def norm_higher(value, values):
-    if value is None:
-        return 0.0
-    valid = [v for v in values if v is not None]
-    if not valid:
-        return 0.0
-    lo, hi = min(valid), max(valid)
-    if math.isclose(lo, hi):
-        return 1.0
-    return max(0.0, min(1.0, (value - lo) / (hi - lo)))
-
-
-def norm_lower(value, values):
-    if value is None:
-        return 0.0
-    valid = [v for v in values if v is not None]
-    if not valid:
-        return 0.0
-    lo, hi = min(valid), max(valid)
-    if math.isclose(lo, hi):
-        return 1.0
-    return max(0.0, min(1.0, (hi - value) / (hi - lo)))
-
-
-def quality_raw(candidate):
-    top1 = candidate.get("top1")
-    top5 = candidate.get("top5")
-    restricted = candidate.get("restrictedTop1")
-
-    parts = []
-    if top1 is not None:
-        parts.append((top1, 0.45))
-    if restricted is not None:
-        parts.append((restricted, 0.35))
-    if top5 is not None:
-        parts.append((top5, 0.20))
-
-    if not parts:
-        return None
-
-    total_weight = sum(w for _, w in parts)
-    return sum(v * w for v, w in parts) / total_weight
-
-
-def usage_is_stream(usage_scenario):
-    return usage_scenario in {"camera_stream", "video_stream", "stream", "real_time"}
-
-
 def weights_for(profile):
-    profile = profile.lower()
-
     if profile == "latency_first":
-        return {
-            "quality": 0.15,
-            "latency": 0.70,
-            "size": 0.10,
-            "interpretability": 0.05,
-            "thermal": 0.00,
-        }
-
+        return {"quality": 0.15, "latency": 0.70, "size": 0.10, "interpretability": 0.05, "thermal": 0.00}
     if profile == "accuracy_first":
-        return {
-            "quality": 0.70,
-            "latency": 0.15,
-            "size": 0.05,
-            "interpretability": 0.10,
-            "thermal": 0.00,
-        }
-
+        return {"quality": 0.70, "latency": 0.15, "size": 0.05, "interpretability": 0.10, "thermal": 0.00}
     if profile == "disk_size_first":
-        return {
-            "quality": 0.15,
-            "latency": 0.20,
-            "size": 0.60,
-            "interpretability": 0.05,
-            "thermal": 0.00,
-        }
-
+        return {"quality": 0.15, "latency": 0.20, "size": 0.60, "interpretability": 0.05, "thermal": 0.00}
     if profile == "conservative_deployment":
-        return {
-            "quality": 0.35,
-            "latency": 0.25,
-            "size": 0.10,
-            "interpretability": 0.30,
-            "thermal": 0.00,
-        }
-
+        return {"quality": 0.35, "latency": 0.25, "size": 0.10, "interpretability": 0.30, "thermal": 0.00}
     if profile == "energy_first":
-        return {
-            "quality": 0.20,
-            "latency": 0.30,
-            "size": 0.20,
-            "interpretability": 0.05,
-            "thermal": 0.25,
-        }
-
+        return {"quality": 0.20, "latency": 0.30, "size": 0.20, "interpretability": 0.05, "thermal": 0.25}
     if profile in {"old_device_or_no_ane", "old_device", "no_ane"}:
-        return {
-            "quality": 0.25,
-            "latency": 0.55,
-            "size": 0.10,
-            "interpretability": 0.10,
-            "thermal": 0.00,
+        return {"quality": 0.25, "latency": 0.55, "size": 0.10, "interpretability": 0.10, "thermal": 0.00}
+    return {"quality": 0.40, "latency": 0.35, "size": 0.10, "interpretability": 0.15, "thermal": 0.00}
+
+
+def normalize_scenario(data):
+    datasets = data.get("datasets") or {}
+    if not datasets:
+        primary = normalize_dataset_id(data.get("datasetId", "imagenette2_160_subset_500"))
+        datasets = {
+            "primaryDatasetId": primary,
+            "validationDatasetIds": [],
+            "hardDatasetIds": [],
+            "smokeDatasetId": None,
+        }
+    else:
+        datasets = {
+            "primaryDatasetId": normalize_dataset_id(datasets["primaryDatasetId"]),
+            "validationDatasetIds": [normalize_dataset_id(value) for value in datasets.get("validationDatasetIds", [])],
+            "hardDatasetIds": [normalize_dataset_id(value) for value in datasets.get("hardDatasetIds", [])],
+            "smokeDatasetId": normalize_dataset_id(datasets["smokeDatasetId"]) if datasets.get("smokeDatasetId") else None,
         }
 
+    quality_thresholds = data.get("qualityThresholds") or {
+        "primary": {
+            "minTop1": data.get("minTop1Accuracy"),
+            "minRestrictedTop1": data.get("minRestrictedTop1Accuracy"),
+        }
+    }
     return {
-        "quality": 0.40,
-        "latency": 0.35,
-        "size": 0.10,
-        "interpretability": 0.15,
-        "thermal": 0.00,
+        "usageScenario": str(data.get("usageScenario") or "single_image_analysis").lower(),
+        "priorityProfile": str(data.get("priorityProfile") or data.get("profile") or "balanced").lower(),
+        "targetDeviceClass": str(data.get("targetDeviceClass") or "").lower(),
+        "requiredComputeUnits": normalize_compute(data["requiredComputeUnits"]) if data.get("requiredComputeUnits") else None,
+        "latencyBudgetMs": as_float(data.get("latencyBudgetMs")),
+        "p90LatencyBudgetMs": as_float(data.get("p90LatencyBudgetMs")),
+        "p95LatencyBudgetMs": as_float(data.get("p95LatencyBudgetMs")),
+        "maxModelSizeMb": as_float(data.get("maxModelSizeMb")),
+        "preferInterpretableOptimization": bool(data.get("preferInterpretableOptimization", False)),
+        "allowPalettizedWeights": bool(data.get("allowPalettizedWeights", True)),
+        "datasets": datasets,
+        "qualityThresholds": quality_thresholds,
     }
 
 
-root_compute = normalize_compute(pick(results, [
-    ("device", "computeUnits"),
-    ("runtime", "computeUnits"),
-    ("computeUnits",),
-], "UNKNOWN"))
+def build_role_map(config):
+    roles = {}
+    datasets = config["datasets"]
+    roles[datasets["primaryDatasetId"]] = "primary"
+    for dataset_id in datasets["validationDatasetIds"]:
+        roles.setdefault(dataset_id, "validation")
+    for dataset_id in datasets["hardDatasetIds"]:
+        roles.setdefault(dataset_id, "hard")
+    if datasets["smokeDatasetId"]:
+        roles.setdefault(datasets["smokeDatasetId"], "smoke")
+    return roles
 
-runs = (
-    results.get("runs")
-    or results.get("results")
-    or results.get("experiments")
-    or []
-)
 
+scenario_cfg = normalize_scenario(scenario)
+role_map = build_role_map(scenario_cfg)
+primary_dataset_id = scenario_cfg["datasets"]["primaryDatasetId"]
+validation_dataset_ids = scenario_cfg["datasets"]["validationDatasetIds"]
+hard_dataset_ids = scenario_cfg["datasets"]["hardDatasetIds"]
+
+runs = results.get("runs") or results.get("results") or []
 if not isinstance(runs, list) or not runs:
     raise SystemExit("No runs found in benchmark results. Expected key: runs[]")
 
-candidates = []
 
-for index, run in enumerate(runs, start=1):
-    model_id = as_str(pick(run, [
-        ("modelId",),
-        ("id",),
-        ("modelName",),
-        ("model", "id"),
-        ("model", "name"),
-    ], f"model_{index}"))
-
-    candidate = {
-        "modelId": model_id,
-        "family": as_str(pick(run, [
-            ("family",),
-            ("modelFamily",),
-            ("model", "family"),
-        ], "")),
-        "format": as_str(pick(run, [
-            ("format",),
-            ("modelFormat",),
-            ("model", "format"),
-        ], "")),
-        "optimizationType": as_str(pick(run, [
-            ("optimizationType",),
-            ("optimization", "type"),
-            ("model", "optimizationType"),
-        ], "")),
-        "computeUnits": normalize_compute(pick(run, [
-            ("computeUnits",),
-            ("compute", "units"),
-            ("runtime", "computeUnits"),
-        ], root_compute)),
-        "measurementMode": as_str(pick(run, [
-            ("measurementMode",),
-            ("measurement", "mode"),
-        ], "")),
-        "modelSizeMb": as_float(pick(run, [
-            ("modelSizeMb",),
-            ("sizeMb",),
-            ("model", "sizeMb"),
-            ("model", "modelSizeMb"),
-        ])),
-        "medianMs": as_float(pick(run, [
-            ("latency", "fullPipelineMedianMs"),
-            ("latency", "medianMs"),
-            ("metrics", "fullPipelineMedianMs"),
-            ("metrics", "medianMs"),
-            ("fullPipelineMedianMs",),
-            ("medianMs",),
-        ])),
-        "p90Ms": as_float(pick(run, [
-            ("latency", "p90Ms"),
-            ("metrics", "p90Ms"),
-            ("p90Ms",),
-        ])),
-        "p95Ms": as_float(pick(run, [
-            ("latency", "p95Ms"),
-            ("metrics", "p95Ms"),
-            ("p95Ms",),
-        ])),
-        "inferenceMedianMs": as_float(pick(run, [
-            ("latency", "inferenceMedianMs"),
-            ("segments", "inferenceMedianMs"),
-            ("metrics", "inferenceMedianMs"),
-            ("inferenceMedianMs",),
-        ])),
-        "preprocessingMedianMs": as_float(pick(run, [
-            ("latency", "preprocessingMedianMs"),
-            ("segments", "preprocessingMedianMs"),
-            ("metrics", "preprocessingMedianMs"),
-            ("preprocessingMedianMs",),
-        ])),
-        "top1": as_float(pick(run, [
-            ("accuracy", "top1"),
-            ("metrics", "top1"),
-            ("top1",),
-        ])),
-        "top5": as_float(pick(run, [
-            ("accuracy", "top5"),
-            ("metrics", "top5"),
-            ("top5",),
-        ])),
-        "restrictedTop1": as_float(pick(run, [
-            ("accuracy", "restrictedTop1"),
-            ("accuracy", "restricted_top1"),
-            ("metrics", "restrictedTop1"),
-            ("restrictedTop1",),
-        ])),
-        "top1Agree": as_float(pick(run, [
-            ("agreement", "top1"),
-            ("metrics", "top1Agree"),
-            ("top1Agree",),
-        ])),
-        "top5Agree": as_float(pick(run, [
-            ("agreement", "top5"),
-            ("metrics", "top5Agree"),
-            ("top5Agree",),
-        ])),
-        "restrictedTop1Agree": as_float(pick(run, [
-            ("agreement", "restrictedTop1"),
-            ("metrics", "restrictedTop1Agree"),
-            ("restrictedTop1Agree",),
-        ])),
-        "thermalState": as_str(pick(run, [
-            ("diagnostics", "thermalState"),
-            ("thermalState",),
-        ], "unknown")),
-        "residentMemoryMb": as_float(pick(run, [
-            ("diagnostics", "residentMemoryMb"),
-            ("residentMemoryMb",),
-        ])),
-        "hasSustainedBenchmark": bool(pick(run, [
-            ("diagnostics", "hasSustainedBenchmark"),
-            ("hasSustainedBenchmark",),
-        ], False)),
-        "raw": run,
+def empty_dataset_metrics():
+    return {
+        "datasetId": None,
+        "role": "unspecified",
+        "dataset": None,
+        "latency": {},
+        "accuracy": {},
+        "statuses": [],
+        "errors": [],
     }
 
-    candidate["qualityRaw"] = quality_raw(candidate)
-    candidate["interpretabilityScore"] = interpretability_score(candidate)
-    candidate["thermalScore"] = thermal_score(candidate)
-    candidate["isPalettized"] = is_palettized(candidate)
-    candidate["isInt8Label"] = is_int8_label(candidate)
 
-    candidates.append(candidate)
+candidates = {}
 
-
-profile = str(
-    scenario.get("priorityProfile")
-    or scenario.get("profile")
-    or "balanced"
-).lower()
-
-usage_scenario = str(
-    scenario.get("usageScenario")
-    or scenario.get("scenario")
-    or "single_image_analysis"
-).lower()
-
-target_device_class = str(scenario.get("targetDeviceClass") or "").lower()
-
-latency_budget = as_float(scenario.get("latencyBudgetMs"))
-p90_budget = as_float(scenario.get("p90LatencyBudgetMs"))
-p95_budget = as_float(scenario.get("p95LatencyBudgetMs"))
-min_top1 = as_float(scenario.get("minTop1Accuracy"))
-min_top5 = as_float(scenario.get("minTop5Accuracy"))
-min_restricted = as_float(scenario.get("minRestrictedTop1Accuracy"))
-max_model_size = as_float(scenario.get("maxModelSizeMb"))
-allow_palettized = bool(scenario.get("allowPalettizedWeights", True))
-prefer_interpretable = bool(scenario.get("preferInterpretableOptimization", False))
-
-required_compute = scenario.get("requiredComputeUnits")
-required_compute = normalize_compute(required_compute) if required_compute else None
-
-cpu_runs_available = any(c["computeUnits"] == "CPU_ONLY" for c in candidates)
-
-if not required_compute:
-    if profile in {"old_device", "old_device_or_no_ane", "no_ane"} or "old" in target_device_class or "no_ane" in target_device_class:
-        if cpu_runs_available:
-            required_compute = "CPU_ONLY"
-
-global_warnings = []
-
-if (profile in {"old_device", "old_device_or_no_ane", "no_ane"} or "old" in target_device_class or "no_ane" in target_device_class) and not cpu_runs_available:
-    global_warnings.append(
-        "Selected old-device/no-ANE scenario, but benchmark results do not contain CPU_ONLY runs. Ranking is based on available runs and should be treated as preliminary."
+for run in runs:
+    model_id = as_str(run.get("modelId") or run.get("id") or "unknown_model")
+    compute_units = normalize_compute(run.get("computeUnits"))
+    dataset_id = normalize_dataset_id(run.get("datasetId") or pick(run, [("dataset", "datasetId")], "unspecified"))
+    candidate_key = (model_id, compute_units)
+    candidate = candidates.setdefault(
+        candidate_key,
+        {
+            "modelId": model_id,
+            "family": as_str(run.get("family") or ""),
+            "format": as_str(run.get("format") or ""),
+            "optimizationType": as_str(run.get("optimizationType") or ""),
+            "computeUnits": compute_units,
+            "modelSizeMb": as_float(run.get("modelSizeMb")),
+            "thermalState": as_str(pick(run, [("diagnostics", "thermalState"), ("thermalState",)], "unknown")),
+            "residentMemoryMb": as_float(pick(run, [("diagnostics", "residentMemoryMb"), ("residentMemoryMb",)])),
+            "datasets": {},
+        },
     )
 
-if usage_is_stream(usage_scenario):
-    has_any_sustained = any(c["hasSustainedBenchmark"] for c in candidates)
-    if not has_any_sustained:
-        global_warnings.append(
-            "Stream scenario selected, but no sustained benchmark metrics were found. Ranking uses p90/p95 latency as proxy and should be validated with long-run thermal tests."
+    dataset_metrics = candidate["datasets"].setdefault(dataset_id, empty_dataset_metrics())
+    dataset_metrics["datasetId"] = dataset_id
+    dataset_metrics["role"] = pick(run, [("dataset", "role")], role_map.get(dataset_id, "unspecified"))
+    dataset_metrics["dataset"] = run.get("dataset") or dataset_metrics["dataset"]
+    dataset_metrics["statuses"].append(as_str(run.get("status") or "unknown"))
+
+    if run.get("status") == "failed":
+        error = run.get("error") or {}
+        dataset_metrics["errors"].append(
+            {
+                "code": as_str(error.get("code") or "run_failed"),
+                "message": as_str(error.get("message") or "experiment failed"),
+                "experimentId": as_str(run.get("experimentId")),
+            }
+        )
+        continue
+
+    latency = run.get("latency") or {}
+    accuracy = run.get("accuracy") or {}
+
+    if latency:
+        dataset_metrics["latency"].update(
+            {
+                "medianMs": as_float(latency.get("fullPipelineMedianMs") or latency.get("medianMs")),
+                "p90Ms": as_float(latency.get("p90Ms")),
+                "p95Ms": as_float(latency.get("p95Ms")),
+                "inferenceMedianMs": as_float(latency.get("inferenceMedianMs")),
+                "preprocessingMedianMs": as_float(latency.get("preprocessingMedianMs")),
+                "postprocessingMedianMs": as_float(latency.get("postprocessingMedianMs")),
+                "imageLoadingMedianMs": as_float(latency.get("imageLoadingMedianMs")),
+            }
+        )
+
+    if accuracy:
+        dataset_metrics["accuracy"].update(
+            {
+                "top1": as_float(accuracy.get("top1")),
+                "top5": as_float(accuracy.get("top5")),
+                "restrictedTop1": as_float(accuracy.get("restrictedTop1")),
+                "totalImages": as_int(accuracy.get("totalImages")),
+                "correctTop1": as_int(accuracy.get("correctTop1")),
+                "correctTop5": as_int(accuracy.get("correctTop5")),
+                "correctRestrictedTop1": as_int(accuracy.get("correctRestrictedTop1")),
+                "perClassAccuracy": accuracy.get("perClassAccuracy"),
+            }
         )
 
 
-for c in candidates:
+if not candidates:
+    raise SystemExit("No model candidates could be built from benchmark results.")
+
+profile = scenario_cfg["priorityProfile"]
+weights = weights_for(profile)
+global_warnings = []
+
+score_base = []
+for candidate in candidates.values():
+    primary_metrics = candidate["datasets"].get(primary_dataset_id)
+    if primary_metrics:
+        score_base.append(
+            {
+                "quality": quality_raw(primary_metrics["accuracy"]),
+                "medianMs": primary_metrics["latency"].get("medianMs"),
+                "modelSizeMb": candidate["modelSizeMb"],
+            }
+        )
+
+quality_values = [entry["quality"] for entry in score_base if entry["quality"] is not None]
+median_values = [entry["medianMs"] for entry in score_base if entry["medianMs"] is not None]
+size_values = [entry["modelSizeMb"] for entry in score_base if entry["modelSizeMb"] is not None]
+
+primary_thresholds = scenario_cfg["qualityThresholds"].get("primary", {})
+validation_thresholds = scenario_cfg["qualityThresholds"].get("validation", {})
+hard_thresholds = scenario_cfg["qualityThresholds"].get("hard", {})
+
+
+def pp_drop(primary_value, other_value):
+    if primary_value is None or other_value is None:
+        return None
+    return (primary_value - other_value) * 100.0
+
+
+def evaluate_robustness(candidate, dataset_ids, thresholds, role_name):
+    entries = []
+    total_penalty = 0.0
+    warnings = []
+    primary_metrics = candidate["datasets"].get(primary_dataset_id, {})
+    primary_accuracy = primary_metrics.get("accuracy", {})
+
+    for dataset_id in dataset_ids:
+        metrics = candidate["datasets"].get(dataset_id)
+        if not metrics:
+            message = f"missing {role_name} dataset run: {dataset_id}"
+            warnings.append(message)
+            entries.append({"datasetId": dataset_id, "status": "missing", "warnings": [message]})
+            continue
+
+        dataset_accuracy = metrics.get("accuracy", {})
+        top1_drop = pp_drop(primary_accuracy.get("top1"), dataset_accuracy.get("top1"))
+        top5_drop = pp_drop(primary_accuracy.get("top5"), dataset_accuracy.get("top5"))
+        restricted_drop = pp_drop(primary_accuracy.get("restrictedTop1"), dataset_accuracy.get("restrictedTop1"))
+
+        dataset_warnings = []
+        status = "passed"
+        max_drop = as_float(thresholds.get("maxAccuracyDropPp"))
+        min_top1 = as_float(thresholds.get("minTop1"))
+
+        if metrics.get("errors"):
+            status = "failed"
+            dataset_warnings.extend(error["message"] for error in metrics["errors"])
+
+        if max_drop is not None and top1_drop is not None and top1_drop > max_drop:
+            status = "warning"
+            dataset_warnings.append(
+                f"{role_name} top-1 drop {top1_drop:.2f} pp exceeds threshold {max_drop:.2f} pp"
+            )
+            if profile in {"balanced", "conservative_deployment"}:
+                total_penalty += 0.20 if role_name == "hard" else 0.12
+            elif profile == "latency_first" and top1_drop > max_drop + 10:
+                total_penalty += 0.05
+
+        if min_top1 is not None and dataset_accuracy.get("top1") is not None and dataset_accuracy["top1"] < min_top1:
+            status = "warning"
+            dataset_warnings.append(
+                f"{role_name} top-1 {dataset_accuracy['top1']:.3f} is below minimum {min_top1:.3f}"
+            )
+            if profile in {"balanced", "conservative_deployment"}:
+                total_penalty += 0.18 if role_name == "hard" else 0.10
+            elif profile == "latency_first" and dataset_accuracy["top1"] < min_top1 - 0.05:
+                total_penalty += 0.05
+
+        entries.append(
+            {
+                "datasetId": dataset_id,
+                "status": status,
+                "warnings": dataset_warnings,
+                "metrics": metrics,
+                "drops": {
+                    "top1DropPp": top1_drop,
+                    "top5DropPp": top5_drop,
+                    "restrictedTop1DropPp": restricted_drop,
+                },
+            }
+        )
+        warnings.extend(dataset_warnings)
+    return entries, warnings, total_penalty
+
+
+ranked = []
+
+for candidate in candidates.values():
+    primary_metrics = candidate["datasets"].get(primary_dataset_id)
     failures = []
     warnings = []
 
-    if required_compute and c["computeUnits"] != required_compute:
-        failures.append(f"requires computeUnits={required_compute}, got {c['computeUnits']}")
+    if not primary_metrics:
+        failures.append(f"missing primary dataset run: {primary_dataset_id}")
+        primary_accuracy = {}
+        primary_latency = {}
+    else:
+        primary_accuracy = primary_metrics.get("accuracy", {})
+        primary_latency = primary_metrics.get("latency", {})
+        if primary_metrics.get("errors"):
+            failures.extend(error["message"] for error in primary_metrics["errors"])
+
+    required_compute = scenario_cfg["requiredComputeUnits"]
+    if required_compute and candidate["computeUnits"] != required_compute:
+        failures.append(f"requires computeUnits={required_compute}, got {candidate['computeUnits']}")
+
+    latency_budget = scenario_cfg["latencyBudgetMs"]
+    p90_budget = scenario_cfg["p90LatencyBudgetMs"]
+    p95_budget = scenario_cfg["p95LatencyBudgetMs"]
+    max_model_size = scenario_cfg["maxModelSizeMb"]
 
     if latency_budget is not None:
-        if c["medianMs"] is None:
-            failures.append("missing median fullPipeline latency")
-        elif c["medianMs"] > latency_budget:
-            failures.append(f"median latency {c['medianMs']:.2f} ms > budget {latency_budget:.2f} ms")
+        median = primary_latency.get("medianMs")
+        if median is None:
+            failures.append("missing primary median fullPipeline latency")
+        elif median > latency_budget:
+            failures.append(f"primary median latency {median:.2f} ms > budget {latency_budget:.2f} ms")
 
     if p90_budget is not None:
-        if c["p90Ms"] is None:
-            failures.append("missing p90 latency")
-        elif c["p90Ms"] > p90_budget:
-            failures.append(f"p90 latency {c['p90Ms']:.2f} ms > budget {p90_budget:.2f} ms")
+        p90 = primary_latency.get("p90Ms")
+        if p90 is None:
+            failures.append("missing primary p90 latency")
+        elif p90 > p90_budget:
+            failures.append(f"primary p90 latency {p90:.2f} ms > budget {p90_budget:.2f} ms")
 
     if p95_budget is not None:
-        if c["p95Ms"] is None:
-            failures.append("missing p95 latency")
-        elif c["p95Ms"] > p95_budget:
-            failures.append(f"p95 latency {c['p95Ms']:.2f} ms > budget {p95_budget:.2f} ms")
+        p95 = primary_latency.get("p95Ms")
+        if p95 is None:
+            failures.append("missing primary p95 latency")
+        elif p95 > p95_budget:
+            failures.append(f"primary p95 latency {p95:.2f} ms > budget {p95_budget:.2f} ms")
 
-    if min_top1 is not None:
-        if c["top1"] is None:
-            failures.append("missing top-1 accuracy")
-        elif c["top1"] < min_top1:
-            failures.append(f"top-1 accuracy {c['top1']:.3f} < minimum {min_top1:.3f}")
+    min_primary_top1 = as_float(primary_thresholds.get("minTop1"))
+    min_primary_restricted = as_float(primary_thresholds.get("minRestrictedTop1"))
 
-    if min_top5 is not None:
-        if c["top5"] is None:
-            failures.append("missing top-5 accuracy")
-        elif c["top5"] < min_top5:
-            failures.append(f"top-5 accuracy {c['top5']:.3f} < minimum {min_top5:.3f}")
+    if min_primary_top1 is not None:
+        if primary_accuracy.get("top1") is None:
+            failures.append("missing primary top-1 accuracy")
+        elif primary_accuracy["top1"] < min_primary_top1:
+            failures.append(
+                f"primary top-1 accuracy {primary_accuracy['top1']:.3f} < minimum {min_primary_top1:.3f}"
+            )
 
-    if min_restricted is not None:
-        if c["restrictedTop1"] is None:
-            failures.append("missing restricted top-1 accuracy")
-        elif c["restrictedTop1"] < min_restricted:
-            failures.append(f"restricted top-1 accuracy {c['restrictedTop1']:.3f} < minimum {min_restricted:.3f}")
+    if min_primary_restricted is not None:
+        if primary_accuracy.get("restrictedTop1") is None:
+            failures.append("missing primary restricted top-1 accuracy")
+        elif primary_accuracy["restrictedTop1"] < min_primary_restricted:
+            failures.append(
+                f"primary restricted top-1 {primary_accuracy['restrictedTop1']:.3f} < minimum {min_primary_restricted:.3f}"
+            )
 
     if max_model_size is not None:
-        if c["modelSizeMb"] is None:
+        size = candidate["modelSizeMb"]
+        if size is None:
             failures.append("missing model size")
-        elif c["modelSizeMb"] > max_model_size:
-            failures.append(f"model size {c['modelSizeMb']:.1f} MB > maximum {max_model_size:.1f} MB")
+        elif size > max_model_size:
+            failures.append(f"model size {size:.1f} MB > maximum {max_model_size:.1f} MB")
 
-    if not allow_palettized and c["isPalettized"]:
+    if not scenario_cfg["allowPalettizedWeights"] and "palett" in str(candidate["optimizationType"]).lower():
         failures.append("palettized weights are not allowed by scenario")
 
-    if c["isInt8Label"] and c["isPalettized"]:
-        warnings.append("INT8-labeled model is interpreted as palettized/weight-compressed, not proven W8A8 integer inference")
-
-    if c["top5Agree"] is not None and c["top5Agree"] < 0.80:
-        warnings.append(f"low top-5 agreement with FP32 baseline: {c['top5Agree']:.3f}")
-
-    if usage_is_stream(usage_scenario) and not c["hasSustainedBenchmark"]:
-        warnings.append("stream scenario uses non-sustained metrics as proxy")
-
-    if prefer_interpretable and c["interpretabilityScore"] < 0.80:
+    if scenario_cfg["preferInterpretableOptimization"] and interpretability_score(candidate) < 0.80:
         warnings.append("less interpretable optimization type compared with FP16/FP32")
 
-    thermal_state = str(c["thermalState"] or "").lower()
-    if thermal_state in {"serious", "critical"}:
-        warnings.append(f"thermal state is {thermal_state}")
+    validation_entries, validation_warnings, validation_penalty = evaluate_robustness(
+        candidate,
+        validation_dataset_ids,
+        validation_thresholds,
+        "validation",
+    )
+    hard_entries, hard_warnings, hard_penalty = evaluate_robustness(
+        candidate,
+        hard_dataset_ids,
+        hard_thresholds,
+        "hard",
+    )
 
-    c["failures"] = failures
-    c["warnings"] = warnings
-    c["eligible"] = len(failures) == 0
+    warnings.extend(validation_warnings)
+    warnings.extend(hard_warnings)
 
+    quality_score = quality_raw(primary_accuracy) or 0.0
+    latency_score = norm_lower(primary_latency.get("medianMs"), median_values)
+    size_score = norm_lower(candidate["modelSizeMb"], size_values)
+    interp_score = interpretability_score(candidate)
+    therm_score = thermal_score(candidate)
 
-eligible = [c for c in candidates if c["eligible"]]
-
-score_base = eligible if eligible else candidates
-
-quality_values = [c["qualityRaw"] for c in score_base]
-median_values = [c["medianMs"] for c in score_base]
-p90_values = [c["p90Ms"] for c in score_base]
-p95_values = [c["p95Ms"] for c in score_base]
-size_values = [c["modelSizeMb"] for c in score_base]
-
-weights = weights_for(profile)
-
-for c in candidates:
-    quality_score = c["qualityRaw"] if c["qualityRaw"] is not None else 0.0
-
-    if usage_is_stream(usage_scenario):
-        latency_parts = []
-        if c["p95Ms"] is not None:
-            latency_parts.append((norm_lower(c["p95Ms"], p95_values), 0.45))
-        if c["p90Ms"] is not None:
-            latency_parts.append((norm_lower(c["p90Ms"], p90_values), 0.40))
-        if c["medianMs"] is not None:
-            latency_parts.append((norm_lower(c["medianMs"], median_values), 0.15))
-    else:
-        latency_parts = []
-        if c["medianMs"] is not None:
-            latency_parts.append((norm_lower(c["medianMs"], median_values), 0.65))
-        if c["p90Ms"] is not None:
-            latency_parts.append((norm_lower(c["p90Ms"], p90_values), 0.35))
-
-    if latency_parts:
-        latency_score = sum(v * w for v, w in latency_parts) / sum(w for _, w in latency_parts)
-    else:
-        latency_score = 0.0
-
-    size_score = norm_lower(c["modelSizeMb"], size_values)
-    interp_score = c["interpretabilityScore"]
-    therm_score = c["thermalScore"]
-
-    total = (
+    total_score = (
         quality_score * weights["quality"]
         + latency_score * weights["latency"]
         + size_score * weights["size"]
         + interp_score * weights["interpretability"]
         + therm_score * weights["thermal"]
+        - validation_penalty
+        - hard_penalty
     )
 
-    if not c["eligible"]:
-        total = total - 10.0
+    eligible = not failures
+    if not eligible:
+        total_score -= 10.0
 
-    c["scores"] = {
-        "quality": quality_score,
-        "latency": latency_score,
-        "size": size_score,
-        "interpretability": interp_score,
-        "thermal": therm_score,
-        "total": total,
-    }
+    candidate.update(
+        {
+            "primaryMetrics": primary_metrics,
+            "validationChecks": validation_entries,
+            "hardChecks": hard_entries,
+            "failures": failures,
+            "warnings": warnings,
+            "eligible": eligible,
+            "scores": {
+                "quality": quality_score,
+                "latency": latency_score,
+                "size": size_score,
+                "interpretability": interp_score,
+                "thermal": therm_score,
+                "validationPenalty": validation_penalty,
+                "hardPenalty": hard_penalty,
+                "total": total_score,
+            },
+        }
+    )
+    ranked.append(candidate)
 
-
-ranked = sorted(
-    candidates,
-    key=lambda x: (
-        x["eligible"],
-        x["scores"]["total"],
-        -(x["medianMs"] if x["medianMs"] is not None else 10**9)
+ranked.sort(
+    key=lambda entry: (
+        entry["eligible"],
+        entry["scores"]["total"],
+        -(((entry.get("primaryMetrics") or {}).get("latency") or {}).get("medianMs") or 10**9),
     ),
-    reverse=True
+    reverse=True,
 )
 
-recommended = next((c for c in ranked if c["eligible"]), None)
+recommended = next((entry for entry in ranked if entry["eligible"]), None)
 
 
-def candidate_name(c):
-    family = c["family"] or c["modelId"]
-    fmt = c["format"] or ""
-    compute = c["computeUnits"] or ""
-    if fmt and fmt not in family:
-        base = f"{family} {fmt}"
-    else:
-        base = c["modelId"]
-    if compute:
-        return f"{base} [{compute}]"
-    return base
+def candidate_name(candidate):
+    family = candidate["family"] or candidate["modelId"]
+    fmt = candidate["format"] or ""
+    compute = candidate["computeUnits"] or ""
+    base = f"{family}_{fmt}" if fmt and fmt not in family else candidate["modelId"]
+    return f"{base} [{compute}]"
 
 
-def recommendation_reasons(rec, ranked_candidates):
-    if rec is None:
-        return ["No eligible configuration found. Relax scenario constraints or check benchmark data."]
+def recommendation_reasons(candidate):
+    if candidate is None:
+        return ["No eligible configuration found. Relax scenario constraints or inspect failed dataset runs."]
 
     reasons = []
-
-    reasons.append("passes all required scenario constraints")
-
-    if rec["medianMs"] is not None:
-        reasons.append(f"median fullPipeline latency: {rec['medianMs']:.2f} ms")
-    if rec["p90Ms"] is not None:
-        reasons.append(f"p90 latency: {rec['p90Ms']:.2f} ms")
-    if rec["top1"] is not None:
-        reasons.append(f"top-1 accuracy: {rec['top1']:.3f}")
-    if rec["restrictedTop1"] is not None:
-        reasons.append(f"restricted top-1 accuracy: {rec['restrictedTop1']:.3f}")
-    if rec["top5"] is not None:
-        reasons.append(f"top-5 accuracy: {rec['top5']:.3f}")
-    if rec["modelSizeMb"] is not None:
-        reasons.append(f"model size: {rec['modelSizeMb']:.1f} MB")
-
-    eligible_candidates = [c for c in ranked_candidates if c["eligible"]]
-
-    if eligible_candidates:
-        fastest = min(
-            eligible_candidates,
-            key=lambda c: c["medianMs"] if c["medianMs"] is not None else 10**9
-        )
-        best_quality = max(
-            eligible_candidates,
-            key=lambda c: c["qualityRaw"] if c["qualityRaw"] is not None else -1
-        )
-        smallest = min(
-            eligible_candidates,
-            key=lambda c: c["modelSizeMb"] if c["modelSizeMb"] is not None else 10**9
-        )
-
-        if fastest["modelId"] == rec["modelId"] and fastest["computeUnits"] == rec["computeUnits"]:
-            reasons.append("has the best median latency among eligible configurations")
-        elif fastest["medianMs"] is not None and rec["medianMs"] is not None:
-            delta = rec["medianMs"] - fastest["medianMs"]
-            reasons.append(f"is {delta:.2f} ms slower than the fastest eligible configuration, but provides a better overall scenario trade-off")
-
-        if best_quality["modelId"] == rec["modelId"] and best_quality["computeUnits"] == rec["computeUnits"]:
-            reasons.append("has the best quality score among eligible configurations")
-
-        if profile == "disk_size_first" and smallest["modelId"] == rec["modelId"]:
-            reasons.append("has the smallest model size among eligible configurations")
-
-    if rec["isPalettized"]:
-        reasons.append("warning: selected configuration appears to use palettized/weight-compressed representation")
-
-    if rec["warnings"]:
-        reasons.extend([f"warning: {w}" for w in rec["warnings"]])
-
+    primary = candidate["primaryMetrics"]
+    latency = primary.get("latency", {})
+    accuracy = primary.get("accuracy", {})
+    reasons.append("best primary dataset quality-latency trade-off under current scenario")
+    if accuracy.get("top1") is not None:
+        reasons.append(f"primary top-1: {accuracy['top1']:.3f}")
+    if accuracy.get("restrictedTop1") is not None:
+        reasons.append(f"primary restricted top-1: {accuracy['restrictedTop1']:.3f}")
+    if latency.get("medianMs") is not None:
+        reasons.append(f"primary median latency: {latency['medianMs']:.2f} ms")
+    if candidate["hardChecks"]:
+        critical_hard = [entry for entry in candidate["hardChecks"] if entry.get("warnings")]
+        if critical_hard:
+            reasons.append("hard dataset has warnings but remained acceptable after profile penalties")
+        else:
+            reasons.append("no critical degradation on hard datasets")
     return reasons
 
 
 generated_at = datetime.now(timezone.utc).isoformat()
-
 report_lines = []
-
 report_lines.append("# Ranking report")
 report_lines.append("")
 report_lines.append(f"Generated at: `{generated_at}`")
 report_lines.append("")
 report_lines.append("## Scenario")
 report_lines.append("")
-report_lines.append(f"- Usage scenario: `{usage_scenario}`")
+report_lines.append(f"- Usage scenario: `{scenario_cfg['usageScenario']}`")
 report_lines.append(f"- Priority profile: `{profile}`")
-report_lines.append(f"- Target device class: `{target_device_class or 'not specified'}`")
-if required_compute:
-    report_lines.append(f"- Required compute units for ranking: `{required_compute}`")
-if latency_budget is not None:
-    report_lines.append(f"- Median latency budget: `{latency_budget:.2f} ms`")
-if p90_budget is not None:
-    report_lines.append(f"- p90 latency budget: `{p90_budget:.2f} ms`")
-if p95_budget is not None:
-    report_lines.append(f"- p95 latency budget: `{p95_budget:.2f} ms`")
-if min_top1 is not None:
-    report_lines.append(f"- Minimum top-1 accuracy: `{min_top1:.3f}`")
-if min_top5 is not None:
-    report_lines.append(f"- Minimum top-5 accuracy: `{min_top5:.3f}`")
-if min_restricted is not None:
-    report_lines.append(f"- Minimum restricted top-1 accuracy: `{min_restricted:.3f}`")
-if max_model_size is not None:
-    report_lines.append(f"- Maximum model size: `{max_model_size:.1f} MB`")
-
-device = results.get("device") or {}
-if device:
-    report_lines.append("")
-    report_lines.append("## Device")
-    report_lines.append("")
-    for key in ["name", "model", "iosVersion", "computeUnits"]:
-        if key in device:
-            report_lines.append(f"- {key}: `{device[key]}`")
+report_lines.append(f"- Primary dataset: `{primary_dataset_id}`")
+if validation_dataset_ids:
+    report_lines.append(f"- Validation datasets: `{', '.join(validation_dataset_ids)}`")
+if hard_dataset_ids:
+    report_lines.append(f"- Hard datasets: `{', '.join(hard_dataset_ids)}`")
 
 if global_warnings:
     report_lines.append("")
@@ -777,144 +699,128 @@ report_lines.append("")
 if recommended is None:
     report_lines.append("No eligible configuration found.")
 else:
-    report_lines.append(f"Recommended configuration: **{candidate_name(recommended)}**")
+    report_lines.append(f"Recommended: **{candidate_name(recommended)}**")
     report_lines.append("")
-    report_lines.append("Reasons:")
+    report_lines.append("Primary dataset:")
+    recommended_primary_accuracy = (recommended.get("primaryMetrics") or {}).get("accuracy") or {}
+    recommended_primary_latency = (recommended.get("primaryMetrics") or {}).get("latency") or {}
+    report_lines.append(f"- top1: {fmt_num(recommended_primary_accuracy.get('top1'))}")
+    report_lines.append(f"- restrictedTop1: {fmt_num(recommended_primary_accuracy.get('restrictedTop1'))}")
+    report_lines.append(f"- median latency: {fmt_ms(recommended_primary_latency.get('medianMs'))}")
+
+    if recommended["validationChecks"]:
+        report_lines.append("")
+        report_lines.append("Validation datasets:")
+        for entry in recommended["validationChecks"]:
+            metrics = entry.get("metrics", {})
+            accuracy = metrics.get("accuracy", {})
+            report_lines.append(
+                f"- {entry['datasetId']}: top1={fmt_num(accuracy.get('top1'))}, "
+                f"top1 drop={fmt_pp(entry.get('drops', {}).get('top1DropPp'))}, status={entry['status']}"
+            )
+
+    if recommended["hardChecks"]:
+        report_lines.append("")
+        report_lines.append("Hard datasets:")
+        for entry in recommended["hardChecks"]:
+            metrics = entry.get("metrics", {})
+            accuracy = metrics.get("accuracy", {})
+            report_lines.append(
+                f"- {entry['datasetId']}: top1={fmt_num(accuracy.get('top1'))}, "
+                f"top1 drop={fmt_pp(entry.get('drops', {}).get('top1DropPp'))}, status={entry['status']}"
+            )
+
     report_lines.append("")
-    for reason in recommendation_reasons(recommended, ranked):
+    report_lines.append("Decision:")
+    for reason in recommendation_reasons(recommended):
         report_lines.append(f"- {reason}")
 
 report_lines.append("")
 report_lines.append("## Ranking")
 report_lines.append("")
-report_lines.append("| Rank | Candidate | Eligible | Score | Median | p90 | Top-1 | Restricted top-1 | Top-5 | Size | Warnings |")
-report_lines.append("|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---|")
+report_lines.append("| Rank | Candidate | Eligible | Primary top-1 | Primary restricted top-1 | Primary median | Validation/hard warnings | Total score |")
+report_lines.append("|---:|---|---:|---:|---:|---:|---|---:|")
 
-rank_no = 1
-for c in ranked:
-    warnings_text = "; ".join(c["warnings"]) if c["warnings"] else ""
-    failures_text = "; ".join(c["failures"]) if c["failures"] else ""
-    status_text = "yes" if c["eligible"] else f"no: {failures_text}"
-
-    display_rank = str(rank_no) if c["eligible"] else "—"
-    if c["eligible"]:
-        rank_no += 1
-
+display_rank = 1
+for entry in ranked:
+    primary_accuracy = (entry.get("primaryMetrics") or {}).get("accuracy") or {}
+    primary_latency = (entry.get("primaryMetrics") or {}).get("latency") or {}
+    warning_text = "; ".join(entry["warnings"]) if entry["warnings"] else ""
+    failure_text = "; ".join(entry["failures"]) if entry["failures"] else "yes"
+    rank_value = str(display_rank) if entry["eligible"] else "—"
+    if entry["eligible"]:
+        display_rank += 1
     report_lines.append(
         "| "
-        + " | ".join([
-            display_rank,
-            candidate_name(c),
-            status_text,
-            fmt_num(c["scores"]["total"], 3),
-            fmt_ms(c["medianMs"]),
-            fmt_ms(c["p90Ms"]),
-            fmt_num(c["top1"], 3),
-            fmt_num(c["restrictedTop1"], 3),
-            fmt_num(c["top5"], 3),
-            fmt_mb(c["modelSizeMb"]),
-            warnings_text,
-        ])
-        + " |"
-    )
-
-report_lines.append("")
-report_lines.append("## Score components")
-report_lines.append("")
-report_lines.append("| Candidate | Quality | Latency | Size | Interpretability | Thermal | Total |")
-report_lines.append("|---|---:|---:|---:|---:|---:|---:|")
-for c in ranked:
-    s = c["scores"]
-    report_lines.append(
-        "| "
-        + " | ".join([
-            candidate_name(c),
-            fmt_num(s["quality"], 3),
-            fmt_num(s["latency"], 3),
-            fmt_num(s["size"], 3),
-            fmt_num(s["interpretability"], 3),
-            fmt_num(s["thermal"], 3),
-            fmt_num(s["total"], 3),
-        ])
+        + " | ".join(
+            [
+                rank_value,
+                candidate_name(entry),
+                failure_text,
+                fmt_num(primary_accuracy.get("top1")),
+                fmt_num(primary_accuracy.get("restrictedTop1")),
+                fmt_ms(primary_latency.get("medianMs")),
+                warning_text,
+                fmt_num(entry["scores"]["total"]),
+            ]
+        )
         + " |"
     )
 
 report_lines.append("")
 report_lines.append("## Notes")
 report_lines.append("")
-report_lines.append("- Ranking is scenario-dependent. The same benchmark results may produce a different recommendation for another usage scenario or priority profile.")
-report_lines.append("- INT8-labeled palettized models are treated as weight-compressed configurations, not as proven W8A8 integer inference.")
-report_lines.append("- For stream/video scenarios, p90/p95 and sustained thermal behavior are more important than median latency.")
-report_lines.append("- For old-device/no-ANE scenarios, CPU_ONLY results or measurements from the target device class should be used.")
-
-report_md = "\n".join(report_lines)
+report_lines.append("- Ranking is built only from the primary dataset. Validation and hard datasets contribute warnings or penalties, but are never averaged into the primary score.")
+report_lines.append("- Positive drop in percentage points means degradation versus the primary dataset.")
+report_lines.append("- `latency_first` keeps validation/hard checks mostly as warnings unless degradation becomes severe.")
 
 report_path = output_dir / "ranking_report.md"
-report_path.write_text(report_md, encoding="utf-8")
+report_path.write_text("\n".join(report_lines), encoding="utf-8")
 
 
-def serializable_candidate(c, rank):
+def serializable_entry(entry, rank):
     return {
         "rank": rank,
-        "modelId": c["modelId"],
-        "name": candidate_name(c),
-        "family": c["family"],
-        "format": c["format"],
-        "optimizationType": c["optimizationType"],
-        "computeUnits": c["computeUnits"],
-        "eligible": c["eligible"],
-        "failures": c["failures"],
-        "warnings": c["warnings"],
-        "metrics": {
-            "medianMs": c["medianMs"],
-            "p90Ms": c["p90Ms"],
-            "p95Ms": c["p95Ms"],
-            "inferenceMedianMs": c["inferenceMedianMs"],
-            "preprocessingMedianMs": c["preprocessingMedianMs"],
-            "top1": c["top1"],
-            "top5": c["top5"],
-            "restrictedTop1": c["restrictedTop1"],
-            "top1Agree": c["top1Agree"],
-            "top5Agree": c["top5Agree"],
-            "restrictedTop1Agree": c["restrictedTop1Agree"],
-            "modelSizeMb": c["modelSizeMb"],
-            "thermalState": c["thermalState"],
-            "residentMemoryMb": c["residentMemoryMb"],
-        },
-        "scores": c["scores"],
+        "modelId": entry["modelId"],
+        "name": candidate_name(entry),
+        "family": entry["family"],
+        "format": entry["format"],
+        "optimizationType": entry["optimizationType"],
+        "computeUnits": entry["computeUnits"],
+        "eligible": entry["eligible"],
+        "failures": entry["failures"],
+        "warnings": entry["warnings"],
+        "primaryDatasetId": primary_dataset_id,
+        "primaryMetrics": entry["primaryMetrics"],
+        "validationChecks": entry["validationChecks"],
+        "hardChecks": entry["hardChecks"],
+        "scores": entry["scores"],
     }
 
 
 ranking_json = {
     "generatedAt": generated_at,
-    "scenario": {
-        "usageScenario": usage_scenario,
-        "priorityProfile": profile,
-        "targetDeviceClass": target_device_class,
-        "requiredComputeUnits": required_compute,
-    },
-    "globalWarnings": global_warnings,
+    "scenario": scenario_cfg,
     "recommendation": None if recommended is None else {
         "modelId": recommended["modelId"],
         "name": candidate_name(recommended),
-        "reasons": recommendation_reasons(recommended, ranked),
+        "reasons": recommendation_reasons(recommended),
     },
-    "ranking": [
-        serializable_candidate(c, idx if c["eligible"] else None)
-        for idx, c in enumerate([c for c in ranked if c["eligible"]], start=1)
-    ] + [
-        serializable_candidate(c, None)
-        for c in ranked
-        if not c["eligible"]
-    ],
+    "ranking": [],
 }
+
+eligible_entries = [entry for entry in ranked if entry["eligible"]]
+for rank_index, entry in enumerate(eligible_entries, start=1):
+    ranking_json["ranking"].append(serializable_entry(entry, rank_index))
+for entry in ranked:
+    if not entry["eligible"]:
+        ranking_json["ranking"].append(serializable_entry(entry, None))
 
 ranking_path = output_dir / "ranking.json"
 ranking_path.write_text(json.dumps(ranking_json, ensure_ascii=False, indent=2), encoding="utf-8")
 
 print(f"Generated: {report_path}")
 print(f"Generated: {ranking_path}")
-
 if recommended:
     print(f"Recommended: {candidate_name(recommended)}")
 else:
