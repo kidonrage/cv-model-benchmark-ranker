@@ -472,55 +472,115 @@ app_logs/benchmark_results.json
 
 ## 10. Формат `benchmark_results.json`
 
-Пример:
+Актуальный фрагмент результата апробации для `single_image_analysis_balanced_generated`:
 
 ```json
 {
   "benchmarkInfo": {
-    "benchmarkAppVersion": "0.1.0",
-    "planId": "single_image_analysis_balanced_generated"
+    "benchmarkAppVersion": "1.0",
+    "finishedAt": "2026-05-24T17:51:51Z",
+    "planId": "single_image_analysis_balanced_generated",
+    "startedAt": "2026-05-24T17:39:26Z",
+    "status": "completed"
   },
   "device": {
-    "name": "iPhone 14",
-    "model": "iPhone14,7",
-    "iosVersion": "18.6",
-    "computeUnits": "ALL"
+    "name": "iPhone",
+    "modelIdentifier": "iPhone14,7",
+    "systemName": "iOS",
+    "systemVersion": "26.4.2",
+    "thermalStateAtStart": "nominal",
+    "thermalStateAtEnd": "serious"
   },
   "runs": [
     {
-      "modelId": "MobileNetV2_FP16",
-      "family": "MobileNetV2",
+      "experimentId": "EfficientNetB0_FP16__imagenette2_160_subset_500__ALL__accuracy__fullPipeline",
+      "modelId": "EfficientNetB0_FP16",
+      "family": "EfficientNetB0",
       "format": "FP16",
       "optimizationType": "float16",
       "computeUnits": "ALL",
       "measurementMode": "fullPipeline",
-      "modelSizeMb": 24.8,
+      "datasetId": "imagenette2_160_subset_500",
+      "modelSizeMb": 10.182,
       "latency": {
-        "fullPipelineMedianMs": 15.76,
-        "p90Ms": 16.29,
-        "p95Ms": 16.5,
-        "inferenceMedianMs": 0.82,
-        "preprocessingMedianMs": 11.6
+        "fullPipelineMedianMs": 14.348983764648438,
+        "medianMs": 14.348983764648438,
+        "p90Ms": 14.496183395385742,
+        "p95Ms": 14.560335874557495
       },
       "accuracy": {
-        "top1": 0.668,
-        "top5": 0.878,
-        "restrictedTop1": 0.976
-      },
-      "agreement": {
-        "top1": 0.98,
-        "top5": 0.922,
-        "restrictedTop1": 1.0
+        "top1": 0.75,
+        "top5": 0.936,
+        "restrictedTop1": 0.984,
+        "totalImages": 500
       },
       "diagnostics": {
         "thermalState": "nominal",
-        "residentMemoryMb": 118.0,
+        "residentMemoryMb": 148.5,
+        "hasSustainedBenchmark": false
+      }
+    },
+    {
+      "experimentId": "EfficientNetB0_INT8__imagenette2_160_subset_500__ALL__accuracy__fullPipeline",
+      "modelId": "EfficientNetB0_INT8",
+      "family": "EfficientNetB0",
+      "format": "INT8",
+      "optimizationType": "unknown_int8_or_weight_compression",
+      "computeUnits": "ALL",
+      "measurementMode": "fullPipeline",
+      "datasetId": "imagenette2_160_subset_500",
+      "modelSizeMb": 5.245,
+      "latency": {
+        "fullPipelineMedianMs": 15.174031257629395,
+        "medianMs": 15.174031257629395,
+        "p90Ms": 15.835344791412354,
+        "p95Ms": 15.972977876663208
+      },
+      "accuracy": {
+        "top1": 0.748,
+        "top5": 0.934,
+        "restrictedTop1": 0.984,
+        "totalImages": 500
+      },
+      "diagnostics": {
+        "thermalState": "nominal",
+        "residentMemoryMb": 180.84375,
+        "hasSustainedBenchmark": false
+      }
+    },
+    {
+      "experimentId": "EfficientNetB0_FP32__imagenette2_160_subset_500__ALL__accuracy__fullPipeline",
+      "modelId": "EfficientNetB0_FP32",
+      "family": "EfficientNetB0",
+      "format": "FP32",
+      "optimizationType": "float32",
+      "computeUnits": "ALL",
+      "measurementMode": "fullPipeline",
+      "datasetId": "imagenette2_160_subset_500",
+      "modelSizeMb": 20.219,
+      "latency": {
+        "fullPipelineMedianMs": 24.11198616027832,
+        "medianMs": 24.11198616027832,
+        "p90Ms": 26.362884044647217,
+        "p95Ms": 26.612192392349243
+      },
+      "accuracy": {
+        "top1": 0.75,
+        "top5": 0.934,
+        "restrictedTop1": 0.984,
+        "totalImages": 500
+      },
+      "diagnostics": {
+        "thermalState": "nominal",
+        "residentMemoryMb": 185.8125,
         "hasSustainedBenchmark": false
       }
     }
   ]
 }
 ```
+
+Этот фрагмент является источником для итогового ranking. Старый формат `benchmarkAppVersion=0.1.0`, `planId=single_image_balanced_v1`, iOS `18.6` и размеры моделей около `48.2 MB` / `40.2 MB` относится к ранним демонстрационным артефактам и не используется в финальной апробации.
 
 ---
 
@@ -541,6 +601,18 @@ app_logs/benchmark_results.json
 reports/ranking_report.md
 reports/ranking.json
 ```
+
+Итоговый ranking для актуального прогона:
+
+| Rank | Candidate | Eligible | Primary top-1 | Primary restricted top-1 | Primary median | Total score |
+|---:|---|---:|---:|---:|---:|---:|
+| 1 | EfficientNetB0_FP16 [ALL] | yes | 0.750 | 0.984 | 14.35 ms | 0.908 |
+| 2 | EfficientNetB0_INT8 [ALL] | yes | 0.748 | 0.984 | 15.17 ms | 0.839 |
+| 3 | EfficientNetB0_FP32 [ALL] | yes | 0.750 | 0.984 | 24.11 ms | 0.475 |
+
+Все три конфигурации EfficientNetB0 проходят thresholds для primary dataset. `EfficientNetB0_FP32 [ALL]` не исключается по latency budget: его median latency равна `24.11 ms`, то есть ниже лимита `25 ms`. Он занимает третье место не из-за нарушения порога, а из-за худшего сочетания latency, размера модели и итогового score по сравнению с FP16 и INT8.
+
+При интерпретации latency нужно учитывать, что полный прогон начался при `thermalStateAtStart=nominal`, а завершился при `thermalStateAtEnd=serious`. Это не ломает вывод о пригодности `EfficientNetB0_FP16`, потому что рекомендация опирается не только на разницу latency `14.35 ms` против `15.17 ms`, но и на качество, размер, интерпретируемый тип оптимизации FP16 и отсутствие warning. Однако точный latency-ranking между FP16 и INT8 желательно подтвердить повторным прогоном с охлаждением устройства и рандомизацией порядка experiments.
 
 ### Параметры `analyze_results.sh`
 
